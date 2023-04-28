@@ -292,7 +292,9 @@ $('.plan-yearly.slick-slider').on('afterChange', function(event, slick, currentS
     }
 });
 
-
+$( document ).ready( () =>{
+    $('.plan-monthly').slick('resize')
+} )
 $('.tab-selector').click((e) => {
     e.preventDefault()
     $('.content').removeClass('active')
