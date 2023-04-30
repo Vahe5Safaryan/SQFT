@@ -41,45 +41,34 @@ $('.main-slider-text').on('afterChange', function(event, slick, currentSlide) {
 
 
 
-
-
 const playButton = document.getElementById('playButton');
 const video = document.getElementById('myVideo');
 
-video.addEventListener('click', () => {
-    if (!video.paused) {
-        video.pause();
+if (video){
+    video.addEventListener('click', () => {
+        if (!video.paused) {
+            video.pause();
+            playButton.style.display = 'block';
+        }
+    });
+    playButton.addEventListener('click', () => {
+        video.play();
+        playButton.style.display = 'none';
+    });
+    video.addEventListener('ended', () => {
         playButton.style.display = 'block';
-    }
-});
-playButton.addEventListener('click', () => {
-    video.play();
-    playButton.style.display = 'none';
-});
-
-video.addEventListener('ended', () => {
-    playButton.style.display = 'block';
-});
+    });
+}
 
 
 
 
-//  Partner Start //
-// $('.partner-section').slick({
-//     dots: false,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow:4,
-//     centerMode: true,
-//     variableWidth: true,
-//     prevArrow: false,
-//     nextArrow: false,
-// });
+
+
 
 $('.partner-section').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
-    // autoplay: true,
     prevArrow: false,
     nextArrow: false,
     variableWidth: true,
@@ -98,8 +87,7 @@ $('.partner-section').slick({
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
+                slidesToShow: 3,
             }
         }
     ]
@@ -295,6 +283,7 @@ $('.plan-yearly.slick-slider').on('afterChange', function(event, slick, currentS
 $( document ).ready( () =>{
     $('.plan-monthly').slick('resize')
 } )
+
 $('.tab-selector').click((e) => {
     e.preventDefault()
     $('.content').removeClass('active')
@@ -303,8 +292,6 @@ $('.tab-selector').click((e) => {
     $(e.target.dataset.target).slick('resize')
     e.target.classList.add('active')
 })
-
-
 
 
 
@@ -453,7 +440,33 @@ accItems.forEach(function(accItem) {
         });
     });
 });
-
 // Accardion End //
+
+
+
+//  Registration Broker
+
+const regBox1 = document.querySelector('.reg-box_1');
+const regBox2 = document.querySelector('.reg-box_2');
+const tabs = document.querySelectorAll('.reg_tab');
+
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        const target = event.target.dataset.target;
+        regBox1.classList.toggle('active', target === '.reg-box_1');
+        regBox2.classList.toggle('active', target === '.reg-box_2');
+        for (let j = 0; j < tabs.length; j++) {
+            tabs[j].classList.toggle('active', tabs[j] === this);
+        }
+    });
+}
+
+
+
+
+
+
+
 
 
