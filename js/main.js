@@ -466,6 +466,71 @@ for (let i = 0; i < tabs.length; i++) {
 
 
 
+// const optionMenu = document.querySelector(".select-menu"),
+//     selectBtn = optionMenu.querySelector(".select-btn"),
+//     options = optionMenu.querySelectorAll(".option"),
+//     sBtn_text = optionMenu.querySelector(".sBtn-text");
+//
+// selectBtn.addEventListener("click", () =>
+//     optionMenu.classList.toggle("active")
+// );
+//
+// options.forEach((option) => {
+//     option.addEventListener("click", () => {
+//         let selectedOption = option.querySelector(".option-text").innerText;
+//         sBtn_text.innerText = selectedOption;
+//
+//         optionMenu.classList.remove("active");
+//     });
+// });
+
+
+// const optionMenus = document.querySelectorAll(".select-menu");
+//
+// optionMenus.forEach((optionMenu) => {
+//     const selectBtn = optionMenu.querySelector(".select-btn");
+//     const options = optionMenu.querySelectorAll(".option");
+//     const sBtn_text = optionMenu.querySelector(".sBtn-text");
+//
+//     selectBtn.addEventListener("click", () =>
+//         optionMenu.classList.toggle("active")
+//     );
+//
+//     options.forEach((option) => {
+//         option.addEventListener("click", () => {
+//             let selectedOption = option.querySelector(".option-text").innerText;
+//             sBtn_text.innerText = selectedOption;
+//
+//             optionMenu.classList.remove("active");
+//         });
+//     });
+// });
+
+const optionMenus = document.querySelectorAll(".select-menu");
+
+for (let i = 0; i < optionMenus.length; i++) {
+    const optionMenu = optionMenus[i];
+    const selectBtn = optionMenu.querySelector(".select-btn");
+    const options = optionMenu.querySelectorAll(".option");
+    const sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+    selectBtn.addEventListener("click", function() {
+        optionMenu.classList.toggle("active");
+    });
+
+    for (let j = 0; j < options.length; j++) {
+        const option = options[j];
+        option.addEventListener("click", function() {
+            let selectedOption = option.querySelector(".option-text").innerText;
+            sBtn_text.innerText = selectedOption;
+
+            optionMenu.classList.remove("active");
+        });
+    }
+}
+
+
+
 
 
 

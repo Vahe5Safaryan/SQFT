@@ -1356,12 +1356,9 @@ li {
 }
 /* Footer End */
 
-/*        -----------------       */
-
+/*   -----------------   */
 
 /* BROKER REGISTRATION */
-
-
 .registration-section{
     padding: 0 0 150px;
     display: flex;
@@ -1376,10 +1373,6 @@ li {
 .registration-section-heading h2{
     color: #fff;
 }
-
-/*.reg-tab-btn{*/
-/*    justify-content: flex-start;*/
-/*}*/
 
 .reg-tab-btn a{
     color: #fff;
@@ -1455,7 +1448,6 @@ li {
     align-items: center;
 }
 
-
 .reg-section-content{
     display: flex;
     flex-direction: column;
@@ -1500,6 +1492,234 @@ li {
     padding-right: 20px;
 }
 
+/*   -----------------   */
+
+/* Project Start */
+
+/* Project Search Start */
+.project-region-search{
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    border: 1px solid #E2E2E2;
+    border-right: none;
+    border-radius: 10px;
+    max-width: 450px;
+    height: 40px;
+    margin: 30px auto;
+}
+.project-region-search input{
+    max-width: 270px;
+    width: 100%;
+    /*height: 100%;*/
+    margin-right: 20px;
+    padding: 8px 20px;
+    border: none;
+    border-right: 1px solid #E2E2E2;
+    background: transparent;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #AAAAAA;
+}
+.project-region-search input::placeholder{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #AAAAAA;
+}
+
+.select-menu {
+    display: inline-block;
+}
+.select-menu .select-btn {
+    display: flex;
+    height: 55px;
+    max-width: 60px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #AAAAAA;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.select-menu .options {
+    position: absolute;
+    width: 200px;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 295px;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-duration: 0.35s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-fill-mode: both;
+}
+.select-menu .options .option {
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    padding: 0 10px;
+    align-items: center;
+    background: #fff;
+}
+.select-menu .options .option:hover {
+    background: #f2f2f2;
+}
+/*.select-menu .options .option i {*/
+/*    font-size: 25px;*/
+/*    margin-right: 12px;*/
+/*}*/
+.select-menu .options .option .option-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #1E1E1E;
+}
+.select-btn i {
+    font-size: 10px;
+    color: #AAAAAA;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+.select-menu.active .options {
+    display: block;
+    opacity: 0;
+    z-index: 10;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    background: #fff;
+}
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+    }
+}
+
+.project-region-search-icon{
+    background: #09D75C;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-left: 30px;
+}
+.project-region-search-icon i{
+    font-size: 21px;
+    color: #fff;
+}
+
+/* Project Search End */
+
+
+.section-heading-project{
+    text-align: center;
+    padding: 100px 0 30px;
+}
+.section-heading-project h1{
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 102%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}
+
+.project-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+    padding-bottom: 30px;
+}
+
+.project-imfo{
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 11px rgba(30, 30, 30, 0.1);
+    border-radius: 10px;
+    column-gap: 20px;
+}
+.project-imfo img{
+    max-width: 100%;
+    width: 300px;
+    height: 100%;
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 20px 0;
+}
+
+.project-content h4{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    color: #09D75C;
+}
+.project-content h5{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #1E1E1E;
+}
+.project-content p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #1E1E1E;
+    padding: 8px 0 20px;
+}
+.project-content p i{
+    font-size: 24px;
+    color: #1E1E1E;
+    margin-right: 11px;
+}
+
+.project-btn-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.project-btn a{
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 21px;
+}
+/* Project End */
 
 
 
@@ -1596,6 +1816,8 @@ li {
     }
 
 
+
+
     .recent-content {
         height: 350px;
     }
@@ -1630,6 +1852,20 @@ li {
         margin-top: 0;
     }
 
+
+
+    .project-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0;
+        row-gap: 30px;
+        padding-bottom: 30px;
+    }
+    .project-imfo {
+        column-gap: 10px;
+    }
 
 }
 
@@ -2000,7 +2236,9 @@ li {
 
 
 
-
+    .section-heading-project h1 {
+        font-size: 36px;
+    }
     .registration-section {
         padding: 0 0 40px;
         display: flex;
@@ -2150,6 +2388,41 @@ li {
         padding: 0 15px;
     }
 
+    .project-imfo {
+        column-gap: 0;
+    }
+    .project-content {
+        padding: 10px 8px;
+    }
+    .project-content h4 {
+        font-size: 20px;
+        line-height: 150%;
+    }
+    .project-content h5 {
+        font-size: 14px;
+    }
+    .project-content p {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+    .project-content p i{
+        font-size: 11px;
+        margin-right: 5px;
+    }
+    .project-imfo img {
+        max-width: 100%;
+        width: 250px;
+        height: 100%;
+    }
+    .project-btn a {
+        width: 100%;
+        max-width: 100%;
+        height: 31px;
+        font-size: 11px;
+        line-height: 13px;
+        padding: 21px 8px;
+    }
+
 }
 
 @media screen and (max-width: 414px) {
@@ -2180,6 +2453,26 @@ li {
         padding: 40px 10px 40px;
         height: 400px;
     }
+
+
+    .project-imfo img {
+        max-width: 100%;
+        width: 140px;
+        height: 100%;
+    }
+
+    .project-region-search input {
+        margin-right: 10px;
+        padding: 8px 5px 8px 10px;
+        font-size: 12px;
+    }
+    .project-region-search-icon {
+        margin-left: 10px;
+    }
+    .select-menu .options {
+        right: 50px;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
