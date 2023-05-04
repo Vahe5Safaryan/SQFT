@@ -534,4 +534,19 @@ for (let i = 0; i < optionMenus.length; i++) {
 
 
 
+//  Scroll To Top Start //
+let btnScrollToTop = document.querySelector(".footer-arrow-top");
 
+btnScrollToTop.addEventListener("click", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollStep = Math.round(scrollTop / 25);
+
+    let scrollInterval = setInterval(function() {
+        if (window.pageYOffset <= 0) {
+            clearInterval(scrollInterval);
+            return;
+        }
+        window.scrollBy(0, -scrollStep);
+    }, 15);
+});
+//  Scroll To Top End //

@@ -1279,7 +1279,7 @@ li {
 .footer-section{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /*align-items: center;*/
     background: #1E1E1E;
     padding: 40px 15px;
     position: relative;
@@ -1332,7 +1332,7 @@ li {
     margin-bottom: 5px;
 }
 .footer-right-menu{
-    padding-left: 155px;
+    padding-left: 85px;
 }
 
 .footer-box-btn p{
@@ -1354,6 +1354,61 @@ li {
     font-size: 14px;
     line-height: 17px
 }
+
+/* Footer 2 Start*/
+
+
+.footer-fight-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-logo-box-2{
+    justify-content: center;
+}
+
+ .footer-logo-box-2 img{
+     width: 140px;
+     max-width: 140px;
+     height: auto;
+}
+
+.footer-left-menu-2 ul{
+    margin-top: 10px;
+}
+.footer-right-menu-2{
+    padding-left: 100px;
+}
+
+.footer-line{
+    background: #09D75C;
+    height: 4px;
+    width: 118px;
+}
+
+.footer-box-social{
+    padding-left: 100px;
+}
+.footer-box-social ul{
+    display: flex;
+    column-gap: 15px;
+    padding-top: 20px;
+}
+.footer-box-social ul li a i{
+    font-size: 28px;
+    color: #fff;
+}
+
+
+
+/* Footer 2 End*/
+
+
+
+
+
+
 /* Footer End */
 
 /*   -----------------   */
@@ -1497,9 +1552,14 @@ li {
 /* Project Start */
 
 /* Project Search Start */
+.project-search{
+    /*padding-bottom: 120px;*/
+}
+
+
 .project-region-search{
     display: flex;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     align-items: center;
     border: 1px solid #E2E2E2;
     border-right: none;
@@ -1517,7 +1577,6 @@ li {
     border: none;
     border-right: 1px solid #E2E2E2;
     background: transparent;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
@@ -1629,6 +1688,7 @@ li {
     border-radius: 10px;
     padding: 10px 30px;
     margin-left: 30px;
+    cursor: pointer;
 }
 .project-region-search-icon i{
     font-size: 21px;
@@ -1637,10 +1697,12 @@ li {
 
 /* Project Search End */
 
-
+.project-section{
+    padding: 100px 0 120px;
+}
 .section-heading-project{
     text-align: center;
-    padding: 100px 0 30px;
+    padding: 0 0 30px 0;
 }
 .section-heading-project h1{
     font-weight: 500;
@@ -1663,7 +1725,7 @@ li {
     display: flex;
     flex-direction: row;
     background: #FFFFFF;
-    box-shadow: 0px 4px 11px rgba(30, 30, 30, 0.1);
+    box-shadow: 0 4px 11px rgba(30, 30, 30, 0.1);
     border-radius: 10px;
     column-gap: 20px;
 }
@@ -1721,6 +1783,80 @@ li {
 }
 /* Project End */
 
+
+/* Project Start */
+.dev-search input{
+    border-right: none;
+}
+
+.developer-boxes{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.developer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.brand-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: -1px 4px 23px rgba(30, 30, 30, 0.08);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 40px 45px;
+    height: 620px;
+    max-height: 100%;
+}
+
+.brand-box img{
+    width: 364px;
+    max-width: 100%;
+    height: 227px;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brand-box-line{
+    width: 178px;
+    height: 4px;
+    background: #1E1E1E;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+}
+
+.brand-box h4{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    color: #09D75C;
+    padding: 30px 0;
+}
+
+.developer-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    row-gap: 16px;
+}
+.developer-btn a{
+    width: 100%;
+    max-width: 330px;
+    height: 77px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* Project End */
 
 
 
@@ -1867,6 +2003,26 @@ li {
         column-gap: 10px;
     }
 
+
+    .brand-box img {
+        width: 364px;
+        max-width: 100%;
+        height: 150px;
+        max-height: 100%;
+    }
+    .brand-box {
+        padding: 15px 15px 15px;
+        height: 460px;
+        max-height: 100%;
+    }
+    .brand-box h4 {
+        font-size: 24px;
+        padding: 30px 0 20px 0;
+    }
+    .developer-btn a {
+        height: 60px;
+    }
+
 }
 
 @media screen and (max-width: 860px) {
@@ -1892,7 +2048,6 @@ li {
         display: none;
     }
 
-
     .none-768 {
         display: none;
     }
@@ -1900,7 +2055,6 @@ li {
     .block-768 {
         display: block !important;
     }
-
 
     .background-header {
         max-height: max-content;
@@ -2138,8 +2292,6 @@ li {
 
 
 
-
-
     .for-developer .what-will-text-ul {
         margin-top: -25px;
         width: 100vw;
@@ -2234,8 +2386,6 @@ li {
         row-gap: 20px;
     }
 
-
-
     .section-heading-project h1 {
         font-size: 36px;
     }
@@ -2259,6 +2409,53 @@ li {
     .reg-tab-btn span {
         margin: 0 10px;
     }
+
+
+    .project-section{
+        padding: 55px 0 50px;
+    }
+
+
+
+    .brand-box img {
+        width: 220px;
+        max-width: 100%;
+        height: 140px;
+        max-height: 100%;
+    }
+    .developer-box {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .brand-box {
+        width: 100%;
+        height: 440px;
+    }
+
+
+
+    /* Footer 2*/
+    .footer-section-2{
+        display: grid;
+        grid-template-columns: auto !important;
+        justify-content: space-between;
+        align-items: normal;
+        row-gap: 20px;
+    }
+    .footer-fight-section {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer-box-social {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .footer-arrow-top-2{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
 
 
 }
@@ -2472,6 +2669,29 @@ li {
     .select-menu .options {
         right: 50px;
     }
+
+    /* Footer 2 */
+    .footer-section-2{
+        justify-content: unset;
+    }
+    .footer-line{
+        margin: auto;
+    }
+    .footer-menu-box-2 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        text-align: center;
+    }
+    .footer-right-menu-2 {
+        padding-left: 0;
+    }
+    .footer-fight-section {
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
 
 }
 
