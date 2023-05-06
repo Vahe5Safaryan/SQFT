@@ -106,11 +106,12 @@ li {
     font-size: 20px;
     line-height: 130.9%;
     text-align: center;
-    margin: auto;
+    /*margin: auto;*/
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 26px 60px;
+    margin-right: 30px;
 }
 
 
@@ -422,6 +423,7 @@ li {
 
 .slider-buttons a:last-child {
     padding: 26px 16px;
+    margin-right: 0;
 }
 
 
@@ -1595,7 +1597,7 @@ li {
 .select-menu .select-btn {
     display: flex;
     height: 55px;
-    max-width: 60px;
+    width: 100%;
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
@@ -1855,9 +1857,230 @@ li {
     font-size: 20px;
     line-height: 24px;
 }
-
 /* Project End */
 
+
+
+/* Developer Learn More */
+.sales-agent-section{
+    padding: 100px 0 120px;
+}
+
+.nav-link.dev-more-menu .logo img{
+    width: 140px;
+    max-width: 140px;
+    height: auto;
+}
+
+.background-header-devmore {
+    background-image: url("../img/bg/bg05.jpg");
+    width: 100%;
+    /*height: 100%;*/
+    max-height: max-content;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.developer-more-section{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 130px 0 220px 0;
+}
+
+.dev-more-content{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 590px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.03);
+    /*filter: blur(1.5px);*/
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.developer-more-section h1{
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 102%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.developer-more-section h1 span{
+    color: #09D75C;
+}
+.developer-more-section p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 30px 0;
+}
+.developer-more-btn{
+    margin: 0;
+}
+
+
+
+
+
+.dev-more-product{
+    justify-content: center;
+}
+.developer-more-prod{
+    padding: 150px 0 120px;
+}
+
+.developer-more-btn-section-bg{
+    background: #1E1E1E;
+    box-shadow: 0px 4px 11px rgba(30, 30, 30, 0.1);
+    padding: 45px 0;
+}
+.developer-more-btn-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 224px;
+}
+.developer-more-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.developer-more-btns p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+    text-align: center;
+}
+.developer-more-btns a{
+    width: 100%;
+    max-width: 292px;
+    height: 68px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.035em;
+}
+
+
+.dev-more-sales-agent-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.dev-more-sales-agent-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+.dev-more-sales-agent-box{
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 11px rgba(30, 30, 30, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+.dev-more-sales-agent-box-dark{
+    background: #1E1E1E;
+    box-shadow: 0 4px 11px rgba(30, 30, 30, 0.1);
+    border-radius: 10px;
+    border: 5px solid rgba(236, 201, 120, 1);
+    border-color: rgba(255, 234, 181, 1) rgba(231, 194, 121, 1) rgba(216, 182, 109, 1);
+}
+.dev-more-sales-agent-img-box{
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    column-gap: 30px;
+
+}
+.dev-more-sales-agent-img-box img{
+    max-width: 125px;
+    border: 4px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.dev-more-sales-agent-text h4{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #09D75C;
+}
+.dev-more-sales-agent-text span{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #8F8F8F;
+    padding-top: 5px;
+}
+.dev-more-sales-agent-content-box{
+    padding-top: 20px;
+}
+.dev-more-sales-agent-content-box ul li {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1E1E1E;
+    display: flex;
+    column-gap: 30px;
+}
+.dev-more-sales-agent-box-dark .dev-more-sales-agent-content-box ul li {
+    color: #fff;
+}
+.dev-more-sales-agent-content-box ul li span{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #8F8F8F;
+}
+.dev-more-sales-agent-box-dark .dev-more-sales-agent-content-box ul li span{
+    color: #BBBBBB;
+}
+
+.dev-more-sales-agent-box-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.dales-more-like-box{
+    background: #fff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    width: 101px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.dales-more-like-box img{
+    max-width: 100%;
+}
+.dales-more-like-box span{
+    width: 2px;
+    height: 20px;
+    border: 1px solid #E2E2E2;
+    margin: 0 15px;
+}
 
 
 
@@ -1869,6 +2092,13 @@ li {
 
     .reviews-section .slick-dots {
         right: 10%;
+    }
+
+    .dev-more-sales-agent-boxes {
+        column-gap: 10px;
+    }
+    .dev-more-sales-agent-box {
+        padding: 30px 15px;
     }
 }
 
@@ -2021,6 +2251,40 @@ li {
     }
     .developer-btn a {
         height: 60px;
+    }
+
+    .developer-more-btn{
+        margin-top: 0;
+    }
+    .developer-more-btn a:nth-child(2) {
+        order: 2;
+    }
+    .developer-more-btn a{
+        width: 190px;
+        font-size: 20px;
+        padding: 26px 10px;
+    }
+    .developer-more-btn a:last-child {
+        padding: 26px 10px;
+    }
+
+
+    .developer-more-btn-section {
+        column-gap: 50px;
+    }
+
+    .dev-more-sales-agent-boxes {
+        column-gap: 0;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .dev-more-sales-agent-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
     }
 
 }
@@ -2457,6 +2721,23 @@ li {
     }
 
 
+    .sales-agent-section{
+        padding: 0 0 50px;
+    }
+    .developer-more-btns p {
+        font-size: 20px;
+    }
+
+
+    .dales-more-like-box{
+        width: 80px;
+        right: 5px;
+        top: 5px;
+        padding: 4px 15px;
+    }
+    .dales-more-like-box span{
+        margin: 0 10px;
+    }
 
 }
 
@@ -2620,6 +2901,58 @@ li {
         padding: 21px 8px;
     }
 
+
+
+    .nav-link.dev-more-menu .logo img {
+        width: 80px;
+        max-width: 80px;
+        height: auto;
+    }
+    .dev-more-content {
+         padding: 20px 15px;
+    }
+    .developer-more-section h1 {
+        font-size: 40px;
+    }
+    .developer-more-section p {
+        font-size: 14px;
+        width: 100%;
+        max-width: 290px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .developer-more-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .developer-more-btn a{
+        width: 290px;
+        max-width: 100%;
+        height: 65px;
+        font-size: 20px;
+        margin-right: 0;
+    }
+    .developer-more-btn a:nth-child(2) {
+        order: 2;
+    }
+    .developer-more-section {
+        padding: 130px 0 180px 0;
+    }
+
+
+    .developer-more-btn-section {
+        flex-direction: column;
+        row-gap: 35px;
+    }
+    .developer-more-btns a {
+        width: 290px;
+        max-width: 290px;
+        height: 68px;
+    }
+
+
+
+
 }
 
 @media screen and (max-width: 414px) {
@@ -2692,6 +3025,38 @@ li {
         margin-top: 10px;
     }
 
+
+    .dev-more-sales-agent-box{
+        padding: 20px 10px;
+    }
+    .dev-more-sales-agent-img-box {
+        column-gap: 20px;
+    }
+    .dev-more-sales-agent-img-box img {
+        max-width: 90px;
+        border: 4px solid #FFFFFF;
+        border-radius: 50%;
+    }
+    .dev-more-sales-agent-text h4 {
+        font-size: 20px;
+    }
+    .dev-more-sales-agent-text h4 {
+        font-size: 20px;
+    }
+    .dev-more-sales-agent-text span {
+        font-size: 11px;
+    }
+    .dev-more-sales-agent-content-box ul li {
+        font-size: 20px;
+        column-gap: 13px;
+    }
+    .dev-more-sales-agent-content-box ul li {
+        font-size: 20px;
+        column-gap: 13px;
+    }
+    .dev-more-sales-agent-content-box ul li span {
+        font-size: 14px;
+    }
 
 }
 
