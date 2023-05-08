@@ -542,15 +542,29 @@ for (let i = 0; i < optionMenus.length; i++) {
 
 
 //  Scroll To Top Start //
+// let btnScrollToTop = document.querySelector(".footer-arrow-top");
+//
+// btnScrollToTop.addEventListener("click", function() {
+//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     let scrollStep = Math.round(scrollTop / 25);
+//
+//     let scrollInterval = setInterval(function() {
+//         if (window.pageYOffset <= 0) {
+//             clearInterval(scrollInterval);
+//             return;
+//         }
+//         window.scrollBy(0, -scrollStep);
+//     }, 15);
+// });
+
+
 let btnScrollToTop = document.querySelector(".footer-arrow-top");
 
 window.addEventListener("scroll", function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop >= 500) { // Проверяем, если scrollTop больше или равен 500
-        btnScrollToTop.style.display = "block"; // Показываем кнопку
+    if (window.pageYOffset >= 500) {
+        btnScrollToTop.style.display = "block";
     } else {
-        btnScrollToTop.style.display = "none"; // Скрываем кнопку
+        btnScrollToTop.style.display = "none";
     }
 });
 

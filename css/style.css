@@ -1395,7 +1395,10 @@ li {
     line-height: 17px
 }
 
-.footer-arrow-top{
+.footer-arrow-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
     display: none;
 }
 
@@ -3351,7 +3354,6 @@ li {
         position: fixed;
         right: 15px;
         top: 15px;
-        display: none;
     }
 
 
