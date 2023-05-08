@@ -133,14 +133,14 @@ $('.plan-monthly').slick({
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 dots: false,
             }
         },
         {
             breakpoint: 630,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 dots: false,
             }
         },
@@ -186,11 +186,10 @@ $('.plan-monthly.slick-slider').on('afterChange', function(event, slick, current
         });
     }
 });
-
-//  ------------------------------ //
-
+//  -------- //
 $('.plan-yearly').slick({
     dots: false,
+    infinite: false,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -224,7 +223,7 @@ $('.plan-yearly').slick({
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: false,
             }
@@ -232,7 +231,7 @@ $('.plan-yearly').slick({
         {
             breakpoint: 630,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: false,
             }
@@ -351,6 +350,7 @@ $('.reviews-section').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                centerPadding: '0px'
             }
         },
         {
@@ -689,3 +689,35 @@ function openTab(evt, tabName) {
 
 // document.getElementById("myElement").addEventListener('touchstart', handleTouchStart, { passive: true });
 // element.addEventListener('touchstart', handleTouchStart, { passive: true });
+
+
+
+function debounce(func, wait = 5, immediate = true) {
+    let timeout;
+    return function() {
+        let context = this, args = arguments;
+        let later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+function checkSlide() {
+    let elements = document.querySelectorAll('.animate-div');
+    elements.forEach(element => {
+        let slideInAt = (window.scrollY + window.innerHeight) - element.offsetHeight / 2;
+        let elementBottom = element.offsetTop + element.offsetHeight;
+        let isHalfShown = slideInAt > element.offsetTop;
+        let isNotScrolledPast = window.scrollY < elementBottom;
+        if (isHalfShown && isNotScrolledPast) {
+            element.classList.add('active');
+        } else {
+            element.classList.remove('active');
+        }
+    });
+}
+window.addEventListener('scroll', debounce(checkSlide));
