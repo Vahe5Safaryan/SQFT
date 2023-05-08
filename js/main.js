@@ -1,3 +1,5 @@
+"use strict";
+
 
 $('.main-slider-text').slick({
     dots: true,
@@ -294,12 +296,17 @@ $('.tab-selector').click((e) => {
 })
 
 
+let reviewsCount = $('.reviews-box').length;
+let slidesToShowCount = 3;
 
+if (reviewsCount < slidesToShowCount) {
+    slidesToShowCount = reviewsCount;
+}
 $('.reviews-section').slick({
     dots: true,
     infinite: false,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: slidesToShowCount,
     slidesToScroll: 1,
     prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
@@ -307,7 +314,7 @@ $('.reviews-section').slick({
         {
             breakpoint: 9999,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: slidesToShowCount,
                 slidesToScroll: 1,
             }
         },
@@ -537,6 +544,16 @@ for (let i = 0; i < optionMenus.length; i++) {
 //  Scroll To Top Start //
 let btnScrollToTop = document.querySelector(".footer-arrow-top");
 
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop >= 500) { // Проверяем, если scrollTop больше или равен 500
+        btnScrollToTop.style.display = "block"; // Показываем кнопку
+    } else {
+        btnScrollToTop.style.display = "none"; // Скрываем кнопку
+    }
+});
+
 btnScrollToTop.addEventListener("click", function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollStep = Math.round(scrollTop / 25);
@@ -548,7 +565,7 @@ btnScrollToTop.addEventListener("click", function() {
         }
         window.scrollBy(0, -scrollStep);
     }, 15);
-});
+})
 //  Scroll To Top End //
 
 
@@ -631,24 +648,30 @@ $('.slider-img.slick-slider').on('afterChange', function(event, slick, currentSl
 
 
 // PDF Project Start //
-function openTab(evt, tabName) {
-    let i, tabcontent, tablinks;
+let tab1 = document.getElementById("tab1");
+tab1 && (tab1.style.display = "flex");
 
-    tabcontent = document.getElementsByClassName("pdf-tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
+let pdfTabs = document.getElementsByClassName("pdf-tab");
+pdfTabs.length > 0 && (pdfTabs[0].className += " active");
+
+function openTab(evt, tabName) {
+    let tabcontent = document.getElementsByClassName("pdf-tab-content");
+    let tablinks = document.getElementsByClassName("pdf-tab");
+
+    for (let i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
-    tablinks = document.getElementsByClassName("pdf-tab");
-    for (i = 0; i < tablinks.length; i++) {
+    for (let i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    document.getElementById(tabName).style.display = "flex";
+    let selectedTab = document.getElementById(tabName);
+    selectedTab && (selectedTab.style.display = "flex");
     evt.currentTarget.className += " active";
 }
 
-document.getElementById("tab1").style.display = "flex";
-document.getElementsByClassName("pdf-tab")[0].className += " active";
-
 // PDF Project Start //
+
+// document.getElementById("myElement").addEventListener('touchstart', handleTouchStart, { passive: true });
+// element.addEventListener('touchstart', handleTouchStart, { passive: true });

@@ -677,7 +677,7 @@ li {
     color: #09D75C;
 }
 .payment-box h5{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -777,8 +777,6 @@ li {
     margin: 0 15px;
 }
 
-
-
 .payment-section .slick-next {
     width: 30px;
     height: 30px;
@@ -790,6 +788,45 @@ li {
     height: 30px;
     left: -5px;
     top: 244px;
+}
+
+
+.pay-business-content h4{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #09D75C;
+    padding: 0 0 14px 0;
+}
+.pay-business-content ul {
+    max-width: 300px;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 17px;
+}
+.pay-business-content ul li{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1E1E1E;
+}
+.pay-business-content ul li span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #09D75C;
+    display: inline-block;
+    width: 75px;
+
+}
+.content-box {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* Payment End */
 
@@ -956,6 +993,7 @@ li {
     width: 125px;
     height: 100%;
     padding: 20px 0;
+    border-radius: 50%;
 }
 
 .reviews-star{
@@ -1355,6 +1393,10 @@ li {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px
+}
+
+.footer-arrow-top{
+    display: none;
 }
 
 /* Footer 2 Start*/
@@ -3141,11 +3183,11 @@ li {
         padding-left: 0;
         padding-top: 20px;
     }
-    .footer-arrow-top-2{
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
+    /*.footer-arrow-top-2{*/
+    /*    position: absolute;*/
+    /*    top: 15px;*/
+    /*    right: 15px;*/
+    /*}*/
 
 
     .sales-agent-section{
@@ -3306,9 +3348,10 @@ li {
     }
 
     .footer-arrow-top{
-        position: absolute;
+        position: fixed;
         right: 15px;
         top: 15px;
+        display: none;
     }
 
 
