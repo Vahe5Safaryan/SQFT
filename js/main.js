@@ -721,3 +721,65 @@ function checkSlide() {
     });
 }
 window.addEventListener('scroll', debounce(checkSlide));
+
+
+
+
+//  Height Box //
+window.addEventListener('load', function() {
+    let divs = document.querySelectorAll('.recent-section .recent-box');
+    let maxHeight = 0;
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].offsetHeight > maxHeight) {
+            maxHeight = divs[i].offsetHeight;
+        }
+    }
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].style.height = maxHeight + 'px';
+    }
+});
+
+
+
+
+// Popup Menu Start //
+const loginBoxes = document.querySelectorAll('.popup-login');
+const btnLogin = document.querySelectorAll('.login');
+const btnLoginMenu = document.querySelectorAll('.login-box-menu');
+const overlay = document.querySelector('.overlay');
+if (btnLogin) {
+    for (let i = 0; i < btnLogin.length; i++) {
+        btnLogin[i].addEventListener('click', function (event) {
+            for (let j = 0; j < loginBoxes.length; j++) {
+                loginBoxes[j].classList.toggle('active-popup');
+                overlay.classList.toggle('d-block');
+            }
+            event.preventDefault();
+        });
+    }
+}
+if (btnLoginMenu) {
+    for (let i = 0; i < btnLoginMenu.length; i++) {
+        btnLoginMenu[i].addEventListener('click', function (event) {
+            for (let j = 0; j < loginBoxes.length; j++) {
+                loginBoxes[j].classList.toggle('active-popup');
+            }
+            overlay.classList.toggle('d-block');
+
+            const icon = btnLoginMenu[i].querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            }
+            event.preventDefault();
+        });
+    }
+}
+overlay.addEventListener('click', function () {
+    for (let j = 0; j < loginBoxes.length; j++) {
+        loginBoxes[j].classList.toggle('active-popup');
+    }
+    overlay.classList.toggle('d-block');
+});
+
+// Popup Menu End //
