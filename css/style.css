@@ -216,7 +216,7 @@ li {
     color: #FFFFFF;
 }
 
-.menu ul li a:focus {
+.menu ul li a:hover {
     color: #00FF57;
 }
 
@@ -237,6 +237,7 @@ li {
     border-radius: 42.5px;
     margin-left: 20px;
     margin-top: 10px;
+    cursor: pointer;
 }
 .login h5{
     font-weight: 500;
@@ -249,6 +250,7 @@ li {
 
 .login-box-menu{
     display: none;
+    cursor: pointer;
 }
 
 .login-menu{
@@ -2551,11 +2553,13 @@ li {
     content: '';
     position: absolute;
     background-image: url("../img/bg/mask01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-position: center;
     z-index: -1;
 }
 
@@ -2777,7 +2781,12 @@ li {
         padding-left: 50px;
     }
     .footer-menu-box-2 {
-        padding-left: 50px;
+        width: 400px;
+        max-width: 100%;
+        padding-left: 0px;
+    }
+    .footer-box-social {
+        padding-left: 30px;
     }
 
 }

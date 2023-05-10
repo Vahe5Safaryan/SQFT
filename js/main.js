@@ -775,11 +775,14 @@ if (btnLoginMenu) {
         });
     }
 }
-overlay.addEventListener('click', function () {
-    for (let j = 0; j < loginBoxes.length; j++) {
-        loginBoxes[j].classList.toggle('active-popup');
-    }
-    overlay.classList.toggle('d-block');
-});
+if(overlay){
+    overlay.addEventListener('click', function () {
+        for (let j = 0; j < loginBoxes.length; j++) {
+            loginBoxes[j].classList.toggle('active-popup');
+        }
+        overlay.classList.toggle('d-block');
+    });
+}
+
 
 // Popup Menu End //
