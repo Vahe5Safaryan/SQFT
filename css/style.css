@@ -178,7 +178,7 @@ li {
 
 .nav-link {
     display: flex ;
-    padding: 0 15px 0 15px;
+    padding: 33px 0 0 0;
     position: relative;
 }
 
@@ -446,7 +446,7 @@ li {
 
 /* Slider Start */
 .slider-section {
-    padding: 80px 0 54px;
+    padding: 85px 0 54px;
     display: flex;
     justify-content: space-between;
 }
