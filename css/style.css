@@ -181,13 +181,20 @@ li {
     padding: 33px 15px 0 15px;
     position: relative;
 }
+.other-nav-link{
+    padding: 30px 0 0 0;
+}
 
 .logo img {
     max-width: 88px;
     height: auto;
     padding: 2px 0 2px 0;
 }
-
+.big-logo img{
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+}
 
 .nav-menu{
     display: flex;
@@ -270,6 +277,106 @@ li {
     margin: 0;
 }
 /* Header End */
+
+/* Under Page Menu Start  --- */
+.under-page-menu-box{
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease;
+    /*overflow-y: auto;*/
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: -295px;
+    flex-direction: column;
+    background: #1E1E1E;
+    padding: 65px 45px;
+    width: 295px;
+    height: 100vh;
+    z-index: 9;
+}
+.under-page-menu-btn{
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    display: block;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    z-index: 9;
+}
+.login-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #09D75C;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 2px
+}
+.login-menu i{
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.under-page-menu-place{
+    padding-top: 45px;
+}
+.under-page-menu-place ul{
+    display: flex;
+    align-items: center;
+}
+.under-page-menu-place ul li a{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.under-page-menu-place ul li a:hover, .under-page-menu-place ul li a:focus{
+    color: #00FF57;
+}
+
+.under-page-menu-place ul span{
+    background: #fff;
+    width: 1px;
+    height: 17px;
+    margin: 0 10px;
+}
+
+.under-page-menu-page{
+    padding-top: 87px;
+}
+.under-page-menu-page ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
+.under-page-menu-page ul li a{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.under-page-menu-page ul li a:hover, .under-page-menu-page ul li a:focus{
+    color: #00FF57;
+}
+
+
+
+
+
+/* Under Page Menu End --- */
+
+
 
 
 /* Login Box Start */
@@ -630,6 +737,7 @@ li {
     justify-content: center;
     align-items: center;
     margin-top: 58px;
+    column-gap: 15px;
 }
 
 .slider-buttons a:last-child {
@@ -986,6 +1094,10 @@ li {
 
 .payment-plan .slick-slide {
     margin: 0 15px;
+}
+
+.payment-section{
+    padding: 0 0 75px 0;
 }
 
 .payment-section .slick-next {
@@ -1716,21 +1828,26 @@ li {
     font-size: 28px;
     color: #fff;
 }
-
-
-
 /* Footer 2 End*/
 
-
-
-
-
-
 /* Footer End */
+
+.indent-box{
+    padding: 60px 0;
+}
+.partner-for-dev{
+    padding: 25px 0 100px;
+}
+.padding-box{
+    padding: 75px 0;
+}
 
 /*   -----------------   */
 
 /* BROKER REGISTRATION */
+.bg-black{
+    background: #1E1E1E;
+}
 .registration-section{
     padding: 0 0 150px;
     display: flex;
@@ -1833,6 +1950,7 @@ li {
 
 .reg-developer{;
     margin-top: 0;
+    border-radius: 10px;
 }
 
 .reg-section-content h4{
@@ -1862,6 +1980,7 @@ li {
     font-size: 10px;
     color: #09D75C;
     padding-right: 20px;
+    margin-top: 5px;
 }
 
 /*   -----------------   */
@@ -2424,6 +2543,11 @@ li {
     margin-right: 0;
 }
 
+/* Learn More Project End */
+
+.block-991{
+    display: none;
+}
 
 /* About Project Start */
 
@@ -2703,22 +2827,148 @@ li {
     color: #1E1E1E;
     text-align: center;
 }
-
-
 /* PDF Project End */
 
 
 
 
+/* Developer Profile Start */
 
-
-
-/* Learn More Project End */
-.block-991{
-    display: none;
+.developer-profile-form-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 105px 0 150px;
 }
 
+.developer-profile-form h4{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 102%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #09D75C;
+}
+
+.developer-profile-reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 11px rgba(30, 30, 30, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 30px 0 35px;
+}
+
+.developer-profile-reg-btn-bordered a{
+    width: 410px;
+    max-height: 100%;
+    height: 85px;
+    border: 1px solid #1E1E1E;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.035em;
+    color: #1E1E1E !important;
+}
+.developer-profile-reg-btn a{
+    width: 410px;
+    max-height: 100%;
+    height: 85px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.035em;
+    color: #FFFFFF;
+}
+.page-for-dev-form-btn{
+    display: flex;
+    flex-direction: column ;
+    row-gap: 10px;
+}
+
+
+
+
+
+
+.developer-profile-form-img img{
+    max-width: 100%;
+    height: 498px;
+    max-height: 100%;
+}
+
+
+.developer-profile-img-btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.developer-profile-reg-btn-bordered{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.developer-profile-img-btns .developer-profile-reg-btn-bordered a{
+    width: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    height: 65px;
+
+    text-align: center;
+    letter-spacing: 0.035em;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130.9%;
+    color: #f00;
+}
+/* Developer Profile End */
+
+
+
+/* Update Availability Start */
+.availability-section-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.availability-box-text {
+    max-width: 600px;
+}
+.availability-box-text p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+
+/* Update Availability End */
+
+
+
+
+
+
+
 /* **** MEDIA  START **** */
+@media screen and (max-width: 1420px) {
+   .padding-logo{
+        padding-left: 5%;
+    }
+}
 @media screen and (max-width: 1260px) {
     .agent-section{
         grid-template-columns: auto auto;
@@ -2739,6 +2989,13 @@ li {
     }
     .dev-more-sales-agent-box {
         padding: 30px 15px;
+    }
+
+
+    .developer-profile-img-btns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -3051,6 +3308,18 @@ li {
     }
 
 
+    .developer-profile-form-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .developer-profile-form-img img {
+        margin-top: 30px;
+    }
+
+
+
 }
 
 @media screen and (max-width: 860px) {
@@ -3080,10 +3349,13 @@ li {
     }
 
 
-
 }
 
 @media screen and (max-width: 768px) {
+    .padding-box{
+        padding: 0;
+    }
+
     .nav-menu {
         justify-content: end;
     }
@@ -3098,11 +3370,28 @@ li {
         display: none;
     }
 
+    .big-logo img{
+        width: 88px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
     /* Popup Menu */
     .header-popup-menu-left{
         display: block;
         padding: 25px 0 20px;
     }
+
+
+    .under-page-menu-btn {
+        top: 15px;
+        left: initial;
+        right: 15px !important;
+        z-index: 10;
+    }
+
+
 
     .none-768 {
         display: none;
@@ -3222,9 +3511,12 @@ li {
         margin: 30px 0 15px;
     }
 
+    .payment-section {
+        padding: 0;
+    }
 
     .what-will {
-        margin-top: 50px;
+        /*margin-top: 50px;*/
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -3239,6 +3531,7 @@ li {
         margin-left: 0;
         margin-top: -190px;
     }
+
 
 
 
@@ -3493,7 +3786,7 @@ li {
         font-size: 36px;
     }
     .registration-section {
-        padding: 0 0 40px;
+        padding: 0 0 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -3600,6 +3893,22 @@ li {
         justify-content: center;
         column-gap: 40px;
     }
+
+    .partner-for-dev {
+        padding: 20px 0 50px;
+    }
+
+    .indent-box {
+        padding: 25px 0;
+    }
+
+
+
+
+
+
+
+
 
 }
 
@@ -3916,10 +4225,85 @@ li {
         padding: 0;
     }
 
+    .broker-reg-btn a{
+        max-width: 270px;
+    }
+
+
+
+    .developer-profile-reg {
+        padding: 20px 0 0 0 ;
+    }
+    .developer-profile-reg-btn-bordered a {
+        width: 270px;
+        max-height: 100%;
+        height: 65px;
+        font-size: 14px;
+        line-height: 17px
+    }
+    .developer-profile-reg-btn a {
+        width: 270px;
+        max-height: 100%;
+        height: 65px;
+        font-size: 14px;
+        line-height: 17px
+    }
+    .developer-profile-form-img img {
+        max-width: 100%;
+        height: 300px;
+        max-height: 100%;
+    }
+
+    .developer-profile-form-img{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .developer-profile-img-btns{
+        padding-bottom: 30px;
+    }
+
+
+    .developer-profile-form-img img {
+        margin-top: 0;
+    }
 
 }
 
 @media screen and (max-width: 414px) {
+    .under-page-menu-box {
+        top: -440px;
+        left: 0;
+        flex-direction: column;
+        background: #1E1E1E;
+        padding: 18px 15px;
+        width: 100%;
+        max-width: 100%;
+        height: 440px;
+        max-height: 100%;
+        overflow-x: auto;
+    }
+
+    .under-page-menu-place {
+        padding-top: 30px;
+        justify-content: center;
+        display: flex;
+    }
+    .under-page-menu-page {
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .under-page-menu-page ul {
+        row-gap: 20px;
+    }
+    .under-page-menu-page ul li a {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+
+
     .reviews-section .slick-prev {
         right: 82%;
     }

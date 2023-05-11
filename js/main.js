@@ -783,6 +783,173 @@ if(overlay){
         overlay.classList.toggle('d-block');
     });
 }
-
-
 // Popup Menu End //
+
+
+
+
+
+// Under Page Menu Start //
+// const underPageMenuBox = document.querySelector('.under-page-menu-box');
+// const underPageMenuBtn = document.querySelector('.under-page-menu-btn');
+// const headerLogo = document.querySelector('.logo');
+//
+// if (underPageMenuBtn) {
+//     let isOpen = false;
+//
+//     underPageMenuBtn.addEventListener('click', function (event) {
+//         if (isOpen) {
+//             setTimeout(function() {
+//                 underPageMenuBox.style.left = "-295px";
+//                 headerLogo.style.opacity = "1";
+//             }, 0);
+//         } else {
+//             underPageMenuBox.style.left = "0px";
+//             headerLogo.style.opacity = "0";
+//         }
+//         isOpen = !isOpen;
+//         event.preventDefault();
+//
+//         const icon = underPageMenuBtn.querySelector('i');
+//         if (icon) {
+//             icon.classList.toggle('fa-bars');
+//             icon.classList.toggle('fa-xmark');
+//         }
+//     });
+//
+// }
+
+
+
+
+
+// const underPageMenuBox = document.querySelector('.under-page-menu-box');
+// const underPageMenuBtn = document.querySelector('.under-page-menu-btn');
+// const headerLogo = document.querySelector('.logo');
+//
+// if (underPageMenuBtn) {
+//     let isOpen = false;
+//
+//     underPageMenuBtn.addEventListener('click', function (event) {
+//         if (isOpen) {
+//             setTimeout(function() {
+//                 if (window.innerWidth <= 414) {
+//                     underPageMenuBox.style.top = "-440px";
+//                 } else {
+//                     underPageMenuBox.style.left = "-295px";
+//                 }
+//                 headerLogo.style.opacity = "1";
+//             }, 0);
+//         } else {
+//             if (window.innerWidth <= 414) {
+//                 underPageMenuBox.style.top = "0";
+//             } else {
+//                 underPageMenuBox.style.left = "0";
+//             }
+//             headerLogo.style.opacity = "0";
+//         }
+//         isOpen = !isOpen;
+//         event.preventDefault();
+//
+//         const icon = underPageMenuBtn.querySelector('i');
+//         if (icon) {
+//             icon.classList.toggle('fa-bars');
+//             icon.classList.toggle('fa-xmark');
+//         }
+//     });
+//
+//     window.addEventListener('resize', function () {
+//         if (!isOpen) return;
+//         if (window.innerWidth <= 414) {
+//             underPageMenuBox.style.top = isOpen ? "0" : "-440px";
+//             underPageMenuBox.style.left = "0";
+//         } else {
+//             underPageMenuBox.style.top = isOpen ? "0" : "-440px";
+//             underPageMenuBox.style.left = isOpen ? "-295px" : "0";
+//         }
+//     });
+// }
+
+
+
+
+
+
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const underPageMenuBox = document.querySelector('.under-page-menu-box');
+const underPageMenuBtn = document.querySelector('.under-page-menu-btn');
+const headerLogo = document.querySelector('.logo');
+
+if (underPageMenuBtn) {
+    let isOpen = false;
+
+    underPageMenuBtn.addEventListener('click', function (event) {
+        if (isOpen) {
+            setTimeout(function() {
+                if (window.innerWidth <= 414) {
+                    underPageMenuBox.style.top = "-440px";
+                    underPageMenuBtn.style.position = "absolute";
+                    underPageMenuBtn.style.right = "15px";
+                }
+                else if (window.innerWidth <= 768){
+                    underPageMenuBox.style.left = "-295px";
+                    underPageMenuBtn.style.position = "absolute";
+                    underPageMenuBtn.style.right = "15px";
+                }
+                else {
+                    underPageMenuBox.style.left = "-295px";
+                    underPageMenuBtn.style.position = "absolute";
+                    underPageMenuBtn.style.left = "15px";
+                }
+                headerLogo.style.opacity = "1";
+            }, 0);
+        }
+        else {
+            if (window.innerWidth <= 414) {
+                underPageMenuBox.style.top = "0";
+                underPageMenuBtn.style.position = "fixed";
+                underPageMenuBtn.style.right = "15px";
+            }
+            else if (window.innerWidth <= 768){
+                underPageMenuBox.style.left = "0";
+                underPageMenuBtn.style.position = "fixed";
+                underPageMenuBtn.style.right = "15px";
+            }
+            else {
+                underPageMenuBox.style.left = "0";
+                underPageMenuBtn.style.position = "fixed";
+                underPageMenuBtn.style.left = "303px";
+            }
+            headerLogo.style.opacity = "0";
+        }
+
+        isOpen = !isOpen;
+        event.preventDefault();
+        const icon = underPageMenuBtn.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+    });
+
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+// Under Page Menu End //

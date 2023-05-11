@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQFT</title>
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="background-header">
+    <header>
+        <div class="container">
+            <nav class="nav-link">
+                <div class="logo">
+                    <img src="img/logo/logo1.svg" alt="">
+                </div>
+                <div class="nav-menu">
+
+
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">For brokers</a></li>
+                            <li><a href="#">For developers</a></li>
+                            <li><a href="#">For sales managers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-menu-right">
+                        <div class="menu right-menu">
+                            <ul>
+                                <li><a href="#">Prices</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">For developers</a></li>
+                            </ul>
+                        </div>
+                        <div class="login-box">
+                            <div class="login">
+                                <h5>Login</h5>
+                            </div>
+                        </div>
+
+                        <div class="login-box-menu">
+                            <div class="login-menu">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popup Menu Start -->
+                <div class="popup-login ">
+                    <div class="header-menu-in-popup">
+                        <div class="header-popup-menu-left">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">For brokers</a></li>
+                                <li><a href="#">For developers</a></li>
+                                <li><a href="#">For sales managers</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-popup-menu-right">
+                            <ul>
+                                <li><a href="#">Prices</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">For developers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4> <span>login</span> or register</h4>
+                    <p>login to your personal account</p>
+                    <div class="popup-login-form">
+                        <form class="form-input">
+                            <input type="text" required="required" placeholder="Emaikl">
+                            <input type="password" required="required" placeholder="Password">
+                            <div class="popup-login-btn">
+                                <a href="" class="btn btn-primary">Send</a>
+                            </div>
+                        </form>
+                        <div class="remember-box">
+                            <label for="remember-checkbox">
+                                <input type="checkbox" id="remember-checkbox" name="remember"> Remember me
+                            </label>
+                            <a href="">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="popup-login-under-btn">
+                        <h4><span>login</span> or register</h4>
+                        <a href="" class="btn-transparent">Become A Free Member</a>
+                    </div>
+                </div>
+                <!-- Popup Menu End -->
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="slider-section">
+            <div class="header-box-text">
+                <div class="header-text">
+                    <h1>Have <span>our <br> technology</span> <br> by your side!</h1>
+                </div>
+                <div class="main-slider-text">
+                    <div class="slider-box">
+                        <h4>More than</h4>
+                        <h3>2 000+</h3>
+                        <p>apartment presented</p>
+                    </div>
+                    <div class="slider-box">
+                        <h4>Available <br> apartment</h4>
+                        <p>from all leading developers</p>
+                    </div>
+                    <div class="slider-box">
+                        <h4>Weekly updates!</h4>
+                        <p>apartment databases</p>
+                    </div>
+                    <div class="slider-box">
+                        <h4>Functions</h4>
+                        <p>Sort, filter, and compare apartment</p>
+                    </div>
+                    <div class="slider-box">
+                        <h4>In one place</h4>
+                        <p>All promotional and marketing <br> material available in one place</p>
+                    </div>
+                    <div class="slider-box">
+                        <h4>First informative</h4>
+                        <p>messages for clients generated</p>
+                    </div>
+                    <div class="slider-box">
+                        <h4>Use technology</h4>
+                        <p>to compete with the biggest <br> agencies out there!</p>
+                    </div>
+                </div>
+                <div class="slider-button">
+                    <a href="" class="btn btn-primary">How it works</a>
+                </div>
+            </div>
+
+            <div class="header-video">
+                <div class="image-wrapper">
+                    <button id="playButton"><i class="fa-solid fa-play"></i></button>
+                    <video id="myVideo" preload="metadata" muted="muted">
+                        <source src="video/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- -->
+
+<section>
+    <div class="container-fluid padding-box">
+        <div class="what-will for-developer ">
+            <div class="section-heading section-heading-what-will block-768">
+                <h2> What will <span>you have</span></h2>
+            </div>
+            <div class="what-will-img">
+                <img src="img/ing/img02.jpg" alt="">
+            </div>
+
+            <div class="what-will-text">
+                <div class="section-heading section-heading-what-will none-768">
+                    <h2>for <span>developers</span></h2>
+                </div>
+                <div class="what-will-text-ul">
+                    <ul>
+                        <li>We are extremely grateful to our developers, who make Dubai the new capital of the world
+                        </li>
+                        <li>We are extremely grateful for you wishing to register with us</li>
+                        <li>You will have access to your own profile, where you will be able to upload availability, and
+                            create new pages for your new project, and make them known to all our brokers!
+                        </li>
+                    </ul>
+                </div>
+                <div class="what-will-text-btn">
+                    <a href="" class="btn btn-primary">Register as a Developer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-will for-developer for-developer-revers">
+            <div class="section-heading section-heading-what-will block-768">
+                <h2> For Sales <span>Managers</span></h2>
+            </div>
+            <div class="what-will-img">
+                <img src="img/ing/img03.jpg" alt="">
+            </div>
+
+            <div class="what-will-text">
+                <div class="section-heading section-heading-what-will none-768">
+                    <h2>For Sales <span>Managers</span></h2>
+                </div>
+                <div class="what-will-text-ul">
+                    <ul>
+                        <li>You can register under your name absolutely for free, and attach your account to the
+                            developer you are working with
+                        </li>
+                        <li>Your profile will be shown to brokers as a “contact” for the developers apartments</li>
+                        <li>You can also push yourself to the top of the list, to always be a first row of contacts!
+                        </li>
+                    </ul>
+                </div>
+                <div class="what-will-text-btn">
+                    <a href="" class="btn btn-primary">Register as a Sales Manager</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- What Will End -->
+
+
+
+<!-- Partner Start -->
+<section>
+    <div class="container partner-for-dev">
+        <div class="section-heading partner-section-heading">
+            <h2>our <span> partners </span></h2>
+        </div>
+        <div class="partner-section">
+            <div class="partner-box">
+                <img src="img/partner/image11.svg" alt="">
+            </div>
+            <div class="partner-box">
+                <img src="img/partner/image12.svg" alt="">
+            </div>
+            <div class="partner-box">
+                <img src="img/partner/image13.svg" alt="">
+            </div>
+            <div class="partner-box">
+                <img src="img/partner/image14.svg" alt="">
+            </div>
+            <div class="partner-box">
+                <img src="img/partner/image16.svg" alt="">
+            </div>
+            <div class="partner-box">
+                <img src="img/partner/image17.svg" alt="">
+            </div>
+            <div class="partner-box">
+                <img src="img/partner/image18.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Partner End -->
+
+
+<section>
+    <div class="container-fluid bg-black">
+        <div class="container ">
+            <div class="section-heading registration-section-heading">
+                <h2>registration <span>for Developer</span></h2>
+            </div>
+            <div class="registration-section ">
+                <div class="registration-box">
+                    <div class="reg-box_1 active">
+                        <form>
+                            <input type="text" name="developer" placeholder="Developer*" required>
+                            <input type="text" name="name" placeholder="Name*" required>
+                            <input type="text" name="surname" placeholder="Surname" required>
+                            <input type="text" name="position" placeholder="Position*" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phoneNumber" placeholder="Phone number">
+                            <input type="password" name="password" placeholder="Password" required>
+                            <input type="password" name="confirmPassword" placeholder="Repeat Password" required>
+                            <p>*required fields</p>
+                            <div class="broker-reg-btn">
+                                <a href="" class="btn btn-primary">Register</a>
+                            </div>
+                            <div class="reg-form-under-text">
+                                <p>By clicking on the button, you consent to the processing of your personal
+                                    data</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="reg-section-content reg-developer">
+                    <h4>What you get:</h4>
+                    <div class="reg-get-text">
+                        <ul>
+                            <li><i class="fa-solid fa-circle"></i>Access to the full data</li>
+                            <li><i class="fa-solid fa-circle"></i>Access to all promotional material</li>
+                            <li><i class="fa-solid fa-circle"></i>First client messages</li>
+                            <li><i class="fa-solid fa-circle"></i>Comparison tool</li>
+                            <li><i class="fa-solid fa-circle"></i>Saved most liked apartments</li>
+                            <li><i class="fa-solid fa-circle"></i>Generate offers (coming soon)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid indent-box"></div>
+
+
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer-bg">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="footer-section">
+                    <div class="footer-logo-box">
+                        <img src="img/logo/logo1.svg" alt="">
+                        <div class="footer-logo-box-content">
+                            <h6>© 2023 SQFT</h6>
+                            <p>Have our technology by your side!</p>
+                            <a href="#">Terms & Privacy policy</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-box">
+                        <div class="footer-left-menu">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">For brokers </a></li>
+                                <li><a href="#">For developers </a></li>
+                                <li><a href="#">For sales managers </a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-left-menu footer-right-menu">
+                            <ul>
+                                <li><a href="#">Prices</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Reviews</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-box-btn">
+                        <p>Try our tool and become
+                            the best version of yourself!</p>
+                        <div class="footer-btn">
+                            <a href="" class="btn btn-primary">Try for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<!--Scroll To Top  -->
+<div class="footer-arrow-top">
+    <img src="img/icon/arrowtop.png" alt="">
+</div>
+
+<div class="overlay"></div>
+
+
+
+
+<!-- Slick -->
+<script src="./js/slick.min.js"></script>
+
+<!-- Main JS -->
+<script src="./js/main.js"></script>
+
+<!-- Script End-->
+</body>
+</html>
