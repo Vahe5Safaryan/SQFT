@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQFT</title>
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<div class="under-page-menu-btn">
+    <div class="login-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</div>
+<div class="under-page-menu-box">
+    <div class="under-page-menu-logo big-logo">
+        <img src="img/logo/logo1.svg" alt="">
+    </div>
+    <div class="under-page-menu-place">
+        <ul>
+            <li><a href="#">UAE</a></li>
+            <span></span>
+            <li><a href="#">Europe</a></li>
+            <span></span>
+            <li><a href="#">UK</a></li>
+        </ul>
+    </div>
+    <div class="under-page-menu-page">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">SQFT Table</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Header Start-->
+<header>
+    <div class="container-fluid">
+        <div class="container">
+            <nav class="nav-link other-nav-link">
+                <div class="logo big-logo padding-logo">
+                    <img src="img/logo/logo2.svg" alt="">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- Header End-->
+
+
+<!-- Home Buttons Start-->
+<!-- btns section Start -->
+<section>
+    <div class="home-button-bg">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="home-btns">
+                    <div class="home-btn">
+                        <a href="" class="btn-transparent">News</a>
+                    </div>
+                    <div class="home-btn">
+                        <a href="" class="btn-transparent">Liked Apartments</a>
+                    </div>
+                    <div class="home-btn">
+                        <a href="" class="btn-transparent">Comparison Tool</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- btns section End -->
+
+
+<!-- Welcome slider Start -->
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="section-heading home-heading">
+                <h2>Welcome <span>Ivan Tkachev</span></h2>
+            </div>
+            <div class="home-head">
+                <h4>news</h4>
+            </div>
+            <div class="news-section">
+                <div class="news-box">
+                    <div>
+                        <img src="img/ing/news1.png" alt="">
+                        <div class="news-box-text">
+                            <h4>Title of the article Title of the article</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-box">
+                    <div>
+                        <img src="img/ing/news2.png" alt="">
+                        <div class="news-box-text">
+                            <h4>Title of the article</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-box">
+                    <div>
+                        <img src="img/ing/news3.png" alt="">
+                        <div class="news-box-text">
+                            <h4>Title of the article</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-box">
+                    <div>
+                        <img src="img/ing/news4.png" alt="">
+                        <div class="news-box-text">
+                            <h4>Title of the article</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-box">
+                    <div>
+                        <img src="img/ing/news3.png" alt="">
+                        <div class="news-box-text">
+                            <h4>Title of the article</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Welcome slider End -->
+
+
+<!-- Apartments Start -->
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="section-heading home-heading">
+                <h2>Liked Apartments </h2>
+            </div>
+
+            <div class="apartments-section">
+                <div class="apartments-filter-box">
+
+                    <div class="apartments-filter-box-language">
+                        <div class="filter-box-language-sqft">
+                            <h4>Sqft</h4>
+                            <span></span>
+                            <h5 class="pseudoinput"></h5>
+                        </div>
+
+                        <div class="language-box">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <img src="img/icon/Aed.png" alt="">
+                                    <span class="option-text sBtn-text">Aed</span>
+                                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <img src="img/icon/Aed.png" alt="">
+                                        <span class="option-text">Aed</span>
+                                    </li>
+                                    <li class="option">
+                                        <img src="img/icon/USD.png" alt="">
+                                        <span class="option-text">Usd</span>
+                                    </li>
+                                    <li class="option">
+                                        <img src="img/icon/EUR.png" alt="">
+                                        <span class="option-text">Eur</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-box-show">
+                        <div class="language-box">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="option-text sBtn-text">Developer</span>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Developer 1</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer2</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer3</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer3</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="language-box">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="option-text sBtn-text">Developer</span>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Developer 1</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer2</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer3</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="language-box">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="option-text sBtn-text">Developer</span>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Developer 1</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer2</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text">Developer3</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-box-hide">
+                        <div class="filter-box-show">
+                            <div class="language-box">
+                                <div class="select-menu">
+                                    <div class="select-btn">
+                                        <span class="option-text sBtn-text">Developer</span>
+                                        <i class="fa-solid fa-sort-down"></i>
+                                    </div>
+                                    <ul class="options">
+                                        <li class="option">
+                                            <span class="option-text">Developer 1</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer2</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer3</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="language-box">
+                                <div class="select-menu">
+                                    <div class="select-btn">
+                                        <span class="option-text sBtn-text">Developer</span>
+                                        <i class="fa-solid fa-sort-down"></i>
+                                    </div>
+                                    <ul class="options">
+                                        <li class="option">
+                                            <span class="option-text">Developer 1</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer2</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="language-box">
+                                <div class="select-menu">
+                                    <div class="select-btn">
+                                        <span class="option-text sBtn-text">Developer</span>
+                                        <i class="fa-solid fa-sort-down"></i>
+                                    </div>
+                                    <ul class="options">
+                                        <li class="option">
+                                            <span class="option-text">Developer 1</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer2</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-box-show">
+                            <div class="language-box">
+                                <div class="select-menu">
+                                    <div class="select-btn">
+                                        <span class="option-text sBtn-text">Developer</span>
+                                        <i class="fa-solid fa-sort-down"></i>
+                                    </div>
+                                    <ul class="options">
+                                        <li class="option">
+                                            <span class="option-text">Developer 1</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer2</span>
+                                        </li>
+                                        <li class="option">
+                                            <span class="option-text">Developer3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="language-box">
+                                <div></div>
+                                <div>
+                                    <div class="card">
+                                        <h4>Price (AED)</h4>
+                                        <div class="price-content">
+                                            <div>
+                                                <p id="price-min-value">0</p>
+                                            </div>
+                                            <div class="max-value">
+                                                <p id="price-max-value">8,000,000+</p>
+                                            </div>
+                                        </div>
+                                        <div class="range-slider">
+                                            <input type="range" id="price-min-price" value="0" min="0" max="8000000"
+                                                   step="1000">
+                                            <input type="range" id="price-max-price" value="8000000" min="0"
+                                                   max="8000000" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="language-box">
+                                <div>
+                                </div>
+                                <div>
+                                    <div class="card">
+                                        <h4>Area (Sqft)</h4>
+                                        <div class="price-content">
+                                            <div>
+                                                <p id="area-min-value">0</p>
+                                            </div>
+                                            <div class="max-value">
+                                                <p id="area-max-value">8,000,000+</p>
+                                            </div>
+                                        </div>
+                                        <div class="range-slider">
+                                            <input type="range" id="area-min-price" value="0" min="0" max="8000000"
+                                                   step="1000">
+                                            <input type="range" id="area-max-price" value="8000000" min="0"
+                                                   max="8000000" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="apartments-btn-box">
+                    <div class="app-show-hide-btn">
+                        <a href="" class="btn btn-primary">More filters</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Apartments End -->
+
+
+<!-- Table result Start-->
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="table-section">
+                <table class="table-filter">
+                    <tr>
+                        <th>
+                            <h5>Compare</h5>
+                        </th>
+                        <th>
+                            <h5>Favourites</h5>
+                        </th>
+                        <th>
+                            <h5>Developer</h5>
+                        </th>
+                        <th>
+                            <h5>Project</h5>
+                        </th>
+                        <th>
+                            <h5>Unit #</h5>
+                        </th>
+                        <th>
+                            <h5>Bedrooms</h5>
+                        </th>
+                        <th>
+                            <h5>Size (sqft)</h5>
+                        </th>
+                        <th>
+                            <h5>Price (AED)</h5>
+                        </th>
+                        <th>
+                            <h5>View </h5>
+                        </th>
+                        <th>
+                            <h5>Location</h5>
+                        </th>
+                        <th>
+                            <h5>Handover</h5>
+                        </th>
+                        <th>
+                            <h5>Learn more</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </td>
+                        <td><h6> Azizi</h6></td>
+                        <td><h6> Azizi fawad</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> Studio</h6></td>
+                        <td><h6> 358.0</h6></td>
+                        <td><h6> dh993,000.00</h6></td>
+                        <td><h6> NEIGHBOUR </h6></td>
+                        <td><h6> Al Jaddaf</h6></td>
+                        <td><h6> Completed</h6></td>
+                        <td>
+                            <div class="table-home">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </td>
+                        <td><h6> Binghatti</h6></td>
+                        <td><h6> Binghatti nova</h6></td>
+                        <td><h6> BNOV-107</h6></td>
+                        <td><h6> 1 bedroom</h6></td>
+                        <td><h6> 839.1</h6></td>
+                        <td><h6> dh743,750.00</h6></td>
+                        <td><h6> Mohamed Bin Zayed Road side view </h6></td>
+                        <td><h6> JVC</h6></td>
+                        <td><h6> Q3 2023</h6></td>
+                        <td>
+                            <div class="table-home">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </td>
+                        <td><h6> Azizi</h6></td>
+                        <td><h6> Azizi fawad</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> Studio</h6></td>
+                        <td><h6> 358.0</h6></td>
+                        <td><h6> dh993,000.00</h6></td>
+                        <td><h6> NEIGHBOUR </h6></td>
+                        <td><h6> Al Jaddaf</h6></td>
+                        <td><h6> Completed</h6></td>
+                        <td>
+                            <div class="table-home">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Table 2 -->
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="section-heading home-heading">
+                <h2>Comparison Tool</h2>
+            </div>
+            <div class="table-section table-section-2">
+
+                <table class="table-filter">
+                    <tr>
+                        <th>
+                            <h5>Compare</h5>
+                        </th>
+                        <th>
+                            <h5>Developer</h5>
+                        </th>
+                        <th>
+                            <h5>Project</h5>
+                        </th>
+                        <th>
+                            <h5>Unit #</h5>
+                        </th>
+                        <th>
+                            <h5>Bedrooms</h5>
+                        </th>
+                        <th>
+                            <h5>Size (sqft)</h5>
+                        </th>
+                        <th>
+                            <h5>Price (AED)</h5>
+                        </th>
+                        <th>
+                            <h5>View </h5>
+                        </th>
+                        <th>
+                            <h5>Location</h5>
+                        </th>
+                        <th>
+                            <h5>Handover</h5>
+                        </th>
+                        <th>
+                            <h5>Learn more</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </td>
+                        <td><h6> Azizi</h6></td>
+                        <td><h6> Azizi fawad</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> Studio</h6></td>
+                        <td><h6> 358.0</h6></td>
+                        <td><h6> dh993,000.00</h6></td>
+                        <td><h6> NEIGHBOUR </h6></td>
+                        <td><h6> Al Jaddaf</h6></td>
+                        <td><h6> Completed</h6></td>
+                        <td>
+                            <div class="table-home">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </td>
+                        <td><h6> Binghatti</h6></td>
+                        <td><h6> Binghatti nova</h6></td>
+                        <td><h6> BNOV-107</h6></td>
+                        <td><h6> 1 bedroom</h6></td>
+                        <td><h6> 839.1</h6></td>
+                        <td><h6> dh743,750.00</h6></td>
+                        <td><h6> Mohamed Bin Zayed Road side view </h6></td>
+                        <td><h6> JVC</h6></td>
+                        <td><h6> Q3 2023</h6></td>
+                        <td>
+                            <div class="table-home">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </td>
+                        <td><h6> Azizi</h6></td>
+                        <td><h6> Azizi fawad</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> Studio</h6></td>
+                        <td><h6> 358.0</h6></td>
+                        <td><h6> dh993,000.00</h6></td>
+                        <td><h6> NEIGHBOUR </h6></td>
+                        <td><h6> Al Jaddaf</h6></td>
+                        <td><h6> Completed</h6></td>
+                        <td>
+                            <div class="table-home">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Table result End-->
+
+
+<!-- Chart Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="chasrt">
+            <div class="chart-section">
+                <div class="chart-head">
+                    <h4>Factual Investment</h4>
+                </div>
+                <div class="width-chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-section">
+                <div class="chart-head">
+                    <h4>Area/Profitt</h4>
+                </div>
+                <div class="width-chart">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chart End -->
+
+<!-- Project Table Start -->
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="table-section table-section-3">
+                <table class="table-filter">
+                    <tr>
+                        <th>
+                            <h5>Project</h5>
+                        </th>
+                        <th>
+                            <h5>Unit #</h5>
+                        </th>
+                        <th>
+                            <h5>Expected Income <br >from rent
+                            </h5>
+                        </th>
+                        <th>
+                            <h5>Expected growth till <br>project handover
+                            </h5>
+                        </th>
+                        <th>
+                            <h5>Service payments <br>(per year)
+                            </h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><h6> Azizi fawad</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> 00000</h6></td>
+                        <td><h6> 00000</h6></td>
+                        <td><h6> 00000</h6></td>
+                    </tr>
+                    <tr>
+                        <td><h6> Binghatti nova</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> 00000</h6></td>
+                        <td><h6> 00000</h6></td>
+                        <td><h6> 00000</h6></td>
+                    </tr>
+                    <tr>
+                        <td><h6> Binghatti nova</h6></td>
+                        <td><h6> 209</h6></td>
+                        <td><h6> 00000</h6></td>
+                        <td><h6> 00000</h6></td>
+                        <td><h6> 00000</h6></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Project Table End -->
+
+
+
+
+<!-- Chart Start 2-->
+<div class="container-fluid">
+    <div class="container">
+        <div class="chasrt chart-copy">
+            <div class="chart-section">
+                <div class="chart-head">
+                    <h4>Expected Income from rent</h4>
+                </div>
+                <div class="width-chart">
+                    <canvas id="myChart3"></canvas>
+                </div>
+            </div>
+            <div class="chart-section">
+                <div class="chart-head">
+                    <h4>Expected growth till project handover</h4>
+                </div>
+                <div class="width-chart">
+                    <canvas id="myChart4"></canvas>
+                </div>
+            </div>
+            <div class="chart-section">
+                <div class="chart-head">
+                    <h4>Service payments (per year)</h4>
+                </div>
+                <div class="width-chart">
+                    <canvas id="myChart5"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-copy-btn">
+            <div class="chart-btn">
+                <a href="" class="btn btn-primary">download PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chart End 2-->
+
+
+
+
+
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer-bg">
+        <div class="container">
+            <div class="footer-section footer-section-2">
+                <div class="footer-logo-box footer-logo-box-2">
+                    <img src="img/logo/logo1.svg" alt="">
+                </div>
+                <div class="footer-fight-section">
+                    <div class="footer-menu-box footer-menu-box-2">
+                        <div class="footer-left-menu footer-left-menu-2">
+                            <div class="footer-line"></div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Developers</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Data</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-left-menu footer-left-menu-2 footer-right-menu footer-right-menu-2">
+                            <div class="footer-line"></div>
+                            <ul>
+                                <li><a href="#">info@mysite.com</a></li>
+                                <li><a href="#">info@mysite.com</a></li>
+                                <li><a href="#">Tel: 123-456-7890</a></li>
+                                <li><a href="#">500 Terry Francois Street</a></li>
+                                <li><a href="#">San Francisco, CA 94158</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-box-social">
+                        <div class="footer-line"></div>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-arrow-top footer-arrow-top-2">
+                    <img src="img/icon/arrowtop.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer End -->
+
+<!--Scroll To Top  -->
+<div class="footer-arrow-top">
+    <img src="img/icon/arrowtop.png" alt="">
+</div>
+
+<div class="overlay"></div>
+
+
+<!-- Dev profile Replace Modal Start-->
+<div class="modal-position">
+    <div class="dev-profile-replace-modal modal-box">
+        <h5>Why would you like to report this agent?</h5>
+        <textarea type="textarea" placeholder="Your comment"></textarea>
+        <div class="dev-profile-replace-modal-btn">
+            <a href="" class="btn btn-primary">Send</a>
+        </div>
+        <div class="modal-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+</div>
+<!-- Dev profile Replace Modal End-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Slick -->
+<script src="./js/slick.min.js"></script>
+
+<script src="assets/js/rangeslider.js"></script> <!-- price -->
+
+<!-- Main JS -->
+<script src="./js/main.js"></script>
+
+<!-- Script End-->
+</body>
+</html>

@@ -66,6 +66,10 @@ if (video){
 $('.partner-section').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 1000,
+    speed: 300,
     prevArrow: false,
     nextArrow: false,
     variableWidth: true,
@@ -801,8 +805,6 @@ if (fileInput){
 
 
 
-
-
 // Dev profile Delete Modal Start //
 const devProfileModal = document.querySelector('.dev-profile-modal');
 const replaceModalBtn = document.querySelectorAll('.replace-modal');
@@ -851,6 +853,636 @@ if (salesMoreReportBtn) {
         });
     }
 }
-
-
 // Dev profile Delete Modal End //
+
+
+//  Broker Modal //
+const changePass = document.querySelector('.change-pass');
+if (changePass) {
+        changePass.addEventListener('click', function (event) {
+            devProfileModal.classList.toggle('active-modal');
+            overlay.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+}
+
+
+//  Shared Access Start //
+
+document.addEventListener('DOMContentLoaded', function() {
+    let addAccesses = document.querySelectorAll('.add-access');
+
+    function handleAddAccessClick() {
+
+        let accessSection;
+        if (window.innerWidth <= 991) {
+            accessSection = document.querySelector('.access-section-small');
+        } else {
+            accessSection = document.querySelector('.access-section');
+        }
+
+        let clonedSection = accessSection.cloneNode(true);
+        let gridContainer = document.querySelector(
+            window.innerWidth <= 991 ? '.grid-container-small' : '.grid-container'
+        );
+        let lastAccessNumber = clonedSection.querySelector('.access-number h3');
+        if (lastAccessNumber) {
+            lastAccessNumber.textContent = (gridContainer.querySelectorAll('.access-number h3').length + 1).toString();
+        }
+
+
+        console.log(gridContainer)
+        gridContainer.appendChild(clonedSection);
+
+        let accessDeleteButtons = clonedSection.querySelectorAll('.access-delete');
+        accessDeleteButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                let accessSection = button.closest('.access-section, .access-section-small');
+                if (accessSection) {
+                    accessSection.remove();
+                }
+            });
+        });
+    }
+
+    addAccesses.forEach(addAccess => {
+        addAccess.addEventListener('click', handleAddAccessClick);
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 991) {
+                addAccess.addEventListener('click', handleAddAccessClick);
+            } else {
+                addAccess.removeEventListener('click', handleAddAccessClick);
+            }
+        });
+    })
+
+    let accessDeleteButtons = document.querySelectorAll('.access-delete');
+    accessDeleteButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            let accessSection = button.closest('.access-section, .access-section-small');
+            if (accessSection) {
+                accessSection.remove();
+            }
+        });
+    });
+});
+//
+
+
+
+
+let width, height, gradient;
+function getGradient(ctx, chartArea) {
+    const chartWidth = chartArea.right - chartArea.left;
+    const chartHeight = chartArea.bottom - chartArea.top;
+    if (!gradient || width !== chartWidth || height !== chartHeight) {
+        width = chartWidth;
+        height = chartHeight;
+        gradient = ctx.createLinearGradient(chartArea.bottom, 0, 0, chartArea.top);
+        gradient.addColorStop(0.5, '#0AD85D');
+        gradient.addColorStop(1, '#05903c');
+    }
+    return gradient;
+}
+
+const ctx = document.getElementById('myChart');
+Chart.defaults.FontFamily = 'Montserrat';
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+        datasets: [{
+            data: [750000, 600000, 200000, 100000],
+            borderWidth: 1,
+            fill: true,
+            label: '',
+            backgroundColor: function(context) {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+
+                if (!chartArea) {
+                    return;
+                }
+                return getGradient(ctx, chartArea);
+            },
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                enabled: false,
+            },
+        },
+        animation: {
+            duration: 2000,
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#1E1E1E',
+                    font: {
+                        size: 16,
+                        family: 'Montserrat',
+                    }
+                },
+            },
+            y: {
+                max: 800000,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                    },
+                    stepSize: 200000,
+                    color: '#8F8F8F',
+                    font: {
+                        size: 14,
+                        family: 'Montserrat',
+                    },
+                },
+            },
+        },
+    },
+});
+
+
+//  Chart 2 Start //
+
+const ctr = document.getElementById('myChart2');
+Chart.defaults.FontFamily = 'Montserrat';
+new Chart(ctr, {
+    type: 'bar',
+    data: {
+        labels: ['Azizi fawad', 'Binghatti ova', 'Binghatti nova'],
+        datasets: [{
+            data: [52, 28, 85],
+            borderWidth: 1,
+            fill: true,
+            label: '',
+            backgroundColor: [
+                "#1e1e1e",
+                "#1e1e1e",
+                "#1e1e1e",
+            ],
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                enabled: false,
+            },
+        },
+        animation: {
+            duration: 2000,
+        },
+        scales: {
+            x: {
+                max: 100,
+                ticks: {
+                    color: '#1E1E1E',
+                    font: {
+                        size: 16,
+                        family: 'Montserrat',
+                    }
+                },
+            },
+            y: {
+                ticks: {
+                    callback: function(value, index, values) {
+                        return value.toFixed(2);
+                    },
+                    stepSize: 25,
+                    color: '#8F8F8F',
+                    font: {
+                        size: 14,
+                        family: 'Montserrat',
+                    },
+                },
+            },
+        },
+    },
+});
+//  Chart 2 End //
+
+
+//  Chart Copy Start //
+const ct3 = document.getElementById('myChart3');
+Chart.defaults.FontFamily = 'Montserrat';
+new Chart(ct3, {
+    type: 'bar',
+    data: {
+        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+        datasets: [{
+            data: [750000, 600000, 200000, 100000],
+            borderWidth: 1,
+            fill: true,
+            label: '',
+            backgroundColor: function(context) {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+
+                if (!chartArea) {
+                    return;
+                }
+                return getGradient(ctx, chartArea);
+            },
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                enabled: false,
+            },
+        },
+        animation: {
+            duration: 2000,
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#1E1E1E',
+                    font: {
+                        size: 8,
+                        family: 'Montserrat',
+                    }
+                },
+            },
+            y: {
+                max: 800000,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                    },
+                    stepSize: 200000,
+                    color: '#8F8F8F',
+                    font: {
+                        size: 10,
+                        family: 'Montserrat',
+                    },
+                },
+            },
+        },
+    },
+});
+
+const ct4 = document.getElementById('myChart4');
+Chart.defaults.FontFamily = 'Montserrat';
+new Chart(ct4, {
+    type: 'bar',
+    data: {
+        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+        datasets: [{
+            data: [100000, 300000, 500000, 750000],
+            borderWidth: 1,
+            fill: true,
+            label: '',
+            backgroundColor: function(context) {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+
+                if (!chartArea) {
+                    return;
+                }
+                return getGradient(ctx, chartArea);
+            },
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                enabled: false,
+            },
+        },
+        animation: {
+            duration: 2000,
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#1E1E1E',
+                    font: {
+                        size: 10,
+                        family: 'Montserrat',
+                    }
+                },
+            },
+            y: {
+                max: 800000,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                    },
+                    stepSize: 200000,
+                    color: '#8F8F8F',
+                    font: {
+                        size: 8,
+                        family: 'Montserrat',
+                    },
+                },
+            },
+        },
+    },
+});
+
+
+const ct5 = document.getElementById('myChart5');
+Chart.defaults.FontFamily = 'Montserrat';
+new Chart(ct5, {
+    type: 'bar',
+    data: {
+        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+        datasets: [{
+            data: [750000, 200000, 600000, 100000],
+            borderWidth: 1,
+            fill: true,
+            label: '',
+            backgroundColor: function(context) {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+
+                if (!chartArea) {
+                    return;
+                }
+                return getGradient(ctx, chartArea);
+            },
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                enabled: false,
+            },
+        },
+        animation: {
+            duration: 2000,
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#1E1E1E',
+                    font: {
+                        size: 10,
+                        family: 'Montserrat',
+                    }
+                },
+            },
+            y: {
+                max: 800000,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                    },
+                    stepSize: 200000,
+                    color: '#8F8F8F',
+                    font: {
+                        size: 8,
+                        family: 'Montserrat',
+                    },
+                },
+            },
+        },
+    },
+});
+//  Chart Copy End //
+
+
+
+//  ------
+$('.news-section').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // infinite: false,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+    responsive: [
+        {
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 998,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 630,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 578,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 414,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }
+    ]
+});
+$('.news-section.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+    let slidesCount = slick.slideCount;
+
+    if (currentSlide === 0) {
+        $('.news-section .slick-prev').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    } else {
+        $('.news-section .slick-prev').css({
+            'background-color': '#09D75C',
+        });
+    }
+    if (currentSlide === slidesCount - 1) {
+        $('.news-section .slick-next').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    } else {
+        $('.news-section .slick-next').css({
+            'background-color': '#09D75C',
+        });
+    }
+});
+
+
+
+//  Height News text box Start //
+window.addEventListener('load', function() {
+    let newsBoxes = document.getElementsByClassName('news-box-text');
+    let maxHeight = 0;
+    for (let i = 0; i < newsBoxes.length; i++) {
+        if (newsBoxes[i].offsetHeight > maxHeight) {
+            maxHeight = newsBoxes[i].offsetHeight;
+        }
+    }
+    for (let j = 0; j < newsBoxes.length; j++) {
+        newsBoxes[j].style.height = maxHeight + 'px';
+    }
+});
+//  Height News text box End //
+
+
+
+const selectBtns = document.querySelectorAll('.select-btn');
+const optionsLists = document.querySelectorAll('.options');
+selectBtns.forEach((selectBtn, index) => {
+    selectBtn.addEventListener('click', function() {
+        selectBtn.classList.toggle('active');
+        optionsLists[index].classList.toggle('active');
+    });
+});
+optionsLists.forEach(options => {
+    const languageOptions = options.querySelectorAll('.option');
+    languageOptions.forEach(option => {
+        option.addEventListener('click', function() {
+
+            const selectedImage = this.querySelector('img').getAttribute('src');
+            const selectedLanguage = this.querySelector('.option-text').textContent;
+
+            const selectBtnImage = this.closest('.language-box').querySelector('.select-btn img');
+            selectBtnImage.setAttribute('src', selectedImage);
+        });
+    });
+});
+
+//  ----------
+
+
+
+
+
+
+
+
+//  --------
+function validateRange(minPrice, maxPrice, minValueElement, maxValueElement) {
+    if (minPrice > maxPrice) {
+        let tempValue = maxPrice;
+        maxPrice = minPrice;
+        minPrice = tempValue;
+    }
+    minValueElement.innerHTML = minPrice;
+    maxValueElement.innerHTML = maxPrice;
+}
+
+const priceMinValue = document.getElementById("price-min-value");
+const priceMaxValue = document.getElementById("price-max-value");
+const priceMinPrice = document.getElementById("price-min-price");
+const priceMaxPrice = document.getElementById("price-max-price");
+
+priceMinPrice.addEventListener("input", () => {
+    let minPrice = parseInt(priceMinPrice.value);
+    let maxPrice = parseInt(priceMaxPrice.value);
+    validateRange(minPrice, maxPrice, priceMinValue, priceMaxValue);
+});
+
+priceMaxPrice.addEventListener("input", () => {
+    let minPrice = parseInt(priceMinPrice.value);
+    let maxPrice = parseInt(priceMaxPrice.value);
+    validateRange(minPrice, maxPrice, priceMinValue, priceMaxValue);
+});
+
+const areaMinValue = document.getElementById("area-min-value");
+const areaMaxValue = document.getElementById("area-max-value");
+const areaMinPrice = document.getElementById("area-min-price");
+const areaMaxPrice = document.getElementById("area-max-price");
+
+areaMinPrice.addEventListener("input", () => {
+    let minPrice = parseInt(areaMinPrice.value);
+    let maxPrice = parseInt(areaMaxPrice.value);
+    validateRange(minPrice, maxPrice, areaMinValue, areaMaxValue);
+});
+
+areaMaxPrice.addEventListener("input", () => {
+    let minPrice = parseInt(areaMinPrice.value);
+    let maxPrice = parseInt(areaMaxPrice.value);
+    validateRange(minPrice, maxPrice, areaMinValue, areaMaxValue);
+});
+
+validateRange(parseInt(priceMinPrice.value), parseInt(priceMaxPrice.value), priceMinValue, priceMaxValue);
+validateRange(parseInt(areaMinPrice.value), parseInt(areaMaxPrice.value), areaMinValue, areaMaxValue);
+//  ----------
+
+
+
+//  Home Filter Start //
+const showBtn = document.querySelectorAll('.app-show-hide-btn');
+const filterBoxHide = document.querySelectorAll('.filter-box-hide');
+showBtn.forEach((button, index) => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const filterBox = filterBoxHide[index];
+        const isShown = filterBox.classList.contains('show');
+
+        if (isShown) {
+            filterBox.style.opacity = '0';
+            setTimeout(() => {
+                filterBox.style.display = 'none';
+            }, 300);
+        } else {
+            filterBox.style.display = 'block';
+            setTimeout(() => {
+                filterBox.style.opacity = '1';
+            }, 0);
+        }
+        button.querySelector('.btn').textContent = isShown ? 'More filters' : 'Less filters';
+        filterBox.classList.toggle('show');
+    });
+});
+//  Home Filter End //
+

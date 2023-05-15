@@ -74,22 +74,28 @@
 <div class="container-fluid">
     <div class="container">
         <div class="developer-profile-form-section">
-            <div class="developer-profile-form">
-                <h4> <span>Developer</span></h4>
+            <div class="developer-profile-form headFF">
+                <h4><span>Business </span> Broker </h4>
                 <div class="developer-profile-reg">
                     <img src="img/ing/group.png" alt="">
                     <div class="registration-box">
                         <div class="reg-box_1 active">
                             <form>
-                                <input type="text" name="developer" placeholder="Developer*" required>
                                 <input type="text" name="name" placeholder="Name*" required>
                                 <input type="text" name="surname" placeholder="Surname" required>
+                                <input type="text" name="estate" placeholder="Real Estate Agency Name or No Agency*"
+                                       required>
                                 <input type="text" name="position" placeholder="Position*" required>
                                 <input type="email" name="email" placeholder="Email" required>
                                 <input type="tel" name="phoneNumber" placeholder="Phone number">
-                                <input type="password" name="password" placeholder="Password" required>
-                                <input type="password" name="confirmPassword" placeholder="Repeat Password" required>
-                                <p>*required fields</p>
+                                <div class="remember-me">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span></span>
+                                        <p>I would like to receive news from developer and be informed <br> about SQFT
+                                            table updates</p>
+                                    </label>
+                                </div>
                                 <div class="page-for-dev-form-btn">
                                     <div class="developer-profile-reg-btn-bordered">
                                         <a href="" class="btn-transparent">Update info</a>
@@ -103,17 +109,33 @@
                     </div>
                 </div>
             </div>
-            <div class="developer-profile-form-img">
-                <img src="img/ing/dev-profile.png" alt="">
-                <div class="developer-profile-img-btns">
-                    <div class="developer-profile-reg-btn-bordered">
-                        <a href="" class="btn-transparent">Update info</a>
-                        <a href="" class="btn-transparent">Update info</a>
-                        <a href="" class="btn-transparent">Update info</a>
+            <div class="current-plan">
+                <div class="current-plan-heed headFF">
+                    <h4>current <span> payment plan</span></h4>
+                </div>
+                <div class="payment-box current-pay for-business">
+                    <div class="content-box">
+                        <div class="pay-line"></div>
+                        <h4><span>Free  </span> for Business</h4>
+                        <h5>Try our tool and become the best version of yourself!</h5>
+                        <h6>What will you get:</h6>
+                        <div class="stick-text-li">
+                            <ul>
+                                <li><i class="fa-solid fa-circle"></i>Give as many access as you want for free while in
+                                    Beta!
+                                </li>
+                                <li><i class="fa-solid fa-circle"></i>Full Basic package for all your users!</li>
+                                <li><i class="fa-solid fa-circle"></i>Control who has access under your name</li>
+
+                            </ul>
+                        </div>
+                        <div class="pay-price">
+                            <h3>0$</h3>
+                            <span>for all</span>
+                        </div>
                     </div>
-                    <div class="developer-profile-reg-btn-bordered">
-                        <a href="" class="btn-transparent">Update info</a>
-                        <a href="" class="btn-transparent">Update info</a>
+                    <div class="pay-down-btn">
+                        <a href="" class="btn btn-primary">Update payment information</a>
                     </div>
                 </div>
             </div>
@@ -123,26 +145,154 @@
 <!-- Developer Reg Form End -->
 
 
-<!-- Update Availability Start -->
-<section>
-    <div class="section-heading section-heading-availability">
-        <h2> Choose your <span>payment plan</span></h2>
-    </div>
-    <div class="bg-black">
+<!--Shared Access Big Start -->
+<section class="big-access-section">
+    <div class="shared-access-bg">
         <div class="container-fluid">
             <div class="container">
-                <div class="availability-section">
-                    <div class="availability-section-box">
-                        <div class="availability-box-text">
-                            <p>Please send us availability data in Excel format,
-                                we will check its format and update availability
-                            </p>
-                        </div>
-                        <div class="availability-box-form">
-                            <input type="text" name="text" placeholder="Upload file.xls">
-                            <div class="developer-profile-reg-btn">
-                                <a href="" class="btn btn-primary">Send</a>
+                <div class="shared-access-section">
+
+                    <div class="grid-container">
+
+                        <div class="access-section-head">
+                            <div class="item1">
+                                <h4><span>Shared Access</span> with :</h4>
                             </div>
+                            <div>
+
+                            </div>
+                            <div class="item2 access-head">
+                                <h5>Status</h5>
+                            </div>
+                            <div class="item3 access-head">
+                                <h5>Revoke Access</h5>
+                            </div>
+                        </div>
+
+                        <div class="access-section">
+                            <div class="item4 access-number">
+                                <h3>1</h3>
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="item5 access-send">
+                                <div class="accessed-btn">
+                                    <a href="" class="btn btn-primary">Send</a>
+                                </div>
+                            </div>
+                            <div class="item6 invite-status">
+                                <i class="fa-solid fa-circle"></i>
+                                <h6>invite sent</h6>
+                            </div>
+                            <div class="item7 delete-btn">
+                                <div class="access-delete">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="access-section">
+                            <div class="item8 access-number">
+                                <h3>2</h3>
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="item9 access-send">
+                                <div class="access-registered">
+                                    <a href="" class="btn-transparent">Send</a>
+                                </div>
+                            </div>
+                            <div class="item10 invite-status active-status pulse">
+                                <i class="fa-solid fa-circle"></i>
+                                <h6>registered</h6>
+                            </div>
+                            <div class="item11 delete-btn">
+                                <div class="access-delete delete-registered">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item12">
+                        <div class="add-access">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Shared Access Big End -->
+
+
+<!--Shared Access Small Start -->
+<section class="small-access-section">
+    <div class="shared-access-bg shared-access-bg-small">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="shared-access-section-small">
+                    <div class="grid-container grid-container-small">
+                        <div class="section-small-head">
+                            <h4><span>Shared Access</span> with:</h4>
+                        </div>
+                        <div class="access-section access-section-small">
+                            <div class="item4 access-number">
+                                <h3>1</h3>
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="item5 access-send">
+                                <div class="accessed-btn">
+                                    <a href="" class="btn btn-primary">Send</a>
+                                </div>
+                            </div>
+                            <div class="access-small-status">
+                                <h5>Status</h5>
+                                <h5>Revoke Access</h5>
+                            </div>
+                            <div class="invite-delete">
+                                <div class="item6 invite-status">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <h6>invite sent</h6>
+                                </div>
+                                <div class="item7 delete-btn">
+                                    <div class="access-delete">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="access-section access-section-small">
+                            <div class="item8 access-number">
+                                <h3>2</h3>
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="item9 access-send">
+                                <div class="access-registered">
+                                    <a href="" class="btn-transparent">Send</a>
+                                </div>
+                            </div>
+                            <div class="access-small-status">
+                                <h5>Status</h5>
+                                <h5>Revoke Access</h5>
+                            </div>
+                            <div class="invite-delete">
+                                <div class="item10 invite-status active-status pulse">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <h6>registered</h6>
+                                </div>
+                                <div class="item11 delete-btn">
+                                    <div class="access-delete delete-registered">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item12">
+                        <div class="add-access">
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </div>
                 </div>
@@ -150,27 +300,187 @@
         </div>
     </div>
 </section>
-<!-- Update Availability End  -->
+<!--Shared Access Mobile End -->
 
-<!--Your Page Start-->
+<!-- Payment Start -->
 <section>
     <div class="container-fluid">
         <div class="container">
-            <div class="your-pages-section">
-                <div class="section-heading section-heading-availability">
-                    <h2> Your <span>Pages</span></h2>
+            <div class="section-heading section-heading-payment">
+                <h2> Choose your <span>payment plan</span></h2>
+            </div>
+
+            <div class="payment-section">
+                <div class="payment-btn">
+                    <a href="" class="tab-selector pay-tab-mon active" data-target=".plan-monthly">individual</a>
+                    <span> </span>
+                    <a href="" class="tab-selector pay-tab-year" data-target=".plan-yearly">business</a>
                 </div>
-                <div class="your-pages-box">
-                    <div class="your-pages-personal">
-                        <h4>Personal Page</h4>
-                        <div class="developer-profile-reg-btn">
-                            <a href="" class="btn btn-primary">Edit</a>
+                <div class="payment-plan">
+                    <div class="content active">
+                        <div class="plan-monthly">
+                            <div class="payment-box free-box">
+                                <div class="content-box">
+                                    <div class="pay-line"></div>
+                                    <h4><span>Free Test </span> for Beta</h4>
+                                    <h5>Try our tool and become the best version of yourself!</h5>
+                                    <h6>What will you get:</h6>
+                                    <div class="stick-text-li">
+                                        <ul>
+                                            <li><i class="fa-solid fa-circle"></i>Access to the full data</li>
+                                            <li><i class="fa-solid fa-circle"></i>Access to all promotional material
+                                            </li>
+                                            <li><i class="fa-solid fa-circle"></i>First client messages</li>
+                                            <li><i class="fa-solid fa-circle"></i>Comparison tool</li>
+                                            <li><i class="fa-solid fa-circle"></i>Saved most liked apartments</li>
+                                            <li><i class="fa-solid fa-circle"></i>Generate offers (coming soon)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pay-price">
+                                        <h3>0$ </h3>
+                                        <span>per month</span>
+                                    </div>
+                                </div>
+                                <div class="pay-down-btn">
+                                    <a href="" class="btn btn-primary">Try for free while <br> in the beta test!</a>
+                                </div>
+                            </div>
+
+                            <div class="payment-box">
+                                <div class="content-box">
+                                    <div class="pay-line"></div>
+                                    <h4>Basic</h4>
+                                    <h5>Become the member when Beta Ends</h5>
+                                    <h6>What you get: </h6>
+                                    <div class="stick-text-li">
+                                        <ul>
+                                            <li><i class="fa-solid fa-circle"></i>Access to the full data</li>
+                                            <li><i class="fa-solid fa-circle"></i>Access to all promotional material
+                                            </li>
+                                            <li><i class="fa-solid fa-circle"></i>First client messages</li>
+                                            <li><i class="fa-solid fa-circle"></i>Comparison tool</li>
+                                            <li><i class="fa-solid fa-circle"></i>Saved most liked apartments</li>
+                                            <li><i class="fa-solid fa-circle"></i>Generate offers (coming soon)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pay-price">
+                                        <h3>10$ </h3>
+                                        <span>per month</span>
+                                    </div>
+                                </div>
+                                <div class="pay-down-btn">
+                                    <a href="" class="btn btn-primary">Try for free</a>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="payment-box">
+                                <div class="content-box">
+                                    <div>
+                                        <div class="pay-line"></div>
+                                        <h4><span>For </span>Business</h4>
+                                        <h5>Create a Business Account for free while in the beta test!</h5>
+                                        <h6>How does it work:</h6>
+                                        <div class="stick-text-li">
+                                            <ul>
+                                                <li><i class="fa-solid fa-circle"></i>Give as many access as you want
+                                                    for free while in Beta!
+                                                </li>
+                                                <li><i class="fa-solid fa-circle"></i>Full Basic package for all your
+                                                    users!
+                                                </li>
+                                                <li><i class="fa-solid fa-circle"></i>Control who has access under your
+                                                    name
+                                                <li><i class="fa-solid fa-circle"></i>Control who has access under your
+                                                    name
+                                                <li><i class="fa-solid fa-circle"></i>Control who has access under your
+                                                    name
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pay-price">
+                                        <h3>8.5$</h3>
+                                        <span>month for 7 <br> or more</span>
+                                    </div>
+                                </div>
+                                <div class="pay-down-btn">
+                                    <a href="" class="btn btn-primary">Try for free</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="your-pages-personal">
-                        <h4>Personal Page</h4>
-                        <div class="developer-profile-reg-btn">
-                            <a href="" class="btn btn-primary">open editor</a>
+
+                    <div class="content">
+                        <div class="plan-yearly">
+                            <div class="payment-box for-business">
+                                <div class="content-box">
+                                    <div class="pay-line"></div>
+                                    <h4>Basic</h4>
+                                    <h5>Become the member when Beta Ends</h5>
+                                    <h6>What you get: </h6>
+                                    <div class="stick-text-li">
+                                        <ul>
+                                            <li><i class="fa-solid fa-circle"></i>Access to the full data</li>
+                                            <li><i class="fa-solid fa-circle"></i>Access to all promotional material
+                                            </li>
+                                            <li><i class="fa-solid fa-circle"></i>First client messages</li>
+                                            <li><i class="fa-solid fa-circle"></i>Comparison tool</li>
+                                            <li><i class="fa-solid fa-circle"></i>Saved most liked apartments</li>
+                                            <li><i class="fa-solid fa-circle"></i>Generate offers (coming soon)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pay-price">
+                                        <h3>90$</h3>
+                                        <span>per month</span>
+                                    </div>
+                                </div>
+                                <div class="pay-down-btn">
+                                    <a href="" class="btn btn-primary">Try for free</a>
+                                </div>
+                            </div>
+
+                            <div class="payment-box for-business">
+                                <div class="content-box">
+                                    <div>
+                                        <div class="pay-line"></div>
+                                        <h4><span>For </span>Business</h4>
+                                        <h5>Create a Business Account for free while in the beta test!</h5>
+                                        <h6>How does it work:</h6>
+                                        <div class="stick-text-li">
+                                            <ul>
+                                                <li><i class="fa-solid fa-circle"></i>Give as many access as you want
+                                                    for free while in Beta!
+                                                </li>
+                                                <li><i class="fa-solid fa-circle"></i>Full Basic package for all your
+                                                    users!
+                                                </li>
+                                                <li><i class="fa-solid fa-circle"></i>Control who has access under your
+                                                    name
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pay-business-content">
+                                        <h4>After Beta prices will be:</h4>
+                                        <ul>
+                                            <li><span>10$</span></li>
+                                            <li class="business-content">per month for 7 or less users</li>
+                                        </ul>
+                                        <ul>
+                                            <li><span>8.5$</span></li>
+                                            <li class="business-content">per month from 7 to 15</li>
+                                        </ul>
+                                        <ul>
+                                            <li><span>7$</span></li>
+                                            <li class="business-content">per month for more than 15</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pay-down-btn">
+                                    <a href="" class="btn btn-primary">Try for free</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -178,345 +488,11 @@
         </div>
     </div>
 </section>
-<!--Your Page End-->
-
-
-<!-- Dev Profile Project Start -->
-<section>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="dev-profile-project">
-                <div class="dev-page-section">
-                    <h4>Projects</h4>
-                </div>
-                <!-- box_1-->
-                <div class="project-box">
-                    <div class="project-imfo">
-                        <div class="prokect-img">
-                            <img src="img/ing/shoba.png" alt="">
-                        </div>
-                        <div class="project-content">
-                            <h4>The Paragon</h4>
-                            <h5>IGO</h5>
-                            <p><i class="fa-solid fa-location-dot"></i> JVC</p>
-                            <div class="project-btn-box">
-                                <div class="project-btn">
-                                    <a href="" class="btn btn-primary">editor</a>
-                                </div>
-                                <div class="project-btn replace-modal">
-                                    <a href="" class="btn btn-primary">delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-imfo">
-                        <div class="prokect-img">
-                            <img src="img/ing/paragon.png" alt="">
-                        </div>
-                        <div class="project-content">
-                            <h4>The Catch</h4>
-                            <h5>IGO</h5>
-                            <p><i class="fa-solid fa-location-dot"></i> Business Bay </p>
-                            <div class="project-btn-box">
-                                <div class="project-btn">
-                                    <a href="" class="btn btn-primary">editor</a>
-                                </div>
-                                <div class="project-btn replace-modal">
-                                    <a href="" class="btn btn-primary">delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- box_2-->
-                <div class="project-box">
-                    <div class="project-imfo">
-                        <div class="prokect-img">
-                            <img src="img/ing/paragon.png" alt="">
-                        </div>
-                        <div class="project-content">
-                            <h4>The Catch</h4>
-                            <h5>IGO</h5>
-                            <p><i class="fa-solid fa-location-dot"></i>Business Bay</p>
-                            <div class="project-btn-box">
-                                <div class="project-btn">
-                                    <a href="" class="btn btn-primary">editor</a>
-                                </div>
-                                <div class="project-btn replace-modal">
-                                    <a href="" class="btn btn-primary">delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-imfo">
-                        <div class="prokect-img">
-                            <img src="img/ing/catch.jpg" alt="">
-                        </div>
-                        <div class="project-content">
-                            <h4>Shoba One</h4>
-                            <h5>Sobha Realty</h5>
-                            <p><i class="fa-solid fa-location-dot"></i> Business Bay</p>
-                            <div class="project-btn-box">
-                                <div class="project-btn">
-                                    <a href="" class="btn btn-primary">editor</a>
-                                </div>
-                                <div class="project-btn replace-modal">
-                                    <a href="" class="btn btn-primary">delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Dev Profile Project End -->
-
-
-<!-- News Brokers Start -->
-<section>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="news-broker-section">
-                <div class="section-heading section-heading-news-broker">
-                    <h2>  <span>News</span> for Brokers</h2>
-                </div>
-                <div class="news-broker-section-create">
-                    <h4>Create News For Brokers</h4>
-                </div>
-                <div class="news-broker-box">
-                    <div class="news-broker-box-img">
-                        <div class="news-broker-box-img-img">
-                            <img src="img/icon/img-icon.png"  id="preview" alt="">
-                        </div>
-                        <div class="add-picture">
-                            <img src="img/icon/add-icon.png" alt="">
-                            <h5 id="file-upload">Add picture</h5>
-                            <input type="file" id="file-input" hidden>
-                        </div>
-                    </div>
-                    <div class="news-broker-box-text">
-                        <h3>Add Topic</h3>
-                        <textarea  id="prop" type="textarea"   placeholder="Add text" ></textarea>
-                    </div>
-                </div>
-                <div class="news-broker-btn">
-                    <a href="" class="btn btn-primary">Publish</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- News Brokers End -->
-
-
-<!-- Dev Page Sales Start -->
-<div class="container-fluid">
-    <div class="container">
-        <div class="sales-agent-section ">
-            <div class="section-heading partner-section-heading">
-                <h2>Sales <span> Agents </span></h2>
-            </div>
-            <div class="project-search">
-                <div class="project-region-search">
-                    <input type="text" placeholder="Agent name">
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <span class="sBtn-text">languages</span>
-                            <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="options">
-                            <li class="option">
-                                <span class="option-text">Region1</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">Region2</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">Region3 </span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">Region4</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="project-region-search-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dev-more-sales-agent-section">
-                <div class="agent-section">
-                    <div class="agent-section-box agent-section-box-dark">
-                        <div class="sales-more-like-box sales-more-report">
-                            <h6>Report</h6>
-                            <div class="sales-more-report-icon">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-img">
-                            <img src="img/ing/review1.png" alt="">
-                            <div class="agent-section-box-text">
-                                <h4>Joanne Buck</h4>
-                                <span>Recommended</span>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-content">
-                            <div class="agent-info-container">
-                                <div class="info">Phone:</div>
-                                <div class="contact">123-456-7890</div>
-                                <div class="info">Email:</div>
-                                <div class="contact">info@mysite.come</div>
-                                <div class="info">Languages:</div>
-                                <div class="contact">English, Russian, <br> Hindi, German</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agent-section-box agent-section-box-dark">
-                        <div class="sales-more-like-box sales-more-report">
-                            <h6>Report</h6>
-                            <div class="sales-more-report-icon">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-img">
-                            <img src="img/ing/review1.png" alt="">
-                            <div class="agent-section-box-text">
-                                <h4>Joanne Buck</h4>
-                                <span>Recommended</span>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-content">
-                            <div class="agent-info-container">
-                                <div class="info">Phone:</div>
-                                <div class="contact">123-456-7890</div>
-                                <div class="info">Email:</div>
-                                <div class="contact">info@mysite.come</div>
-                                <div class="info">Languages:</div>
-                                <div class="contact">English, Russian, <br> Hindi, German</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agent-section-box">
-                        <div class="sales-more-like-box sales-more-report">
-                            <h6>Report</h6>
-                            <div class="sales-more-report-icon">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-img">
-                            <img src="img/ing/review1.png" alt="">
-                            <div class="agent-section-box-text">
-                                <h4>Joanne Buck</h4>
-                                <span>Recommended</span>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-content">
-                            <div class="agent-info-container">
-                                <div class="info">Phone:</div>
-                                <div class="contact">123-456-7890</div>
-                                <div class="info">Email:</div>
-                                <div class="contact">info@mysite.come</div>
-                                <div class="info">Languages:</div>
-                                <div class="contact">English, Russian, <br> Hindi, German</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agent-section-box">
-                        <div class="sales-more-like-box sales-more-report">
-                            <h6>Report</h6>
-                            <div class="sales-more-report-icon">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-img">
-                            <img src="img/ing/review1.png" alt="">
-                            <div class="agent-section-box-text">
-                                <h4>Joanne Buck</h4>
-                                <span>Recommended</span>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-content">
-                            <div class="agent-info-container">
-                                <div class="info">Phone:</div>
-                                <div class="contact">123-456-7890</div>
-                                <div class="info">Email:</div>
-                                <div class="contact">info@mysite.come</div>
-                                <div class="info">Languages:</div>
-                                <div class="contact">English, Russian, <br> Hindi, German</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agent-section-box">
-                        <div class="sales-more-like-box sales-more-report">
-                            <h6>Report</h6>
-                            <div class="sales-more-report-icon">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-img">
-                            <img src="img/ing/review1.png" alt="">
-                            <div class="agent-section-box-text">
-                                <h4>Joanne Buck</h4>
-                                <span>Recommended</span>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-content">
-                            <div class="agent-info-container">
-                                <div class="info">Phone:</div>
-                                <div class="contact">123-456-7890</div>
-                                <div class="info">Email:</div>
-                                <div class="contact">info@mysite.come</div>
-                                <div class="info">Languages:</div>
-                                <div class="contact">English, Russian, <br> Hindi, German</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agent-section-box">
-                        <div class="sales-more-like-box sales-more-report">
-                            <h6>Report</h6>
-                            <div class="sales-more-report-icon">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-img">
-                            <img src="img/ing/review1.png" alt="">
-                            <div class="agent-section-box-text">
-                                <h4>Joanne Buck</h4>
-                                <span>Recommended</span>
-                            </div>
-                        </div>
-                        <div class="agent-section-box-content">
-                            <div class="agent-info-container">
-                                <div class="info">Phone:</div>
-                                <div class="contact">123-456-7890</div>
-                                <div class="info">Email:</div>
-                                <div class="contact">info@mysite.come</div>
-                                <div class="info">Languages:</div>
-                                <div class="contact">English, Russian, <br> Hindi, German</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dev-more-sales-agent-box-btn">
-                    <a href="" class="btn btn-primary">see more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Dev Page Sales End -->
+<!-- Payment End -->
 
 
 <!--Dev Page FAQ Start -->
-<section>
+<section class="bb-padding">
     <div class="faq-bg dev-profile-faq-bg">
         <div class="container">
             <div class="faq-accordion">
@@ -778,7 +754,6 @@
 
 <div class="container-fluid indent-box"></div>
 
-
 <!-- Footer Start -->
 <footer>
     <div class="footer-bg">
@@ -837,7 +812,6 @@
 <div class="overlay"></div>
 
 
-
 <!-- Dev profile Delete Modal Start -->
 <div class="modal-position">
     <div class="dev-profile-modal modal-box">
@@ -863,7 +837,7 @@
         <div class="dev-profile-replace-modal-btn">
             <a href="" class="btn btn-primary">Send</a>
         </div>
-            <div class="modal-close-btn">
+        <div class="modal-close-btn">
             <i class="fa-solid fa-xmark"></i>
         </div>
     </div>
@@ -872,6 +846,8 @@
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Slick -->
 <script src="./js/slick.min.js"></script>
 
