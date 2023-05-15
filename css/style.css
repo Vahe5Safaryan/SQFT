@@ -1871,7 +1871,7 @@ li {
     color: #fff;
     padding: 0;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 29px;
     text-transform: uppercase;
 }
@@ -1946,7 +1946,6 @@ li {
 .reg-section-content{
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
     background: #fff;
     padding: 40px 80px 40px;
@@ -1954,6 +1953,7 @@ li {
     margin-top: 50px;
     width: 100%;
     max-width: 477px;
+    border-radius: 10px;
 }
 
 .reg-developer{;
@@ -4220,7 +4220,7 @@ canvas{
 
 .chart-copy .chart-section{
     margin-top: 40px;
-    padding: 20px 0;
+    padding: 20px 10px;
     border: 1.5px solid #8F8F8F;
     border-radius: 10px;
     max-height: 400px;
