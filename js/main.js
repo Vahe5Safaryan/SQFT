@@ -12,7 +12,7 @@ $('.main-slider-text').slick({
 
 });
 
-$('.main-slider-text').on('afterChange', function(event, slick, currentSlide) {
+$('.main-slider-text').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -41,11 +41,10 @@ $('.main-slider-text').on('afterChange', function(event, slick, currentSlide) {
 });
 
 
-
 const playButton = document.getElementById('playButton');
 const video = document.getElementById('myVideo');
 
-if (video){
+if (video) {
     video.addEventListener('click', () => {
         if (!video.paused) {
             video.pause();
@@ -60,7 +59,6 @@ if (video){
         playButton.style.display = 'block';
     });
 }
-
 
 
 $('.partner-section').slick({
@@ -156,7 +154,7 @@ $('.plan-monthly').slick({
         }
     ]
 });
-$('.plan-monthly.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+$('.plan-monthly.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -250,7 +248,7 @@ $('.plan-yearly').slick({
         }
     ]
 });
-$('.plan-yearly.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+$('.plan-yearly.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -277,9 +275,9 @@ $('.plan-yearly.slick-slider').on('afterChange', function(event, slick, currentS
     }
 });
 
-$( document ).ready( () =>{
+$(document).ready(() => {
     $('.plan-monthly').slick('resize')
-} )
+})
 
 $('.tab-selector').click((e) => {
     e.preventDefault()
@@ -358,7 +356,7 @@ $('.reviews-section').slick({
         }
     ]
 });
-$('.reviews-section.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+$('.reviews-section.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -390,7 +388,7 @@ $('.reviews-section.slick-slider').on('afterChange', function(event, slick, curr
 
 const accItems = document.querySelectorAll('.faq-accordion-item');
 
-accItems.forEach(function(accItem) {
+accItems.forEach(function (accItem) {
     const accContent = accItem.querySelector('.faq-accordion-content');
     const faqIcon = accItem.querySelector('.faq-icon');
 
@@ -401,8 +399,8 @@ accItems.forEach(function(accItem) {
     const accHeadings = accItem.querySelectorAll('.faq-accordion-heading-content');
     const accUnderItems = accItem.querySelectorAll('.faq-accordion-under-item-btn');
 
-    accHeadings.forEach(function(accButton) {
-        accButton.addEventListener('click', function() {
+    accHeadings.forEach(function (accButton) {
+        accButton.addEventListener('click', function () {
             const accContent = this.nextElementSibling;
             const accIcon = this.querySelector('i');
             accIcon.classList.toggle('fa-plus');
@@ -420,8 +418,8 @@ accItems.forEach(function(accItem) {
         });
     });
 
-    accUnderItems.forEach(function(accButton) {
-        accButton.addEventListener('click', function() {
+    accUnderItems.forEach(function (accButton) {
+        accButton.addEventListener('click', function () {
             const accContent = this.nextElementSibling;
             const accIcon = this.querySelector('i');
             accIcon.classList.toggle('fa-plus');
@@ -446,14 +444,13 @@ accItems.forEach(function(accItem) {
 // Accardion End //
 
 
-
 //  Registration Broker
 const regBox1 = document.querySelector('.reg-box_1');
 const regBox2 = document.querySelector('.reg-box_2');
 const tabs = document.querySelectorAll('.reg_tab');
 
 for (let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener('click', function(event) {
+    tabs[i].addEventListener('click', function (event) {
         event.preventDefault();
         const target = event.target.dataset.target;
         regBox1.classList.toggle('active', target === '.reg-box_1');
@@ -473,13 +470,13 @@ for (let i = 0; i < optionMenus.length; i++) {
     const options = optionMenu.querySelectorAll(".option");
     const sBtn_text = optionMenu.querySelector(".sBtn-text");
 
-    selectBtn.addEventListener("click", function() {
+    selectBtn.addEventListener("click", function () {
         optionMenu.classList.toggle("active");
     });
 
     for (let j = 0; j < options.length; j++) {
         const option = options[j];
-        option.addEventListener("click", function() {
+        option.addEventListener("click", function () {
             let selectedOption = option.querySelector(".option-text").innerText;
             sBtn_text.innerText = selectedOption;
 
@@ -491,7 +488,7 @@ for (let i = 0; i < optionMenus.length; i++) {
 
 let btnScrollToTop = document.querySelector(".footer-arrow-top");
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     if (window.pageYOffset >= 500) {
         btnScrollToTop.style.display = "block";
     } else {
@@ -499,11 +496,11 @@ window.addEventListener("scroll", function() {
     }
 });
 
-btnScrollToTop.addEventListener("click", function() {
+btnScrollToTop.addEventListener("click", function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollStep = Math.round(scrollTop / 25);
 
-    let scrollInterval = setInterval(function() {
+    let scrollInterval = setInterval(function () {
         if (window.pageYOffset <= 0) {
             clearInterval(scrollInterval);
             return;
@@ -535,7 +532,7 @@ $('.slider-img').slick({
     focusOnSelect: true,
     variableWidth: true,
 });
-$('.slider-big-img.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+$('.slider-big-img.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -562,7 +559,7 @@ $('.slider-big-img.slick-slider').on('afterChange', function(event, slick, curre
     }
 });
 
-$('.slider-img.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+$('.slider-img.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -620,9 +617,9 @@ function openTab(evt, tabName) {
 
 function debounce(func, wait = 5, immediate = true) {
     let timeout;
-    return function() {
+    return function () {
         let context = this, args = arguments;
-        let later = function() {
+        let later = function () {
             timeout = null;
             if (!immediate) func.apply(context, args);
         };
@@ -632,6 +629,7 @@ function debounce(func, wait = 5, immediate = true) {
         if (callNow) func.apply(context, args);
     };
 }
+
 function checkSlide() {
     let elements = document.querySelectorAll('.animate-div');
     elements.forEach(element => {
@@ -646,13 +644,12 @@ function checkSlide() {
         }
     });
 }
+
 window.addEventListener('scroll', debounce(checkSlide));
 
 
-
-
 //  Height Box //
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     let divs = document.querySelectorAll('.recent-section .recent-box');
     let maxHeight = 0;
     for (let i = 0; i < divs.length; i++) {
@@ -664,7 +661,6 @@ window.addEventListener('load', function() {
         divs[i].style.height = maxHeight + 'px';
     }
 });
-
 
 
 // Popup Menu Start //
@@ -701,7 +697,7 @@ if (btnLoginMenu) {
         });
     }
 }
-if(overlay){
+if (overlay) {
     overlay.addEventListener('click', function () {
         for (let j = 0; j < loginBoxes.length; j++) {
             loginBoxes[j].classList.toggle('active-popup');
@@ -717,7 +713,6 @@ if(overlay){
 // Popup Menu End //
 
 
-
 // Under Page Menu Start //
 const underPageMenuBox = document.querySelector('.under-page-menu-box');
 const underPageMenuBtn = document.querySelector('.under-page-menu-btn');
@@ -728,37 +723,32 @@ if (underPageMenuBtn) {
 
     underPageMenuBtn.addEventListener('click', function (event) {
         if (isOpen) {
-            setTimeout(function() {
+            setTimeout(function () {
                 if (window.innerWidth <= 414) {
                     underPageMenuBox.style.top = "-440px";
                     underPageMenuBtn.style.position = "absolute";
                     underPageMenuBtn.style.right = "15px";
-                }
-                else if (window.innerWidth <= 768){
+                } else if (window.innerWidth <= 768) {
                     underPageMenuBox.style.left = "-295px";
                     underPageMenuBtn.style.position = "absolute";
                     underPageMenuBtn.style.right = "15px";
-                }
-                else {
+                } else {
                     underPageMenuBox.style.left = "-295px";
                     underPageMenuBtn.style.position = "absolute";
                     underPageMenuBtn.style.left = "15px";
                 }
                 headerLogo.style.opacity = "1";
             }, 0);
-        }
-        else {
+        } else {
             if (window.innerWidth <= 414) {
                 underPageMenuBox.style.top = "0";
                 underPageMenuBtn.style.position = "fixed";
                 underPageMenuBtn.style.right = "15px";
-            }
-            else if (window.innerWidth <= 768){
+            } else if (window.innerWidth <= 768) {
                 underPageMenuBox.style.left = "0";
                 underPageMenuBtn.style.position = "fixed";
                 underPageMenuBtn.style.right = "15px";
-            }
-            else {
+            } else {
                 underPageMenuBox.style.left = "0";
                 underPageMenuBtn.style.position = "fixed";
                 underPageMenuBtn.style.left = "303px";
@@ -783,17 +773,17 @@ const fileInput = document.getElementById('file-input');
 const uploadDiv = document.getElementById('file-upload');
 const previewImg = document.getElementById('preview');
 
-if (uploadDiv){
-    uploadDiv.addEventListener('click', function() {
+if (uploadDiv) {
+    uploadDiv.addEventListener('click', function () {
         fileInput.click();
     });
 }
-if (fileInput){
-    fileInput.addEventListener('change', function() {
+if (fileInput) {
+    fileInput.addEventListener('change', function () {
         const file = this.files[0];
         if (file) {
             const reader = new FileReader();
-            reader.addEventListener('load', function() {
+            reader.addEventListener('load', function () {
                 previewImg.setAttribute('src', this.result);
                 previewImg.style.display = 'block';
             });
@@ -802,7 +792,6 @@ if (fileInput){
     });
 }
 // Add img //
-
 
 
 // Dev profile Delete Modal Start //
@@ -814,26 +803,26 @@ const body = document.querySelector('body')
 if (replaceModalBtn) {
     for (let i = 0; i < replaceModalBtn.length; i++) {
         replaceModalBtn[i].addEventListener('click', function (event) {
-                devProfileModal.classList.toggle('active-modal');
-                overlay.classList.toggle('d-block');
-                body.style.overflow = "hidden"
-                event.preventDefault();
+            devProfileModal.classList.toggle('active-modal');
+            overlay.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
         });
     }
 
     if (modalCloseBtn) {
-        for (let i = 0; i < modalCloseBtn.length; i++){
-            modalCloseBtn[i].addEventListener('click', function (){
+        for (let i = 0; i < modalCloseBtn.length; i++) {
+            modalCloseBtn[i].addEventListener('click', function () {
                 overlay.classList.remove('d-block');
                 document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
                 body.style.overflow = "auto"
             });
         }
     }
-    if(overlay){
+    if (overlay) {
         overlay.addEventListener('click', function () {
             overlay.classList.remove('d-block');
-            if (document.querySelector('.modal-box.active-modal')){
+            if (document.querySelector('.modal-box.active-modal')) {
                 document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
             }
             body.style.overflow = "auto"
@@ -859,18 +848,18 @@ if (salesMoreReportBtn) {
 //  Broker Modal //
 const changePass = document.querySelector('.change-pass');
 if (changePass) {
-        changePass.addEventListener('click', function (event) {
-            devProfileModal.classList.toggle('active-modal');
-            overlay.classList.toggle('d-block');
-            body.style.overflow = "hidden"
-            event.preventDefault();
-        });
+    changePass.addEventListener('click', function (event) {
+        devProfileModal.classList.toggle('active-modal');
+        overlay.classList.toggle('d-block');
+        body.style.overflow = "hidden"
+        event.preventDefault();
+    });
 }
 
 
 //  Shared Access Start //
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let addAccesses = document.querySelectorAll('.add-access');
 
     function handleAddAccessClick() {
@@ -896,8 +885,8 @@ document.addEventListener('DOMContentLoaded', function() {
         gridContainer.appendChild(clonedSection);
 
         let accessDeleteButtons = clonedSection.querySelectorAll('.access-delete');
-        accessDeleteButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
+        accessDeleteButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
                 let accessSection = button.closest('.access-section, .access-section-small');
                 if (accessSection) {
                     accessSection.remove();
@@ -908,7 +897,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addAccesses.forEach(addAccess => {
         addAccess.addEventListener('click', handleAddAccessClick);
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             if (window.innerWidth <= 991) {
                 addAccess.addEventListener('click', handleAddAccessClick);
             } else {
@@ -918,8 +907,8 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     let accessDeleteButtons = document.querySelectorAll('.access-delete');
-    accessDeleteButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
+    accessDeleteButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
             let accessSection = button.closest('.access-section, .access-section-small');
             if (accessSection) {
                 accessSection.remove();
@@ -930,9 +919,8 @@ document.addEventListener('DOMContentLoaded', function() {
 //
 
 
-
-
 let width, height, gradient;
+
 function getGradient(ctx, chartArea) {
     const chartWidth = chartArea.right - chartArea.left;
     const chartHeight = chartArea.bottom - chartArea.top;
@@ -947,329 +935,425 @@ function getGradient(ctx, chartArea) {
 }
 
 const ctx = document.getElementById('myChart');
-Chart.defaults.FontFamily = 'Montserrat';
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-        datasets: [{
-            data: [750000, 600000, 200000, 100000],
-            borderWidth: 1,
-            fill: true,
-            label: '',
-            backgroundColor: function(context) {
-                const chart = context.chart;
-                const {ctx, chartArea} = chart;
+if (ctx) {
+    Chart.defaults.FontFamily = 'Montserrat';
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+            datasets: [{
+                data: [750000, 600000, 200000, 100000],
+                borderWidth: 1,
+                fill: true,
+                label: '',
+                backgroundColor: function (context) {
+                    const chart = context.chart;
+                    const {ctx, chartArea} = chart;
 
-                if (!chartArea) {
-                    return;
-                }
-                return getGradient(ctx, chartArea);
-            },
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                enabled: false,
-            },
-        },
-        animation: {
-            duration: 2000,
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#1E1E1E',
-                    font: {
-                        size: 16,
-                        family: 'Montserrat',
+                    if (!chartArea) {
+                        return;
                     }
+                    return getGradient(ctx, chartArea);
+                },
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                tooltip: {
+                    enabled: false,
                 },
             },
-            y: {
-                max: 800000,
-                ticks: {
-                    callback: function(value, index, values) {
-                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+            animation: {
+                duration: 2000,
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: '#1E1E1E',
+                        font: {
+                            size: 16,
+                            family: 'Montserrat',
+                        }
                     },
-                    stepSize: 200000,
-                    color: '#8F8F8F',
-                    font: {
-                        size: 14,
-                        family: 'Montserrat',
+                },
+                y: {
+                    max: 800000,
+                    ticks: {
+                        callback: function (value, index, values) {
+                            return '$' + value.toLocaleString('en-US', {
+                                minimumFractionDigits: 0,
+                                maximumFractionDigits: 2
+                            });
+                        },
+                        stepSize: 200000,
+                        color: '#8F8F8F',
+                        font: {
+                            size: 14,
+                            family: 'Montserrat',
+                        },
                     },
                 },
             },
         },
-    },
-});
-
+    });
+}
 
 //  Chart 2 Start //
 
 const ctr = document.getElementById('myChart2');
-Chart.defaults.FontFamily = 'Montserrat';
-new Chart(ctr, {
-    type: 'bar',
-    data: {
-        labels: ['Azizi fawad', 'Binghatti ova', 'Binghatti nova'],
-        datasets: [{
-            data: [52, 28, 85],
-            borderWidth: 1,
-            fill: true,
-            label: '',
-            backgroundColor: [
-                "#1e1e1e",
-                "#1e1e1e",
-                "#1e1e1e",
-            ],
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                enabled: false,
-            },
+if (ctr) {
+    Chart.defaults.FontFamily = 'Montserrat';
+    new Chart(ctr, {
+        type: 'bar',
+        data: {
+            labels: ['Azizi fawad', 'Binghatti ova', 'Binghatti nova'],
+            datasets: [{
+                data: [52, 28, 85],
+                borderWidth: 1,
+                fill: true,
+                label: '',
+                backgroundColor: [
+                    "#1e1e1e",
+                    "#1e1e1e",
+                    "#1e1e1e",
+                ],
+            }]
         },
-        animation: {
-            duration: 2000,
-        },
-        scales: {
-            x: {
-                max: 100,
-                ticks: {
-                    color: '#1E1E1E',
-                    font: {
-                        size: 16,
-                        family: 'Montserrat',
-                    }
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                tooltip: {
+                    enabled: false,
                 },
             },
-            y: {
-                ticks: {
-                    callback: function(value, index, values) {
-                        return value.toFixed(2);
+            animation: {
+                duration: 2000,
+            },
+            scales: {
+                x: {
+                    max: 100,
+                    ticks: {
+                        color: '#1E1E1E',
+                        font: {
+                            size: 16,
+                            family: 'Montserrat',
+                        }
                     },
-                    stepSize: 25,
-                    color: '#8F8F8F',
-                    font: {
-                        size: 14,
-                        family: 'Montserrat',
+                },
+                y: {
+                    ticks: {
+                        callback: function (value, index, values) {
+                            return value.toFixed(2);
+                        },
+                        stepSize: 25,
+                        color: '#8F8F8F',
+                        font: {
+                            size: 14,
+                            family: 'Montserrat',
+                        },
                     },
                 },
             },
         },
-    },
-});
+    });
+}
 //  Chart 2 End //
 
 
-//  Chart Copy Start //
-const ct3 = document.getElementById('myChart3');
+
+const chartData = [
+    { id: 'myChart3', data: [750000, 600000, 200000, 100000] },
+    { id: 'myChart4', data: [100000, 300000, 500000, 750000] },
+    { id: 'myChart5', data: [750000, 200000, 600000, 100000] }
+];
+if (chartData.id){
 Chart.defaults.FontFamily = 'Montserrat';
-new Chart(ct3, {
-    type: 'bar',
-    data: {
-        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-        datasets: [{
-            data: [750000, 600000, 200000, 100000],
-            borderWidth: 1,
-            fill: true,
-            label: '',
-            backgroundColor: function(context) {
-                const chart = context.chart;
-                const {ctx, chartArea} = chart;
 
-                if (!chartArea) {
-                    return;
-                }
-                return getGradient(ctx, chartArea);
-            },
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                enabled: false,
-            },
-        },
-        animation: {
-            duration: 2000,
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#1E1E1E',
-                    font: {
-                        size: 8,
-                        family: 'Montserrat',
-                    }
-                },
-            },
-            y: {
-                max: 800000,
-                ticks: {
-                    callback: function(value, index, values) {
-                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+chartData.forEach((chart) => {
+    const ctx = document.getElementById(chart.id);
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+                datasets: [{
+                    data: chart.data,
+                    borderWidth: 1,
+                    fill: true,
+                    label: '',
+                    backgroundColor: function(context) {
+                        const chart = context.chart;
+                        const {ctx, chartArea} = chart;
+
+                        if (!chartArea) {
+                            return;
+                        }
+                        return getGradient(ctx, chartArea);
                     },
-                    stepSize: 200000,
-                    color: '#8F8F8F',
-                    font: {
-                        size: 10,
-                        family: 'Montserrat',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: false,
                     },
                 },
+                animation: {
+                    duration: 2000,
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#1E1E1E',
+                            font: {
+                                size: 10,
+                                family: 'Montserrat',
+                            }
+                        },
+                    },
+                    y: {
+                        max: 800000,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                            },
+                            stepSize: 200000,
+                            color: '#8F8F8F',
+                            font: {
+                                size: 8,
+                                family: 'Montserrat',
+                            },
+                        },
+                    },
+                },
             },
-        },
-    },
+        });
+    }
 });
+}
 
-const ct4 = document.getElementById('myChart4');
-Chart.defaults.FontFamily = 'Montserrat';
-new Chart(ct4, {
-    type: 'bar',
-    data: {
-        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-        datasets: [{
-            data: [100000, 300000, 500000, 750000],
-            borderWidth: 1,
-            fill: true,
-            label: '',
-            backgroundColor: function(context) {
-                const chart = context.chart;
-                const {ctx, chartArea} = chart;
-
-                if (!chartArea) {
-                    return;
-                }
-                return getGradient(ctx, chartArea);
-            },
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                enabled: false,
-            },
-        },
-        animation: {
-            duration: 2000,
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#1E1E1E',
-                    font: {
-                        size: 10,
-                        family: 'Montserrat',
-                    }
-                },
-            },
-            y: {
-                max: 800000,
-                ticks: {
-                    callback: function(value, index, values) {
-                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
-                    },
-                    stepSize: 200000,
-                    color: '#8F8F8F',
-                    font: {
-                        size: 8,
-                        family: 'Montserrat',
-                    },
-                },
-            },
-        },
-    },
-});
-
-
-const ct5 = document.getElementById('myChart5');
-Chart.defaults.FontFamily = 'Montserrat';
-new Chart(ct5, {
-    type: 'bar',
-    data: {
-        labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-        datasets: [{
-            data: [750000, 200000, 600000, 100000],
-            borderWidth: 1,
-            fill: true,
-            label: '',
-            backgroundColor: function(context) {
-                const chart = context.chart;
-                const {ctx, chartArea} = chart;
-
-                if (!chartArea) {
-                    return;
-                }
-                return getGradient(ctx, chartArea);
-            },
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                enabled: false,
-            },
-        },
-        animation: {
-            duration: 2000,
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#1E1E1E',
-                    font: {
-                        size: 10,
-                        family: 'Montserrat',
-                    }
-                },
-            },
-            y: {
-                max: 800000,
-                ticks: {
-                    callback: function(value, index, values) {
-                        return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
-                    },
-                    stepSize: 200000,
-                    color: '#8F8F8F',
-                    font: {
-                        size: 8,
-                        family: 'Montserrat',
-                    },
-                },
-            },
-        },
-    },
-});
-//  Chart Copy End //
-
+ // Chart Copy Start //
+// const ct3 = document.getElementById('myChart3');
+// if (ct3) {
+//     Chart.defaults.FontFamily = 'Montserrat';
+//     new Chart(ct3, {
+//         type: 'bar',
+//         data: {
+//             labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+//             datasets: [{
+//                 data: [750000, 600000, 200000, 100000],
+//                 borderWidth: 1,
+//                 fill: true,
+//                 label: '',
+//                 backgroundColor: function (context) {
+//                     const chart = context.chart;
+//                     const {ctx, chartArea} = chart;
+//
+//                     if (!chartArea) {
+//                         return;
+//                     }
+//                     return getGradient(ctx, chartArea);
+//                 },
+//             }]
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: true,
+//             plugins: {
+//                 legend: {
+//                     display: false,
+//                 },
+//                 tooltip: {
+//                     enabled: false,
+//                 },
+//             },
+//             animation: {
+//                 duration: 2000,
+//             },
+//             scales: {
+//                 x: {
+//                     ticks: {
+//                         color: '#1E1E1E',
+//                         font: {
+//                             size: 8,
+//                             family: 'Montserrat',
+//                         }
+//                     },
+//                 },
+//                 y: {
+//                     max: 800000,
+//                     ticks: {
+//                         callback: function (value, index, values) {
+//                             return '$' + value.toLocaleString('en-US', {
+//                                 minimumFractionDigits: 0,
+//                                 maximumFractionDigits: 2
+//                             });
+//                         },
+//                         stepSize: 200000,
+//                         color: '#8F8F8F',
+//                         font: {
+//                             size: 10,
+//                             family: 'Montserrat',
+//                         },
+//                     },
+//                 },
+//             },
+//         },
+//     });
+// }
+//
+// const ct4 = document.getElementById('myChart4');
+// if (ct4) {
+//     Chart.defaults.FontFamily = 'Montserrat';
+//     new Chart(ct4, {
+//         type: 'bar',
+//         data: {
+//             labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+//             datasets: [{
+//                 data: [100000, 300000, 500000, 750000],
+//                 borderWidth: 1,
+//                 fill: true,
+//                 label: '',
+//                 backgroundColor: function (context) {
+//                     const chart = context.chart;
+//                     const {ctx, chartArea} = chart;
+//
+//                     if (!chartArea) {
+//                         return;
+//                     }
+//                     return getGradient(ctx, chartArea);
+//                 },
+//             }]
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: true,
+//             plugins: {
+//                 legend: {
+//                     display: false,
+//                 },
+//                 tooltip: {
+//                     enabled: false,
+//                 },
+//             },
+//             animation: {
+//                 duration: 2000,
+//             },
+//             scales: {
+//                 x: {
+//                     ticks: {
+//                         color: '#1E1E1E',
+//                         font: {
+//                             size: 10,
+//                             family: 'Montserrat',
+//                         }
+//                     },
+//                 },
+//                 y: {
+//                     max: 800000,
+//                     ticks: {
+//                         callback: function (value, index, values) {
+//                             return '$' + value.toLocaleString('en-US', {
+//                                 minimumFractionDigits: 0,
+//                                 maximumFractionDigits: 2
+//                             });
+//                         },
+//                         stepSize: 200000,
+//                         color: '#8F8F8F',
+//                         font: {
+//                             size: 8,
+//                             family: 'Montserrat',
+//                         },
+//                     },
+//                 },
+//             },
+//         },
+//     });
+// }
+//
+// const ct5 = document.getElementById('myChart5');
+// if (ct5) {
+//     Chart.defaults.FontFamily = 'Montserrat';
+//     new Chart(ct5, {
+//         type: 'bar',
+//         data: {
+//             labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+//             datasets: [{
+//                 data: [750000, 200000, 600000, 100000],
+//                 borderWidth: 1,
+//                 fill: true,
+//                 label: '',
+//                 backgroundColor: function (context) {
+//                     const chart = context.chart;
+//                     const {ctx, chartArea} = chart;
+//
+//                     if (!chartArea) {
+//                         return;
+//                     }
+//                     return getGradient(ctx, chartArea);
+//                 },
+//             }]
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: true,
+//             plugins: {
+//                 legend: {
+//                     display: false,
+//                 },
+//                 tooltip: {
+//                     enabled: false,
+//                 },
+//             },
+//             animation: {
+//                 duration: 2000,
+//             },
+//             scales: {
+//                 x: {
+//                     ticks: {
+//                         color: '#1E1E1E',
+//                         font: {
+//                             size: 10,
+//                             family: 'Montserrat',
+//                         }
+//                     },
+//                 },
+//                 y: {
+//                     max: 800000,
+//                     ticks: {
+//                         callback: function (value, index, values) {
+//                             return '$' + value.toLocaleString('en-US', {
+//                                 minimumFractionDigits: 0,
+//                                 maximumFractionDigits: 2
+//                             });
+//                         },
+//                         stepSize: 200000,
+//                         color: '#8F8F8F',
+//                         font: {
+//                             size: 8,
+//                             family: 'Montserrat',
+//                         },
+//                     },
+//                 },
+//             },
+//         },
+//     });
+// }
+ // Chart Copy End //
 
 
 //  ------
@@ -1331,7 +1415,7 @@ $('.news-section').slick({
         }
     ]
 });
-$('.news-section.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+$('.news-section.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
@@ -1359,9 +1443,8 @@ $('.news-section.slick-slider').on('afterChange', function(event, slick, current
 });
 
 
-
 //  Height News text box Start //
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     let newsBoxes = document.getElementsByClassName('news-box-text');
     let maxHeight = 0;
     for (let i = 0; i < newsBoxes.length; i++) {
@@ -1376,11 +1459,10 @@ window.addEventListener('load', function() {
 //  Height News text box End //
 
 
-
 const selectBtns = document.querySelectorAll('.select-btn');
 const optionsLists = document.querySelectorAll('.options');
 selectBtns.forEach((selectBtn, index) => {
-    selectBtn.addEventListener('click', function() {
+    selectBtn.addEventListener('click', function () {
         selectBtn.classList.toggle('active');
         optionsLists[index].classList.toggle('active');
     });
@@ -1388,7 +1470,7 @@ selectBtns.forEach((selectBtn, index) => {
 optionsLists.forEach(options => {
     const languageOptions = options.querySelectorAll('.option');
     languageOptions.forEach(option => {
-        option.addEventListener('click', function() {
+        option.addEventListener('click', function () {
 
             const selectedImage = this.querySelector('img').getAttribute('src');
             const selectedLanguage = this.querySelector('.option-text').textContent;
@@ -1400,12 +1482,6 @@ optionsLists.forEach(options => {
 });
 
 //  ----------
-
-
-
-
-
-
 
 
 //  --------
@@ -1423,40 +1499,41 @@ const priceMinValue = document.getElementById("price-min-value");
 const priceMaxValue = document.getElementById("price-max-value");
 const priceMinPrice = document.getElementById("price-min-price");
 const priceMaxPrice = document.getElementById("price-max-price");
+if (priceMinPrice) {
 
-priceMinPrice.addEventListener("input", () => {
-    let minPrice = parseInt(priceMinPrice.value);
-    let maxPrice = parseInt(priceMaxPrice.value);
-    validateRange(minPrice, maxPrice, priceMinValue, priceMaxValue);
-});
+    priceMinPrice.addEventListener("input", () => {
+        let minPrice = parseInt(priceMinPrice.value);
+        let maxPrice = parseInt(priceMaxPrice.value);
+        validateRange(minPrice, maxPrice, priceMinValue, priceMaxValue);
+    });
 
-priceMaxPrice.addEventListener("input", () => {
-    let minPrice = parseInt(priceMinPrice.value);
-    let maxPrice = parseInt(priceMaxPrice.value);
-    validateRange(minPrice, maxPrice, priceMinValue, priceMaxValue);
-});
+    priceMaxPrice.addEventListener("input", () => {
+        let minPrice = parseInt(priceMinPrice.value);
+        let maxPrice = parseInt(priceMaxPrice.value);
+        validateRange(minPrice, maxPrice, priceMinValue, priceMaxValue);
+    });
 
-const areaMinValue = document.getElementById("area-min-value");
-const areaMaxValue = document.getElementById("area-max-value");
-const areaMinPrice = document.getElementById("area-min-price");
-const areaMaxPrice = document.getElementById("area-max-price");
+    const areaMinValue = document.getElementById("area-min-value");
+    const areaMaxValue = document.getElementById("area-max-value");
+    const areaMinPrice = document.getElementById("area-min-price");
+    const areaMaxPrice = document.getElementById("area-max-price");
 
-areaMinPrice.addEventListener("input", () => {
-    let minPrice = parseInt(areaMinPrice.value);
-    let maxPrice = parseInt(areaMaxPrice.value);
-    validateRange(minPrice, maxPrice, areaMinValue, areaMaxValue);
-});
+    areaMinPrice.addEventListener("input", () => {
+        let minPrice = parseInt(areaMinPrice.value);
+        let maxPrice = parseInt(areaMaxPrice.value);
+        validateRange(minPrice, maxPrice, areaMinValue, areaMaxValue);
+    });
 
-areaMaxPrice.addEventListener("input", () => {
-    let minPrice = parseInt(areaMinPrice.value);
-    let maxPrice = parseInt(areaMaxPrice.value);
-    validateRange(minPrice, maxPrice, areaMinValue, areaMaxValue);
-});
+    areaMaxPrice.addEventListener("input", () => {
+        let minPrice = parseInt(areaMinPrice.value);
+        let maxPrice = parseInt(areaMaxPrice.value);
+        validateRange(minPrice, maxPrice, areaMinValue, areaMaxValue);
+    });
 
-validateRange(parseInt(priceMinPrice.value), parseInt(priceMaxPrice.value), priceMinValue, priceMaxValue);
-validateRange(parseInt(areaMinPrice.value), parseInt(areaMaxPrice.value), areaMinValue, areaMaxValue);
+    validateRange(parseInt(priceMinPrice.value), parseInt(priceMaxPrice.value), priceMinValue, priceMaxValue);
+    validateRange(parseInt(areaMinPrice.value), parseInt(areaMaxPrice.value), areaMinValue, areaMaxValue);
+}
 //  ----------
-
 
 
 //  Home Filter Start //

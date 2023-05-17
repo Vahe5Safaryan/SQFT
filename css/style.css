@@ -3308,6 +3308,13 @@ li {
     background: #FFFFFF;
     border-radius: 32px;
 }
+.broker-modal-input input::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676767;
+    padding-left: 33px;
+}
 /* B-B*/
 
 /* Dev profile Delete Modal Star */
