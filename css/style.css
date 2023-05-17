@@ -780,7 +780,13 @@ li {
 .section-heading-what-will {
     margin: 0 0 40px 0;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
+}
+.section-heading-what-will h2{
+    margin-left: 30px;
+}
+.space{
+    margin-left: 0 !important;
 }
 
 .what-will {
@@ -814,7 +820,7 @@ li {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    padding: 40px 60px 40px 175px;
+    padding: 40px 60px 40px 140px;
 }
 
 .what-will-text ul li {
@@ -969,7 +975,7 @@ li {
 }
 
 .payment-box{
-    padding: 35px 10px 45px;
+    padding: 35px 10px 40px;
     border-radius: 10px;
     border: 1.5px solid #8F8F8F;
     display: flex;
@@ -977,8 +983,6 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 765px;
-    max-width: 100%;
 }
 
 .pay-line{
@@ -986,7 +990,7 @@ li {
     height: 8px;
     background: #09D75C;
     border-radius: 10px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .payment-box h4{
@@ -1109,14 +1113,27 @@ li {
     height: 30px;
     right: 0;
     top: 244px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payment-section .slick-next i{
+    font-size: 13px;
 }
 .payment-section .slick-prev {
     width: 30px;
     height: 30px;
     left: 0;
     top: 244px;
-}
 
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.payment-section .slick-prev i{
+    font-size: 13px;
+}
 
 .pay-business-content h4{
     font-weight: 500;
@@ -2377,6 +2394,9 @@ li {
 .developer-more-prod{
     padding: 150px 0 120px;
 }
+.developer-more-head{
+    margin-bottom: 30px;
+}
 
 .developer-more-btn-section-bg{
     background: #1E1E1E;
@@ -2861,6 +2881,8 @@ li {
     max-width: 520px;
 }
 
+
+
 .developer-profile-form-section{
     display: flex;
     justify-content: center;
@@ -2953,7 +2975,7 @@ li {
 .developer-profile-reg-btn{
     display: flex;
     justify-content: center;
-    max-width: 410px;
+    /*max-width: 410px;*/
     width: 100%;
 }
 .developer-profile-img-btns .developer-profile-reg-btn-bordered a{
@@ -3447,11 +3469,10 @@ label span {
     color: #09D75C;
 }
 
-.current-pay {
-    padding: 0 50px;
-    /*height: 98%;*/
-
+.current-plan .payment-box{
+    padding: 35px 10px 75px;
 }
+
 .current-pay .pay-down-btn a{
     padding: 16px 22px 17px 22px;
     width: 100%;
@@ -4781,6 +4802,10 @@ canvas{
         font-size: 20px;
         line-height: 24px;
     }
+
+    .current-plan .payment-box {
+        padding: 35px 10px 45px;
+    }
 }
 
 @media screen and (max-width: 860px) {
@@ -5547,11 +5572,16 @@ canvas{
         height: 60px;
     }
 
-    /*.developer-profile-form h4 {*/
-    /*    font-size: 24px;*/
-    /*}*/
     .current-plan-heed h4 {
         font-size: 24px;
+    }
+
+    .faq-accordion-item {
+        padding: 20px;
+    }
+
+    .current-plan .payment-box {
+        padding: 0 10px;
     }
 }
 
@@ -5941,6 +5971,10 @@ canvas{
     .chart-copy .chart-section{
         width: 100%;
     }
+
+    .access-number input{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -6150,6 +6184,10 @@ canvas{
 
     .filter-box-show .select-menu .options{
         right: 0;
+    }
+
+    .access-section-small {
+        padding: 20px 0 !important;
     }
 
 }
