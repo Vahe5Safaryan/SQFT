@@ -1075,284 +1075,76 @@ const chartData = [
     { id: 'myChart4', data: [100000, 300000, 500000, 750000] },
     { id: 'myChart5', data: [750000, 200000, 600000, 100000] }
 ];
-if (chartData.id){
-Chart.defaults.FontFamily = 'Montserrat';
+if (document.getElementById(chartData[0].id)) {
+    Chart.defaults.FontFamily = 'Montserrat';
 
-chartData.forEach((chart) => {
-    const ctx = document.getElementById(chart.id);
-    if (ctx) {
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-                datasets: [{
-                    data: chart.data,
-                    borderWidth: 1,
-                    fill: true,
-                    label: '',
-                    backgroundColor: function(context) {
-                        const chart = context.chart;
-                        const {ctx, chartArea} = chart;
+    chartData.forEach((chart) => {
+        const ctx = document.getElementById(chart.id);
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+                    datasets: [{
+                        data: chart.data,
+                        borderWidth: 1,
+                        fill: true,
+                        label: '',
+                        backgroundColor: function(context) {
+                            const chart = context.chart;
+                            const {ctx, chartArea} = chart;
 
-                        if (!chartArea) {
-                            return;
-                        }
-                        return getGradient(ctx, chartArea);
-                    },
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: {
-                        display: false,
-                    },
-                    tooltip: {
-                        enabled: false,
-                    },
-                },
-                animation: {
-                    duration: 2000,
-                },
-                scales: {
-                    x: {
-                        ticks: {
-                            color: '#1E1E1E',
-                            font: {
-                                size: 10,
-                                family: 'Montserrat',
+                            if (!chartArea) {
+                                return;
                             }
+                            return getGradient(ctx, chartArea);
+                        },
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            enabled: false,
                         },
                     },
-                    y: {
-                        max: 800000,
-                        ticks: {
-                            callback: function(value, index, values) {
-                                return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                    animation: {
+                        duration: 2000,
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#1E1E1E',
+                                font: {
+                                    size: 10,
+                                    family: 'Montserrat',
+                                }
                             },
-                            stepSize: 200000,
-                            color: '#8F8F8F',
-                            font: {
-                                size: 8,
-                                family: 'Montserrat',
+                        },
+                        y: {
+                            max: 800000,
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+                                },
+                                stepSize: 200000,
+                                color: '#8F8F8F',
+                                font: {
+                                    size: 8,
+                                    family: 'Montserrat',
+                                },
                             },
                         },
                     },
                 },
-            },
-        });
-    }
-});
+            });
+        }
+    });
 }
-
- // Chart Copy Start //
-// const ct3 = document.getElementById('myChart3');
-// if (ct3) {
-//     Chart.defaults.FontFamily = 'Montserrat';
-//     new Chart(ct3, {
-//         type: 'bar',
-//         data: {
-//             labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-//             datasets: [{
-//                 data: [750000, 600000, 200000, 100000],
-//                 borderWidth: 1,
-//                 fill: true,
-//                 label: '',
-//                 backgroundColor: function (context) {
-//                     const chart = context.chart;
-//                     const {ctx, chartArea} = chart;
-//
-//                     if (!chartArea) {
-//                         return;
-//                     }
-//                     return getGradient(ctx, chartArea);
-//                 },
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             maintainAspectRatio: true,
-//             plugins: {
-//                 legend: {
-//                     display: false,
-//                 },
-//                 tooltip: {
-//                     enabled: false,
-//                 },
-//             },
-//             animation: {
-//                 duration: 2000,
-//             },
-//             scales: {
-//                 x: {
-//                     ticks: {
-//                         color: '#1E1E1E',
-//                         font: {
-//                             size: 8,
-//                             family: 'Montserrat',
-//                         }
-//                     },
-//                 },
-//                 y: {
-//                     max: 800000,
-//                     ticks: {
-//                         callback: function (value, index, values) {
-//                             return '$' + value.toLocaleString('en-US', {
-//                                 minimumFractionDigits: 0,
-//                                 maximumFractionDigits: 2
-//                             });
-//                         },
-//                         stepSize: 200000,
-//                         color: '#8F8F8F',
-//                         font: {
-//                             size: 10,
-//                             family: 'Montserrat',
-//                         },
-//                     },
-//                 },
-//             },
-//         },
-//     });
-// }
-//
-// const ct4 = document.getElementById('myChart4');
-// if (ct4) {
-//     Chart.defaults.FontFamily = 'Montserrat';
-//     new Chart(ct4, {
-//         type: 'bar',
-//         data: {
-//             labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-//             datasets: [{
-//                 data: [100000, 300000, 500000, 750000],
-//                 borderWidth: 1,
-//                 fill: true,
-//                 label: '',
-//                 backgroundColor: function (context) {
-//                     const chart = context.chart;
-//                     const {ctx, chartArea} = chart;
-//
-//                     if (!chartArea) {
-//                         return;
-//                     }
-//                     return getGradient(ctx, chartArea);
-//                 },
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             maintainAspectRatio: true,
-//             plugins: {
-//                 legend: {
-//                     display: false,
-//                 },
-//                 tooltip: {
-//                     enabled: false,
-//                 },
-//             },
-//             animation: {
-//                 duration: 2000,
-//             },
-//             scales: {
-//                 x: {
-//                     ticks: {
-//                         color: '#1E1E1E',
-//                         font: {
-//                             size: 10,
-//                             family: 'Montserrat',
-//                         }
-//                     },
-//                 },
-//                 y: {
-//                     max: 800000,
-//                     ticks: {
-//                         callback: function (value, index, values) {
-//                             return '$' + value.toLocaleString('en-US', {
-//                                 minimumFractionDigits: 0,
-//                                 maximumFractionDigits: 2
-//                             });
-//                         },
-//                         stepSize: 200000,
-//                         color: '#8F8F8F',
-//                         font: {
-//                             size: 8,
-//                             family: 'Montserrat',
-//                         },
-//                     },
-//                 },
-//             },
-//         },
-//     });
-// }
-//
-// const ct5 = document.getElementById('myChart5');
-// if (ct5) {
-//     Chart.defaults.FontFamily = 'Montserrat';
-//     new Chart(ct5, {
-//         type: 'bar',
-//         data: {
-//             labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
-//             datasets: [{
-//                 data: [750000, 200000, 600000, 100000],
-//                 borderWidth: 1,
-//                 fill: true,
-//                 label: '',
-//                 backgroundColor: function (context) {
-//                     const chart = context.chart;
-//                     const {ctx, chartArea} = chart;
-//
-//                     if (!chartArea) {
-//                         return;
-//                     }
-//                     return getGradient(ctx, chartArea);
-//                 },
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             maintainAspectRatio: true,
-//             plugins: {
-//                 legend: {
-//                     display: false,
-//                 },
-//                 tooltip: {
-//                     enabled: false,
-//                 },
-//             },
-//             animation: {
-//                 duration: 2000,
-//             },
-//             scales: {
-//                 x: {
-//                     ticks: {
-//                         color: '#1E1E1E',
-//                         font: {
-//                             size: 10,
-//                             family: 'Montserrat',
-//                         }
-//                     },
-//                 },
-//                 y: {
-//                     max: 800000,
-//                     ticks: {
-//                         callback: function (value, index, values) {
-//                             return '$' + value.toLocaleString('en-US', {
-//                                 minimumFractionDigits: 0,
-//                                 maximumFractionDigits: 2
-//                             });
-//                         },
-//                         stepSize: 200000,
-//                         color: '#8F8F8F',
-//                         font: {
-//                             size: 8,
-//                             family: 'Montserrat',
-//                         },
-//                     },
-//                 },
-//             },
-//         },
-//     });
-// }
  // Chart Copy End //
 
 

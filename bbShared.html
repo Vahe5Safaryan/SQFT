@@ -2,9 +2,481 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQFT</title>
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 
+<div class="under-page-menu-btn">
+    <div class="login-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</div>
+<div class="under-page-menu-box">
+    <div class="under-page-menu-logo big-logo">
+        <img src="img/logo/logo1.svg" alt="">
+    </div>
+    <div class="under-page-menu-place">
+        <ul>
+            <li><a href="#">UAE</a></li>
+            <span></span>
+            <li><a href="#">Europe</a></li>
+            <span></span>
+            <li><a href="#">UK</a></li>
+        </ul>
+    </div>
+    <div class="under-page-menu-page">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">SQFT Table</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Header Start-->
+<header>
+    <div class="container-fluid">
+        <div class="container">
+            <nav class="nav-link other-nav-link">
+                <div class="logo big-logo padding-logo">
+                    <img src="img/logo/logo2.svg" alt="">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- Header End-->
+
+<!-- Developer Reg Form Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="developer-profile-form-section">
+            <div class="developer-profile-form headFF">
+                <h4><span>broker business <br> </span> shared access </h4>
+                <div class="developer-profile-reg">
+                    <img src="img/ing/group.png" alt="">
+                    <div class="registration-box">
+                        <div class="reg-box_1 active">
+                            <form>
+                                <input type="text" name="name" placeholder="Name*" required>
+                                <input type="text" name="surname" placeholder="Surname" required>
+                                <input type="text" name="estate" placeholder="Real Estate Agency Name or No Agency*" required>
+                                <input type="text" name="position" placeholder="Position*" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="tel" name="phoneNumber" placeholder="Phone number">
+                                <div class="remember-me">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span></span>
+                                        <p >I would like to receive news from developer and be informed <br> about SQFT table updates</p>
+                                    </label>
+                                </div>
+                                <div class="page-for-dev-form-btn">
+                                    <div class="developer-profile-reg-btn-bordered">
+                                        <a href="" class="btn-transparent">Update info</a>
+                                    </div>
+                                    <div class="developer-profile-reg-btn change-pass">
+                                        <a href="" class="btn btn-primary">Change password</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="current-plan">
+                <div class="current-plan-heed headFF">
+                    <h4>current <span>payment plan</span> </h4>
+                </div>
+                <div class="shared-access-img">
+                    <div class="shared-access-text">
+                        <div class="pay-line"></div>
+                        <h4>Free Under <br> Business Account</h4>
+                    </div>
+                    <img src="img/ing/bbimage.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Developer Reg Form End -->
+
+
+<!-- FAQ Start -->
+<section>
+    <div class="faq-bg dev-profile-faq-bg">
+        <div class="container">
+            <div class="faq-accordion">
+                <div class="section-heading faq-section-heading">
+                    <h2><span>Faq</span></h2>
+                </div>
+                <div class="faq-accordion-item active">
+                    <div class="faq-accordion-heading-content">
+                        <h4>Features FAQs</h4>
+                        <div class="faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-heading-content">
+                        <h4>Features FAQs</h4>
+                        <div class="faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn ">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-heading-content">
+                        <h4>Features FAQs</h4>
+                        <div class="faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn ">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-heading-content">
+                        <h4>Features FAQs</h4>
+                        <div class="faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn ">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What information is needed to create a Login?</h5> <i
+                                    class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-under-item">
+                            <div class="faq-accordion-under-item-btn">
+                                <h5>What is the free trial during “beta”?</h5> <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="faq-accordion-under-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Dev Page FAQ End -->
+
+<div class="container-fluid indent-box"></div>
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer-bg">
+        <div class="container">
+            <div class="footer-section footer-section-2">
+                <div class="footer-logo-box footer-logo-box-2">
+                    <img src="img/logo/logo1.svg" alt="">
+                </div>
+                <div class="footer-fight-section">
+                    <div class="footer-menu-box footer-menu-box-2">
+                        <div class="footer-left-menu footer-left-menu-2">
+                            <div class="footer-line"></div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Developers</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Data</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-left-menu footer-left-menu-2 footer-right-menu footer-right-menu-2">
+                            <div class="footer-line"></div>
+                            <ul>
+                                <li><a href="#">info@mysite.com</a></li>
+                                <li><a href="#">info@mysite.com</a></li>
+                                <li><a href="#">Tel: 123-456-7890</a></li>
+                                <li><a href="#">500 Terry Francois Street</a></li>
+                                <li><a href="#">San Francisco, CA 94158</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-box-social">
+                        <div class="footer-line"></div>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-arrow-top footer-arrow-top-2">
+                    <img src="img/icon/arrowtop.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer End -->
+
+<!--Scroll To Top  -->
+<div class="footer-arrow-top">
+    <img src="img/icon/arrowtop.png" alt="">
+</div>
+
+<div class="overlay"></div>
+
+
+
+<!-- Broker Modal Start -->
+<div class="modal-position">
+    <div class="dev-profile-modal modal-box">
+        <h4> Change<span> password</span> </h4>
+        <div class="broker-modal-input">
+            <form>
+                <input type="text" name="name" placeholder="Оld password*" required>
+                <input type="text" name="name" placeholder="New password*" required>
+                <input type="text" name="name" placeholder="Confirm the password*" required>
+                <div class="dev-profile-replace-modal-btn">
+                    <a href="" class="btn btn-primary">Change</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+</div>
+<!-- Broker Modal End -->
+
+
+<!-- Slick -->
+<script src="./js/slick.min.js"></script>
+
+<!-- Main JS -->
+<script src="./js/main.js"></script>
+
+<!-- Script End-->
 </body>
 </html>
