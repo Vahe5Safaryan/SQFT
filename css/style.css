@@ -2479,8 +2479,8 @@ li {
     box-shadow: 0 4px 11px rgba(30, 30, 30, 0.1);
     border-radius: 10px;
     padding: 30px 20px 30px 30px;
-    height: 275px;
-    transition: all 0.2s ease;
+    height: 280px;
+    transition: all 0.1s ease;
 }
 .agent-section-box-dark{
     background: #1E1E1E;

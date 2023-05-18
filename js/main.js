@@ -1273,12 +1273,14 @@ optionsLists.forEach(options => {
     const languageOptions = options.querySelectorAll('.option');
     languageOptions.forEach(option => {
         option.addEventListener('click', function () {
+            const selectedImage = this.querySelector('img');
+            if (selectedImage !== null) {
+                const selectedSrc = selectedImage.getAttribute('src');
+                const selectedLanguage = this.querySelector('.option-text').textContent;
 
-            const selectedImage = this.querySelector('img').getAttribute('src');
-            const selectedLanguage = this.querySelector('.option-text').textContent;
-
-            const selectBtnImage = this.closest('.language-box').querySelector('.select-btn img');
-            selectBtnImage.setAttribute('src', selectedImage);
+                const selectBtnImage = this.closest('.language-box').querySelector('.select-btn img');
+                selectBtnImage.setAttribute('src', selectedSrc);
+            }
         });
     });
 });
@@ -1367,45 +1369,38 @@ showBtn.forEach((button, index) => {
 //  Reg img Start //
 const regImg = document.getElementById('regimg');
 const imagePreview = document.getElementById('imagePreview');
-regImg.addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
+if (regImg){
+    regImg.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
 
-    reader.onload = (e) => {
-        imagePreview.src = e.target.result;
-    };
+        reader.onload = (e) => {
+            imagePreview.src = e.target.result;
+        };
 
-    reader.readAsDataURL(file);
-});
+        reader.readAsDataURL(file);
+    });
+}
 //  Reg img End //
 
 
-
-
-
-
-
-
+//  Sales Agent Cart Start //
 let agentBoxes = document.querySelectorAll('.agent-section-box');
-
-// Добавляем обработчик события клика к каждому элементу
 agentBoxes.forEach(function(agentBox) {
     let hiddenElements = agentBox.querySelectorAll('.hidden');
 
     agentBox.addEventListener('click', function() {
-        // Переключаем класс hidden у дочерних элементов текущего agentBox
         hiddenElements.forEach(function(element) {
             element.classList.toggle('hidden');
             element.style.opacity = '1';
         });
 
-        // Проверяем, есть ли у какого-либо дочернего элемента класс hidden
         let hasHiddenElements = Array.from(hiddenElements).some(function(element) {
             return element.classList.contains('hidden');
         });
 
-        // Устанавливаем высоту в зависимости от наличия hidden элементов
         agentBox.style.height = hasHiddenElements ? '' : '100%';
-        agentBox.style.height = hasHiddenElements ? `${agentBox.scrollHeight}px` : '275';
+        agentBox.style.height = hasHiddenElements ? `${agentBox.scrollHeight}px` : '280';
     });
 });
+//  Sales Agent Cart End //
