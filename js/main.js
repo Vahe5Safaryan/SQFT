@@ -644,9 +644,7 @@ function checkSlide() {
         }
     });
 }
-
 window.addEventListener('scroll', debounce(checkSlide));
-
 
 //  Height Box //
 window.addEventListener('load', function () {
@@ -844,6 +842,20 @@ if (salesMoreReportBtn) {
 }
 // Dev profile Delete Modal End //
 
+// Sales Agent Modal Start //
+const salesAgentModal = document.querySelector('.sales-agent-modal');
+const salesModalBtn = document.querySelectorAll('.sales-modal');
+if (salesModalBtn) {
+    for (let i = 0; i < salesModalBtn.length; i++) {
+        salesModalBtn[i].addEventListener('click', function (event) {
+            salesAgentModal.classList.toggle('active-modal');
+            overlay.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+    }
+}
+// Sales Agent Modal End //
 
 //  Broker Modal //
 const changePass = document.querySelector('.change-pass');
@@ -858,7 +870,6 @@ if (changePass) {
 
 
 //  Shared Access Start //
-
 document.addEventListener('DOMContentLoaded', function () {
     let addAccesses = document.querySelectorAll('.add-access');
 
@@ -916,7 +927,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-//
+
 
 
 let width, height, gradient;
@@ -1152,7 +1163,6 @@ if (document.getElementById(chartData[0].id)) {
 $('.news-section').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    // infinite: false,
     prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
     responsive: [
@@ -1272,7 +1282,6 @@ optionsLists.forEach(options => {
         });
     });
 });
-
 //  ----------
 
 
@@ -1355,3 +1364,48 @@ showBtn.forEach((button, index) => {
 });
 //  Home Filter End //
 
+//  Reg img Start //
+const regImg = document.getElementById('regimg');
+const imagePreview = document.getElementById('imagePreview');
+regImg.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+        imagePreview.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});
+//  Reg img End //
+
+
+
+
+
+
+
+
+let agentBoxes = document.querySelectorAll('.agent-section-box');
+
+// Добавляем обработчик события клика к каждому элементу
+agentBoxes.forEach(function(agentBox) {
+    let hiddenElements = agentBox.querySelectorAll('.hidden');
+
+    agentBox.addEventListener('click', function() {
+        // Переключаем класс hidden у дочерних элементов текущего agentBox
+        hiddenElements.forEach(function(element) {
+            element.classList.toggle('hidden');
+            element.style.opacity = '1';
+        });
+
+        // Проверяем, есть ли у какого-либо дочернего элемента класс hidden
+        let hasHiddenElements = Array.from(hiddenElements).some(function(element) {
+            return element.classList.contains('hidden');
+        });
+
+        // Устанавливаем высоту в зависимости от наличия hidden элементов
+        agentBox.style.height = hasHiddenElements ? '' : '100%';
+        agentBox.style.height = hasHiddenElements ? `${agentBox.scrollHeight}px` : '275';
+    });
+});
