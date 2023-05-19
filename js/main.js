@@ -1,6 +1,5 @@
 "use strict";
 
-
 $('.main-slider-text').slick({
     dots: true,
     infinite: false,
@@ -385,7 +384,6 @@ $('.reviews-section.slick-slider').on('afterChange', function (event, slick, cur
 
 
 // Accardion Start //
-
 const accItems = document.querySelectorAll('.faq-accordion-item');
 
 accItems.forEach(function (accItem) {
@@ -929,7 +927,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 let width, height, gradient;
 
 function getGradient(ctx, chartArea) {
@@ -1013,7 +1010,6 @@ if (ctx) {
         },
     });
 }
-
 //  Chart 2 Start //
 
 const ctr = document.getElementById('myChart2');
@@ -1400,7 +1396,6 @@ agentBoxes.forEach(function(agentBox) {
         });
 
         agentBox.style.height = hasHiddenElements ? '' : '100%';
-        agentBox.style.height = hasHiddenElements ? `${agentBox.scrollHeight}px` : '280';
     });
 });
 //  Sales Agent Cart End //

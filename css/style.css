@@ -4544,6 +4544,11 @@ canvas{
     color: #09D75C;
 }
 
+.agent-section-box-sales{
+    height: 100%;
+    padding: 35px 20px 65px 30px;
+}
+
 .yourself-content h4{
     font-weight: 500;
     font-size: 40px;
@@ -6653,6 +6658,10 @@ canvas{
         max-width: 310px;
         width: 100%;
     }
+
+    .sales-agent-input-btn a{
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -6866,6 +6875,12 @@ canvas{
 
     .access-section-small {
         padding: 20px 0 !important;
+    }
+
+
+    .sales-agent-input-btn a{
+        padding: 5px;
+        display: flex;
     }
 
 }
