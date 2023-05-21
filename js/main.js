@@ -855,6 +855,7 @@ if (salesModalBtn) {
 }
 // Sales Agent Modal End //
 
+
 //  Broker Modal //
 const changePass = document.querySelector('.change-pass');
 if (changePass) {
@@ -865,6 +866,73 @@ if (changePass) {
         event.preventDefault();
     });
 }
+
+//  Big Modal Start //
+const bigModalBox = document.querySelector('.big-modal-box');
+const overlay2 = document.querySelector('.overlay2');
+const projectModalOpenBtn = document.querySelectorAll('.project-btn-modal-open');
+const bigModalCloseBtn = document.querySelector('.big-modal-close-btn');
+
+if (projectModalOpenBtn) {
+    for (let i = 0; i < projectModalOpenBtn.length; i++) {
+        projectModalOpenBtn[i].addEventListener('click', function (event) {
+            bigModalBox.classList.toggle('active-modal');
+            overlay2.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+    }
+    if (bigModalCloseBtn) {
+        bigModalCloseBtn.addEventListener('click', function () {
+            overlay2.classList.toggle('d-block');
+            document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
+            body.style.overflow = "auto"
+        });
+    }
+}
+//  Big Modal End //
+
+
+// New Offer Modal Start //
+const offerModal = document.querySelector('.offer-modal');
+const projectModalBtn = document.querySelectorAll('.project-modal-btn');
+
+if (projectModalBtn) {
+    for (let i = 0; i < projectModalBtn.length; i++) {
+        projectModalBtn[i].addEventListener('click', function (event) {
+            bigModalBox.classList.toggle('active-modal');
+            offerModal.classList.toggle('active-modal');
+            overlay2.classList.toggle('d-block');
+            overlay.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+    }
+
+    if (offerModal) {
+        overlay.addEventListener('click', function () {
+            overlay.classList.remove('d-block');
+            offerModal.classList.remove('active-modal');
+        })
+    }
+}
+// New Offer Modal End //
+
+
+// Home News Modal Start //
+const newsModalSection = document.querySelector('.news-modal-section');
+const openNewsModalBtn = document.querySelector('.open-news-modal');
+
+if (openNewsModalBtn) {
+    openNewsModalBtn.addEventListener('click', function (event) {
+        newsModalSection.classList.toggle('active-modal');
+            overlay.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+
+}
+// Home News Modal End //
 
 
 //  Shared Access Start //
@@ -1399,3 +1467,103 @@ agentBoxes.forEach(function(agentBox) {
     });
 });
 //  Sales Agent Cart End //
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.modal-slider').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+    responsive: [
+        {
+            breakpoint: 9999,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 998,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 630,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 578,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 414,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
+$('.modal-slider.slick-slider').on('afterChange', function (event, slick, currentSlide) {
+    let slidesCount = slick.slideCount;
+
+    if (currentSlide === 0) {
+        $('.modal-slider .slick-prev').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    } else {
+        $('.modal-slider .slick-prev').css({
+            'background-color': '#09D75C',
+        });
+    }
+    if (currentSlide === slidesCount - 1) {
+        $('.modal-slider .slick-next').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    } else {
+        $('.modal-slider .slick-next').css({
+            'background-color': '#09D75C',
+        });
+    }
+});
+
+
+
+
+
+
+
+
