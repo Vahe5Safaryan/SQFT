@@ -2466,6 +2466,7 @@ li {
     -o-transition: 0.3s;
     transition: 0.3s;
     margin-left: 10px;
+    margin-top: -2px;
 }
 .select-menu.active .select-btn i {
     -webkit-transform: rotate(-180deg);
@@ -3587,6 +3588,25 @@ li {
     line-height: 130.9%;
     color: #1E1E1E ;
 }
+
+/* -- */
+.individual-broker .payment-box{
+    max-height: 690px;
+    height: 100%;
+}
+.individual-broker .content-box .pay-line{
+    margin-top: 35px;
+}
+
+.carrent-pay-plan .payment-box{
+    max-height: 690px;
+    height: 100%;
+}
+
+/* -- */
+
+
+
 /* Developer Profile End */
 
 /* Update Availability Start */
@@ -3814,7 +3834,15 @@ li {
     width: 100%;
     padding: 50px 30px;
 }
-.news-broker-box-text h3{
+.news-broker-box-text input{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 102%;
+    text-transform: uppercase;
+    color: #1E1E1E;
+    border: none;
+}
+.news-broker-box-text input:placeholder{
     font-weight: 500;
     font-size: 40px;
     line-height: 102%;
@@ -3997,6 +4025,19 @@ li {
 .dev-profile-modal h4 span{
     color: #fff;
 }
+
+.dev-profile-modal-change{
+    display: none;
+    width: 430px;
+    height: auto;
+    background: #1E1E1E;
+    border-radius: 10px;
+    position: relative;
+    padding: 30px 47px 35px;
+    border: 1.5px solid #8F8F8F;
+}
+
+
 
 .broker-modal-input{
     margin-top: 20px;
@@ -5223,8 +5264,8 @@ canvas{
 
 /* BB Shared Access Start */
 .shared-access-img{
-    max-height: 835px;
-    height: 100%;
+    max-height: 100%;
+    height: 725px;
     position: relative;
 }
 
@@ -5439,6 +5480,7 @@ canvas{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 20px;
 }
 .card-box-form ul li input{
     border: none;
@@ -5452,6 +5494,27 @@ canvas{
 .card-box-form-btn{
     width: 100%;
 }
+
+
+.card-box-form .project-region-search{
+    display: inline-block;
+    border: none;
+    border-radius: inherit;
+    border-bottom: 1.5px solid #DBDBDB;
+    width: 165px;
+    max-width: 100%;
+    font-size: 14px;
+    color: #1e1e1e;
+    margin: 0;
+    height: 25px;
+}
+.card-box-form .project-region-search .select-menu .select-btn{
+    height: auto;
+    width: 100px;
+}
+
+
+
 
 .top-days{
     display: -webkit-box;
@@ -7002,6 +7065,22 @@ canvas{
         font-size: 15px;
     }
 
+    .shared-access-img{
+        height: 100%;
+    }
+
+    .individual-broker .payment-box{
+        max-height: 100%;
+        height: 500px;
+    }
+    .individual-broker .content-box .pay-line{
+        margin-top: 0;
+    }
+    .carrent-pay-plan .payment-box{
+        max-height: 100%;
+        height: 500px;
+    }
+
 }
 
 @media screen and (max-width: 860px) {
@@ -8366,7 +8445,7 @@ canvas{
     }
 
     .project-content {
-        padding: 10px 8px;
+        padding: 10px 10px;
     }
 
     .project-content h4 {
@@ -8390,12 +8469,15 @@ canvas{
 
     .project-imfo img {
         max-width: 100%;
-        width: 250px;
+        width: 140px;
         height: 100%;
+        object-fit: cover;
     }
-
+    .project-btn-box {
+        row-gap: 8px;
+    }
     .project-btn a {
-        width: 132px;
+        width: 140px;
         max-width: 100%;
         height: 31px;
         font-size: 11px;
@@ -8771,6 +8853,20 @@ canvas{
         row-gap: 10px;
         width: 100%;
     }
+
+
+    .project-region-search{
+        height: 70px;
+    }
+    .project-region-search-icon {
+        padding: 25px 30px;
+    }
+    .project-region-search input::-ms-input-placeholder{
+        font-size: 12px;
+    }
+    .project-region-search input::placeholder{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -9035,6 +9131,11 @@ canvas{
     }
     .modal-slider  .slick-next {
         right: 30%;
+    }
+
+
+    .card-box-form .project-region-search{
+        width: 120px;
     }
 
 }

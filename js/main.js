@@ -838,6 +838,7 @@ if (salesMoreReportBtn) {
         });
     }
 }
+
 // Dev profile Delete Modal End //
 
 // Sales Agent Modal Start //
@@ -857,14 +858,29 @@ if (salesModalBtn) {
 
 
 //  Broker Modal //
-const changePass = document.querySelector('.change-pass');
+// const changePass = document.querySelectorAll('.change-pass');
+// if (changePass) {
+//     for (let i = 0; i < changePass.length; i++) {
+//         changePass[i].addEventListener('click', function (event) {
+//             devProfileModal.classList.toggle('active-modal');
+//             overlay.classList.toggle('d-block');
+//             body.style.overflow = "hidden"
+//             event.preventDefault();
+//         });
+//     }
+// }
+
+const changePass = document.querySelectorAll('.change-pass');
+const devProfileModalChange = document.querySelector('.dev-profile-modal-change');
 if (changePass) {
-    changePass.addEventListener('click', function (event) {
-        devProfileModal.classList.toggle('active-modal');
-        overlay.classList.toggle('d-block');
-        body.style.overflow = "hidden"
-        event.preventDefault();
-    });
+    for (let i = 0; i < changePass.length; i++) {
+        changePass[i].addEventListener('click', function (event) {
+            devProfileModalChange.classList.toggle('active-modal');
+            overlay.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+    }
 }
 
 //  Big Modal Start //

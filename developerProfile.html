@@ -100,7 +100,7 @@
                                     <div class="developer-profile-reg-btn-bordered">
                                         <a href="" class="btn-transparent">Update info</a>
                                     </div>
-                                    <div class="developer-profile-reg-btn">
+                                    <div class="developer-profile-reg-btn change-pass">
                                         <a href="" class="btn btn-primary">Change password</a>
                                     </div>
                                 </div>
@@ -303,7 +303,7 @@
                         </div>
                     </div>
                     <div class="news-broker-box-text">
-                        <h3>Add Topic</h3>
+                        <input type="text" name="developer" placeholder="ADD TOPIC" required>
                         <textarea  id="prop" type="textarea"   placeholder="Add text" ></textarea>
                     </div>
                 </div>
@@ -842,7 +842,26 @@
 
 <div class="overlay"></div>
 
-
+<!-- Broker Modal Start -->
+<div class="modal-position">
+    <div class="dev-profile-modal-change modal-box">
+        <h4> Change<span> password</span> </h4>
+        <div class="broker-modal-input">
+            <form>
+                <input type="text" name="name" placeholder="Оld password*" required>
+                <input type="text" name="name" placeholder="New password*" required>
+                <input type="text" name="name" placeholder="Confirm the password*" required>
+                <div class="dev-profile-replace-modal-btn">
+                    <a href="" class="btn btn-primary">Change</a>
+                </div>
+            </form>
+        </div>
+        <div class="modal-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+</div>
+<!-- Broker Modal End -->
 
 <!-- Dev profile Delete Modal Start -->
 <div class="modal-position">
