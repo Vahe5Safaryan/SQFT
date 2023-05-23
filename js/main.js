@@ -93,6 +93,8 @@ $('.partner-section').slick({
 //  Partner End //
 
 
+
+
 // // Payment Section //
 $('.plan-monthly').slick({
     dots: false,
@@ -286,6 +288,7 @@ $('.tab-selector').click((e) => {
     $(e.target.dataset.target).slick('resize')
     e.target.classList.add('active')
 })
+
 
 
 let reviewsCount = $('.reviews-box').length;
@@ -883,31 +886,6 @@ if (changePass) {
     }
 }
 
-//  Big Modal Start //
-const bigModalBox = document.querySelector('.big-modal-box');
-const overlay2 = document.querySelector('.overlay2');
-const projectModalOpenBtn = document.querySelectorAll('.project-btn-modal-open');
-const bigModalCloseBtn = document.querySelector('.big-modal-close-btn');
-
-if (projectModalOpenBtn) {
-    for (let i = 0; i < projectModalOpenBtn.length; i++) {
-        projectModalOpenBtn[i].addEventListener('click', function (event) {
-            bigModalBox.classList.toggle('active-modal');
-            overlay2.classList.toggle('d-block');
-            body.style.overflow = "hidden"
-            event.preventDefault();
-        });
-    }
-    if (bigModalCloseBtn) {
-        bigModalCloseBtn.addEventListener('click', function () {
-            overlay2.classList.toggle('d-block');
-            document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
-            body.style.overflow = "auto"
-        });
-    }
-}
-//  Big Modal End //
-
 
 // New Offer Modal Start //
 const offerModal = document.querySelector('.offer-modal');
@@ -954,38 +932,45 @@ if (openNewsModalBtn) {
 //  Shared Access Start //
 document.addEventListener('DOMContentLoaded', function () {
     let addAccesses = document.querySelectorAll('.add-access');
+    let deletedAccessSection = null;
 
     function handleAddAccessClick() {
-
-        let accessSection;
-        if (window.innerWidth <= 991) {
+        let accessSection = document.querySelector('.access-section');
+        if (window.innerWidth <= 991 && document.querySelector('.access-section-small')) {
             accessSection = document.querySelector('.access-section-small');
-        } else {
-            accessSection = document.querySelector('.access-section');
         }
 
-        let clonedSection = accessSection.cloneNode(true);
-        let gridContainer = document.querySelector(
-            window.innerWidth <= 991 ? '.grid-container-small' : '.grid-container'
-        );
-        let lastAccessNumber = clonedSection.querySelector('.access-number h3');
-        if (lastAccessNumber) {
-            lastAccessNumber.textContent = (gridContainer.querySelectorAll('.access-number h3').length + 1).toString();
-        }
+        if (accessSection) {
+            let clonedSection;
+            let gridContainer = document.querySelector(
+                window.innerWidth <= 991 ? '.grid-container-small' : '.grid-container'
+            );
 
+            if (deletedAccessSection) {
+                clonedSection = deletedAccessSection.cloneNode(true);
+                deletedAccessSection = null;
+            } else {
+                clonedSection = accessSection.cloneNode(true);
+            }
 
-        console.log(gridContainer)
-        gridContainer.appendChild(clonedSection);
+            let lastAccessNumber = clonedSection.querySelector('.access-number h3');
+            if (lastAccessNumber) {
+                lastAccessNumber.textContent = (gridContainer.querySelectorAll('.access-number h3').length + 1).toString();
+            }
 
-        let accessDeleteButtons = clonedSection.querySelectorAll('.access-delete');
-        accessDeleteButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
-                let accessSection = button.closest('.access-section, .access-section-small');
-                if (accessSection) {
-                    accessSection.remove();
-                }
+            gridContainer.appendChild(clonedSection);
+
+            let accessDeleteButtons = clonedSection.querySelectorAll('.access-delete');
+            accessDeleteButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    let accessSection = button.closest('.access-section, .access-section-small');
+                    if (accessSection) {
+                        accessSection.remove();
+                        deletedAccessSection = accessSection.cloneNode(true);
+                    }
+                });
             });
-        });
+        }
     }
 
     addAccesses.forEach(addAccess => {
@@ -1005,12 +990,15 @@ document.addEventListener('DOMContentLoaded', function () {
             let accessSection = button.closest('.access-section, .access-section-small');
             if (accessSection) {
                 accessSection.remove();
+                deletedAccessSection = accessSection.cloneNode(true);
             }
         });
     });
 });
+//  Shared Access Start //
 
 
+//  Chart Start /
 let width, height, gradient;
 
 function getGradient(ctx, chartArea) {
@@ -1486,6 +1474,40 @@ agentBoxes.forEach(function(agentBox) {
 
 
 
+//  Big Modal Start //
+const bigModalBox = document.querySelector('.big-modal-box');
+const overlay2 = document.querySelector('.overlay2');
+const projectModalOpenBtn = document.querySelectorAll('.project-btn-modal-open');
+const bigModalCloseBtn = document.querySelector('.big-modal-close-btn');
+
+if (projectModalOpenBtn) {
+    for (let i = 0; i < projectModalOpenBtn.length; i++) {
+        projectModalOpenBtn[i].addEventListener('click', function (event) {
+            bigModalBox.classList.toggle('active-modal');
+            $('.modal-slider').slick('reinit');
+            overlay2.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+    }
+    if (bigModalCloseBtn) {
+        bigModalCloseBtn.addEventListener('click', function () {
+            overlay2.classList.toggle('d-block');
+            document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
+            body.style.overflow = "auto"
+        });
+    }
+    if (overlay2) {
+        overlay2.addEventListener('click', function () {
+            overlay2.classList.toggle('d-block');
+            bigModalBox.classList.toggle('active-modal');
+            body.style.overflow = "auto"
+        });
+    }
+}
+//  Big Modal End //
+
+//  Big Modal Slier Start //
 $('.modal-slider').slick({
     dots: false,
     infinite: false,
@@ -1495,12 +1517,6 @@ $('.modal-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
     responsive: [
-        {
-            breakpoint: 9999,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
         {
             breakpoint: 1025,
             settings: {
@@ -1543,26 +1559,25 @@ $('.modal-slider.slick-slider').on('afterChange', function (event, slick, curren
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
-        $('.modal-slider .slick-prev').css({
+        $('.slick-prev').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
             'transform': 'matrix(1, 0, 0, -1, 0, 0)',
         });
     } else {
-        $('.modal-slider .slick-prev').css({
+        $('.slick-prev').css({
             'background-color': '#09D75C',
         });
     }
     if (currentSlide === slidesCount - 1) {
-        $('.modal-slider .slick-next').css({
+        $('.slick-next').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
             'transform': 'matrix(1, 0, 0, -1, 0, 0)',
         });
     } else {
-        $('.modal-slider .slick-next').css({
+        $('.slick-next').css({
             'background-color': '#09D75C',
         });
     }
 });
-
