@@ -1470,16 +1470,6 @@ agentBoxes.forEach(function(agentBox) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 $('.modal-slider').slick({
     dots: false,
     infinite: false,
@@ -1559,11 +1549,4 @@ $('.modal-slider.slick-slider').on('afterChange', function (event, slick, curren
         });
     }
 });
-
-
-
-
-
-
-
 
