@@ -573,6 +573,17 @@ li {
     line-height: 17px;
 }
 
+.popup-login-btn a, .popup-login-btn button{
+    width: 316px;
+    height: 62px;
+    text-align: center;
+    letter-spacing: 0.035em;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
 .remember-box{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1453,7 +1464,7 @@ li {
 }
 .recent-box img {
     display: inline-block;
-    width: 410px;
+    width: 600px;
     max-width: 100%;
     height: auto;
 }
@@ -6628,7 +6639,9 @@ canvas{
         margin: 38px auto;
     }
 
-
+.btn-p a{
+    padding: 0 10px;
+}
     .recent-content {
         height: 350px;
     }
