@@ -149,26 +149,14 @@
                             </ul>
                             <ul>
                                 <li><h6>Language:</h6></li>
-                                    <div class="project-region-search">
-                                        <div class="select-menu">
-                                            <div class="select-btn">
-                                                <span class="sBtn-text">Select</span>
-                                            </div>
-                                            <ul class="options">
-                                                <li class="option">
-                                                    <span class="option-text">RU</span>
-                                                </li>
-                                                <li class="option">
-                                                    <span class="option-text">ENG</span>
-                                                </li>
-                                                <li class="option">
-                                                    <span class="option-text">FR </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-<!--                                <li><input type="text" name="languages:" required></li>-->
+                                <div class="select-language">
+                                    <select name="field2" id="field2" class="select-box" multiple multiselect-search="true" multiselect-select-all="true" multiselect-max-items="3" onchange="console.log(this.selectedOptions)">
+                                        <option>English </option>
+                                        <option>Russian</option>
+                                        <option>Hindi</option>
+                                        <option>German</option>
+                                    </select>
+                                </div>
                             </ul>
                         </div>
                         <div class="card-box-form-btn">
@@ -700,6 +688,14 @@
     </div>
 </div>
 <!-- Broker Modal End -->
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<script src="./js/multiselect-dropdown.js" ></script>
+
 
 
 <!-- Slick -->

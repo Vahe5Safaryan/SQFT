@@ -1913,6 +1913,7 @@ li {
     width: 300px;
     height: auto;
     padding: 16px 0;
+    font-family:  'Montserrat', sans-serif;
 }
 
 .contact-btn-box{
@@ -5508,6 +5509,60 @@ canvas{
     width: 100%;
 }
 
+/* Selector For Language */
+.select-language{
+    max-width: 100%;
+    width: 100%;
+}
+.multiselect-dropdown {
+    width: 175px !important;
+    display: inline-block;
+    padding: 2px 5px 0px 5px;
+    border-radius: 0;
+    border: none !important;
+    border-bottom: 1.5px solid #DBDBDB !important;
+    position: relative;
+    background: #fff !important;
+}
+.optext{
+    font-size: 12px;
+    display: inline-block;
+}
+.multiselect-dropdown-list-wrapper {
+    -webkit-box-shadow: gray 0 3px 8px;
+    box-shadow: gray 0 3px 8px;
+    z-index: 100;
+    padding: 2px;
+    border-radius: 4px;
+    border: solid 1px #1E1E1D;
+    display: none;
+    margin: -1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+.multiselect-dropdown-list input {
+    height: 15px !important;
+    width: 15px !important;
+    margin-right: 0.35em;
+}
+.multiselect-dropdown-list label{
+    color: #1e1e1e !important;
+    font-weight: 500 !important;
+}
+.multiselect-dropdown-list-wrapper .multiselect-dropdown-search {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.multiselect-dropdown span.placeholder {
+    color: #9fa2a5 !important;
+}
+.multiselect-dropdown span.optext {
+    background-color: #eee !important;
+}
+/* Selector For Language */
 
 .card-box-form .project-region-search{
     display: inline-block;
@@ -9152,6 +9207,10 @@ canvas{
 
     .card-box-form .project-region-search{
         width: 120px;
+    }
+
+    .multiselect-dropdown{
+        width: 150px;
     }
 
 }
