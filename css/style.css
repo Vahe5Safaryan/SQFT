@@ -5175,7 +5175,118 @@ input[type=range]::-webkit-slider-runnable-track {
 .table-section-2 .table-btn{
     background: #D70909;
 }
-/* Table result End */
+
+/* Tabel Slider Start */
+.hrart-bg i{
+    color: #1E1E1E;
+}
+.g2-slide .table-heart{
+    text-align: center;
+}
+
+.table-slider-section{
+    padding: 100px;
+}
+
+.table-slider{
+    padding: 30px 0 130px 0;
+}
+
+.reviews-pagination {
+    margin-top: 30px;
+}
+
+.reviews-pagination .g2-slider-pagination__wrapper, .reviews-pagination .g2-slider-pagination__wrapper ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviews-pagination button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.reviews-pagination button:focus {
+    outline: none;
+}
+.reviews-pagination ul {
+    margin: 0 -1px;
+    padding: 0;
+    list-style: none;
+}
+
+.reviews-pagination ul li {
+    padding: 7px;
+    margin: 1px;
+    cursor: pointer;
+}
+
+.reviews-pagination .dot.active {
+    color: #09d75c;
+}
+
+.reviews-pagination .prev {
+    margin-right: 10px;
+}
+.reviews-pagination .next {
+    margin-left: 10px;
+}
+
+
+.reviews-pagination .prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #09D75C;
+}
+.reviews-pagination .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #09D75C;
+}
+
+.reviews-pagination ul li {
+    cursor: pointer;
+    color: #1e1e1e;
+    border: 1px solid #D5D5D5;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    margin-right: 10px;
+    padding: 8px 12px;
+}
+
+.reviews-pagination .slick-disabled {
+    background: rgba(9, 215, 92, 0.3);
+    backdrop-filter: blur(16.5px);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+
+.g2-slide::-webkit-scrollbar {
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    display: block;
+}
+.g2-slide::-webkit-scrollbar-thumb {
+    background: rgba(7, 184, 79, 0.2);
+    border-radius: 10px;
+}
+
+/* Tabel Slider End */
+
 
 /* Chart Start */
 .chasrt{
@@ -7150,6 +7261,14 @@ canvas{
     .carrent-pay-plan .payment-box{
         max-height: 100%;
         height: 500px;
+    }
+
+    .g2-slide{
+        overflow-x: scroll !important;
+        width: 100%;
+    }
+    .table-slider{
+        padding: 30px 0 50px 0;
     }
 
 }
@@ -9211,6 +9330,29 @@ canvas{
 
     .multiselect-dropdown{
         width: 150px;
+    }
+
+
+
+    .reviews-pagination ul li {
+        font-size: 15px;
+        padding: 5px 10px;
+        margin-right: 6px;
+    }
+
+    .reviews-pagination .next {
+        width: 35px;
+        height: 35px;
+    }
+    .reviews-pagination .prev {
+        width: 35px;
+        height: 35px;
+    }
+    .reviews-pagination .next  i{
+        font-size: 10px;
+    }
+    .reviews-pagination .prev  i{
+        font-size: 10px;
     }
 
 }
