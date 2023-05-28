@@ -797,6 +797,7 @@ if (fileInput) {
 const devProfileModal = document.querySelector('.dev-profile-modal');
 const replaceModalBtn = document.querySelectorAll('.replace-modal');
 const modalCloseBtn = document.querySelectorAll('.modal-close-btn');
+const closeBtn = document.querySelectorAll('.close-btn');
 const body = document.querySelector('body')
 
 if (replaceModalBtn) {
@@ -812,6 +813,15 @@ if (replaceModalBtn) {
     if (modalCloseBtn) {
         for (let i = 0; i < modalCloseBtn.length; i++) {
             modalCloseBtn[i].addEventListener('click', function () {
+                overlay.classList.remove('d-block');
+                document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
+                body.style.overflow = "auto"
+            });
+        }
+    }
+    if (closeBtn) {
+        for (let i = 0; i < closeBtn.length; i++) {
+            closeBtn[i].addEventListener('click', function () {
                 overlay.classList.remove('d-block');
                 document.querySelector('.modal-box.active-modal').classList.remove('active-modal');
                 body.style.overflow = "auto"

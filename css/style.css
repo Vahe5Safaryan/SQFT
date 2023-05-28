@@ -4001,7 +4001,7 @@ li {
     -moz-column-gap: 30px;
     column-gap: 30px;
 }
-.dev-profile-modal-btn a{
+.dev-profile-modal-btn a, .dev-profile-modal-btn button {
     width: 128px;
     height: 46px;
     text-align: center;
