@@ -804,6 +804,7 @@ if (replaceModalBtn) {
     for (let i = 0; i < replaceModalBtn.length; i++) {
         replaceModalBtn[i].addEventListener('click', function (event) {
             devProfileModal.classList.toggle('active-modal');
+            document.getElementById("projectId").value = this.getAttribute('data-project-id');
             overlay.classList.toggle('d-block');
             body.style.overflow = "hidden"
             event.preventDefault();
