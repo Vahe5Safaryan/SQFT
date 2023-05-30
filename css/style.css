@@ -7768,6 +7768,7 @@ canvas{
     .faq-icon {
         background: #09D75C;
         width: 35px;
+        min-width: 35px;
         height: 35px;
     }
     .faq-accordion-heading-content i {
@@ -9331,7 +9332,6 @@ canvas{
     .multiselect-dropdown{
         width: 150px;
     }
-
 
 
     .reviews-pagination ul li {
