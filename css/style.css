@@ -5170,6 +5170,7 @@ input[type=range]::-webkit-slider-runnable-track {
 .table-home i{
     font-size: 25px;
     color: #09D75C;
+    cursor: pointer;
 }
 
 .table-section-2 .table-btn{
@@ -7050,7 +7051,7 @@ canvas{
         position: fixed;
         top: 30%;
         left: 25%;
-        z-index: 9;
+        z-index: 11;
     }
 
 

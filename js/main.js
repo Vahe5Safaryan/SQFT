@@ -1506,9 +1506,10 @@ agentBoxes.forEach(function(agentBox) {
 const bigModalBox = document.querySelector('.big-modal-box');
 const overlay2 = document.querySelector('.overlay2');
 const projectModalOpenBtn = document.querySelectorAll('.project-btn-modal-open');
+const tableHomeOpenModal = document.querySelectorAll('.table-home');
 const bigModalCloseBtn = document.querySelector('.big-modal-close-btn');
 
-if (projectModalOpenBtn) {
+if (projectModalOpenBtn || tableHomeOpenModal) {
     for (let i = 0; i < projectModalOpenBtn.length; i++) {
         projectModalOpenBtn[i].addEventListener('click', function (event) {
             bigModalBox.classList.toggle('active-modal');
@@ -1518,6 +1519,18 @@ if (projectModalOpenBtn) {
             event.preventDefault();
         });
     }
+    //  Green-Home //
+    for (let i = 0; i < tableHomeOpenModal.length; i++) {
+        tableHomeOpenModal[i].addEventListener('click', function (event) {
+            bigModalBox.classList.toggle('active-modal');
+            $('.modal-slider').slick('reinit');
+            overlay2.classList.toggle('d-block');
+            body.style.overflow = "hidden"
+            event.preventDefault();
+        });
+    }
+    //  Green-Home //
+
     if (bigModalCloseBtn) {
         bigModalCloseBtn.addEventListener('click', function () {
             overlay2.classList.toggle('d-block');
@@ -1741,15 +1754,6 @@ $(document).ready(function () {
     }
 });
 // Table Sloider Start //
-
-
-
-
-
-
-
-
-
 
 
 
