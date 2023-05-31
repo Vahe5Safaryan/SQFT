@@ -179,7 +179,7 @@ li {
 
 /* Header Start*/
 .background-header {
-    background-image: url("../img/header/bg01.jpg");
+    background-image: url("../img/header/bg01.webp");
     width: 100%;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
@@ -984,7 +984,7 @@ li {
 
 /* Stick Start */
 .stick-section{
-    background-image: url("../img/bg/bg02.jpg");
+    background-image: url("../img/bg/bg02.webp");
     width: 100%;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
@@ -1420,7 +1420,7 @@ li {
 
 /* Recent  Start */
 .recent-bg {
-    background-image: url("../img/bg/bg03.jpg");
+    background-image: url("../img/bg/bg03.webp");
     width: 100%;
     max-height: 961px;
     background-position: center;
@@ -1644,7 +1644,7 @@ li {
 
 /* Start */
 .faq-bg {
-    background-image: url("../img/bg/bg03.jpg");
+    background-image: url("../img/bg/bg03.webp");
     width: 100%;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
@@ -2795,7 +2795,7 @@ li {
 }
 
 .background-header-devmore {
-    background-image: url("../img/bg/bg05.jpg");
+    background-image: url("../img/bg/bg05.webp");
     width: 100%;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
@@ -3079,7 +3079,7 @@ li {
 
 /* Learn More Project Start */
 .background-header-project {
-    background-image: url("../img/bg/project.jpg");
+    background-image: url("../img/bg/project.webp");
     width: 100%;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
@@ -3250,13 +3250,13 @@ li {
     background-size: cover;
     position: relative;
     z-index: -2 !important;
-    background-image: url("../img/bg/bg06.jpg");
+    background-image: url("../img/bg/bg06.webp");
 }
 
 .includes-section:before{
     content: '';
     position: absolute;
-    background-image: url("../img/bg/mask01.png");
+    background-image: url("../img/bg/mask01.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -3939,7 +3939,7 @@ li {
 
 /*   */
 .dev-profile-faq-bg {
-    background-image: url("../img/bg/bg07.jpg");
+    background-image: url("../img/bg/bg07.webp");
     width: 100%;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
