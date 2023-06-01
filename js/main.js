@@ -502,6 +502,16 @@ for (let i = 0; i < optionMenus.length; i++) {
         });
     }
 }
+//  Close on click  window //
+window.addEventListener("click", function (event) {
+    const modal = document.querySelector(".select-menu.active");
+    if (modal && !modal.contains(event.target)) {
+        modal.classList.remove("active");
+    }
+});
+
+
+
 
 
 let btnScrollToTop = document.querySelector(".footer-arrow-top");
