@@ -883,8 +883,8 @@ li {
 .partner-box img {
     width: 161px;
     height: 100%;
-    -o-object-fit: none;
-    object-fit: none;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 /* Partner End */
 
