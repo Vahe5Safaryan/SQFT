@@ -79,7 +79,7 @@
                 <div class="developer-profile-reg">
                     <div class="reg-img">
                         <label for="regimg">
-                            <img id="imagePreview" src="img/ing/group.webp" alt="">
+                            <img class="lazyload" id="imagePreview" data-src="img/ing/group.webp" alt="">
                         </label>
                         <input type="file" id="regimg" style="display: none;">
                     </div>
@@ -676,10 +676,10 @@
 </div>
 <!-- Broker Modal Change Pass End -->
 
-
+<!-- lazysizes -->
+<script src="./js/lazysizes.min.js" defer></script>
 <!-- Slick -->
 <script src="./js/slick.min.js"></script>
-
 <!-- Main JS -->
 <script src="./js/main.js"></script>
 
