@@ -512,10 +512,7 @@ window.addEventListener("click", function (event) {
 
 
 
-
-
 let btnScrollToTop = document.querySelector(".footer-arrow-top");
-
 window.addEventListener("scroll", function () {
     if (window.pageYOffset >= 500) {
         btnScrollToTop.style.display = "block";
@@ -953,16 +950,17 @@ if (projectModalBtn) {
 
 // Home News Modal Start //
 const newsModalSection = document.querySelector('.news-modal-section');
-const openNewsModalBtn = document.querySelector('.open-news-modal');
+const openNewsModalBtn = document.querySelectorAll('.open-news-modal');
 
 if (openNewsModalBtn) {
-    openNewsModalBtn.addEventListener('click', function (event) {
-        newsModalSection.classList.toggle('active-modal');
+    for (let i = 0; i < openNewsModalBtn.length; i++) {
+        openNewsModalBtn[i].addEventListener('click', function (event) {
+            newsModalSection.classList.toggle('active-modal');
             overlay.classList.toggle('d-block');
             body.style.overflow = "hidden"
             event.preventDefault();
         });
-
+    }
 }
 // Home News Modal End //
 
@@ -1269,6 +1267,7 @@ if (document.getElementById(chartData[0].id)) {
 $('.news-section').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    infinite: false,
     prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
     responsive: [
