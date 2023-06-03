@@ -167,6 +167,7 @@ $('.plan-monthly.slick-slider').on('afterChange', function (event, slick, curren
     } else {
         $('.plan-monthly .slick-prev').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     }
     if (currentSlide === slidesCount - 1) {
@@ -177,6 +178,22 @@ $('.plan-monthly.slick-slider').on('afterChange', function (event, slick, curren
         });
     } else {
         $('.plan-monthly .slick-next').css({
+            'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    }
+});
+$('.plan-monthly').on('afterChange', function (event, slick, currentSlide) {
+    let slidesCount = slick.slideCount;
+
+    if (currentSlide === slidesCount - slick.options.slidesToShow) {
+        $('.slick-next').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
+        });
+    } else {
+        $('.slick-next').css({
             'background-color': '#09D75C',
         });
     }
@@ -251,23 +268,39 @@ $('.plan-yearly').slick({
 });
 $('.plan-yearly.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
-
     if (currentSlide === 0) {
-        $('.slick-prev').css({
+        $('.plan-yearly .slick-prev').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
             'transform': 'matrix(1, 0, 0, -1, 0, 0)',
         });
     } else {
-        $('.slick-prev').css({
+        $('.plan-yearly .slick-prev').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     }
     if (currentSlide === slidesCount - 1) {
-        $('.slick-next').css({
+        $('.plan-yearly .slick-next').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
             'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    } else {
+        $('.plan-yearly .slick-next').css({
+            'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    }
+});
+$('.plan-yearly').on('afterChange', function (event, slick, currentSlide) {
+    let slidesCount = slick.slideCount;
+
+    if (currentSlide === slidesCount - slick.options.slidesToShow) {
+        $('.slick-next').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     } else {
         $('.slick-next').css({
@@ -370,6 +403,7 @@ $('.reviews-section.slick-slider').on('afterChange', function (event, slick, cur
     } else {
         $('.reviews-section .slick-prev').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     }
     if (currentSlide === slidesCount - 1) {
@@ -381,6 +415,7 @@ $('.reviews-section.slick-slider').on('afterChange', function (event, slick, cur
     } else {
         $('.reviews-section .slick-next').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
         });
     }
 });
@@ -391,7 +426,7 @@ $('.reviews-section').on('afterChange', function (event, slick, currentSlide) {
         $('.slick-next').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
-            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     } else {
         $('.slick-next').css({
@@ -709,6 +744,7 @@ if (btnLoginMenu) {
             for (let j = 0; j < loginBoxes.length; j++) {
                 loginBoxes[j].classList.toggle('active-popup');
             }
+
             overlay.classList.toggle('d-block');
 
             let icon = btnLoginMenu[i].querySelector('i');
@@ -716,6 +752,9 @@ if (btnLoginMenu) {
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-xmark');
             }
+
+            btnLoginMenu[i].classList.toggle('btnLoginMenuActive');
+
             event.preventDefault();
         });
     }
@@ -1794,4 +1833,17 @@ $(document).ready(function () {
 
 
 
+var h5Element = document.querySelector('.filter-box-language-sqft h5');
+var h4Element = document.querySelector('.filter-box-language-sqft h4');
 
+h5Element.addEventListener("click", function() {
+    if (h5Element.style.color === "rgb(30, 30, 30)") {
+        h5Element.style.color = "#00FF57";
+        h5Element.style.setProperty('--after-color', '#00FF57');
+        h4Element.style.color = "#1e1e1e";
+    } else {
+        h5Element.style.color = "#1e1e1e";
+        h5Element.style.setProperty('--after-color', '#1e1e1e');
+        h4Element.style.color = "#1e1e1e";
+    }
+});
