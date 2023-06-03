@@ -4078,41 +4078,39 @@ li {
     height: 64px;
     background: #FFFFFF;
     border-radius: 32px;
+    padding-left: 33px;
 }
 .broker-modal-input input::-webkit-input-placeholder{
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #676767;
-    padding-left: 33px;
+
 }
 .broker-modal-input input::-moz-placeholder{
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #676767;
-    padding-left: 33px;
+
 }
 .broker-modal-input input:-ms-input-placeholder{
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #676767;
-    padding-left: 33px;
 }
 .broker-modal-input input::-ms-input-placeholder{
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #676767;
-    padding-left: 33px;
 }
 .broker-modal-input input::placeholder{
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #676767;
-    padding-left: 33px;
 }
 /* B-B*/
 /* Dev profile Delete Modal Star */
