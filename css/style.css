@@ -4813,9 +4813,8 @@ label span {
     font-size: 20px;
     line-height: 24px;
     color: #00FF57;
+    cursor: pointer;
 }
-
-
 
 .apartments-filter-box{
     width: 100%;
@@ -4893,38 +4892,6 @@ label span {
     border: 1px solid #000000;
     margin: 0 10px;
 }
-.pseudoinput:after {
-    content: " м\00b2";
-    white-space: pre;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #1E1E1E;
-}
-
-
-
-
-
-
-.filter-box-language-sqft h4 {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #00FF57;
-}
-
-.filter-box-language-sqft h5 {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #1e1e1e;
-}
 
 .filter-box-language-sqft h5::after {
     content: " м\00b2";
@@ -4935,11 +4902,8 @@ label span {
     line-height: 24px;
     text-transform: uppercase;
     color: var(--after-color, #1e1e1e);
+    cursor: pointer;
 }
-
-
-
-
 
 .language-box .select-btn i{
     font-size: 16px;
@@ -5206,7 +5170,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .table-heart i{
     font-size: 20px;
-    color: #D70909;
+    cursor: pointer;
 }
 .table-home {
     display: -webkit-box;

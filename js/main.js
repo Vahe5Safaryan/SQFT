@@ -996,9 +996,9 @@ if (openNewsModalBtn) {
         openNewsModalBtn[i].addEventListener('click', function (event) {
             newsModalSection.classList.toggle('active-modal');
 
-            var title = this.getAttribute('data-news-title');
-            var text = this.getAttribute('data-news-text');
-            var img = this.getAttribute('data-news-image');
+            let title = this.getAttribute('data-news-title');
+            let text = this.getAttribute('data-news-text');
+            let img = this.getAttribute('data-news-image');
 
             // inputs =
             // '<div class="home-news-box-img" >' +
@@ -1833,17 +1833,35 @@ $(document).ready(function () {
 
 
 
-var h5Element = document.querySelector('.filter-box-language-sqft h5');
-var h4Element = document.querySelector('.filter-box-language-sqft h4');
-
+// SQFT | M2 //
+let h5Element = document.querySelector('.filter-box-language-sqft h5');
+let h4Element = document.querySelector('.filter-box-language-sqft h4');
 h5Element.addEventListener("click", function() {
-    if (h5Element.style.color === "rgb(30, 30, 30)") {
-        h5Element.style.color = "#00FF57";
-        h5Element.style.setProperty('--after-color', '#00FF57');
-        h4Element.style.color = "#1e1e1e";
-    } else {
-        h5Element.style.color = "#1e1e1e";
-        h5Element.style.setProperty('--after-color', '#1e1e1e');
-        h4Element.style.color = "#1e1e1e";
-    }
+    h5Element.style.color = "#00FF57";
+    h5Element.style.setProperty('--after-color', '#00FF57');
+    h4Element.style.color = "#1e1e1e";
+});
+
+h4Element.addEventListener("click", function() {
+    h4Element.style.color = "#00FF57";
+    h5Element.style.color = "#1e1e1e";
+    h5Element.style.setProperty('--after-color', '#1e1e1e');
+});
+
+
+
+//  Heart color //
+let heartIcons = document.querySelectorAll(".fa-regular.fa-heart");
+heartIcons.forEach(function(icon) {
+    icon.addEventListener("click", function() {
+        if (icon.classList.contains("fa-regular")) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+            icon.style.color = "#D70909";
+        } else if (icon.classList.contains("fa-solid")) {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+            icon.style.color = "#1e1e1e";
+        }
+    });
 });
