@@ -1836,18 +1836,20 @@ $(document).ready(function () {
 // SQFT | M2 //
 let h5Element = document.querySelector('.filter-box-language-sqft h5');
 let h4Element = document.querySelector('.filter-box-language-sqft h4');
-h5Element.addEventListener("click", function() {
-    h5Element.style.color = "#00FF57";
-    h5Element.style.setProperty('--after-color', '#00FF57');
-    h4Element.style.color = "#1e1e1e";
-});
-
-h4Element.addEventListener("click", function() {
-    h4Element.style.color = "#00FF57";
-    h5Element.style.color = "#1e1e1e";
-    h5Element.style.setProperty('--after-color', '#1e1e1e');
-});
-
+if (h5Element){
+    h5Element.addEventListener("click", function() {
+        h5Element.style.color = "#00FF57";
+        h5Element.style.setProperty('--after-color', '#00FF57');
+        h4Element.style.color = "#1e1e1e";
+    });
+}
+if (h4Element){
+    h4Element.addEventListener("click", function() {
+        h4Element.style.color = "#00FF57";
+        h5Element.style.color = "#1e1e1e";
+        h5Element.style.setProperty('--after-color', '#1e1e1e');
+    });
+}
 
 
 //  Heart color //
