@@ -956,6 +956,34 @@ if (openNewsModalBtn) {
     for (let i = 0; i < openNewsModalBtn.length; i++) {
         openNewsModalBtn[i].addEventListener('click', function (event) {
             newsModalSection.classList.toggle('active-modal');
+
+            var title = this.getAttribute('data-news-title');
+            var text = this.getAttribute('data-news-text');
+            var img = this.getAttribute('data-news-image');
+
+            // inputs =
+            // '<div class="home-news-box-img" >' +
+            // '<img src="'+img+'" alt="">' +
+            // '</div>' +
+            // '<div class="home-news-box-text">' +
+            // '<h4>' + title + '</h4>' +
+            // '<p>' + text + '</p>' +
+            // '</div>' +
+            // '<div class="modal-close-btn">' +
+            // '<i class="fa-solid fa-xmark"></i>' +
+            // '</div>'
+            document.getElementById('newsModalInnerHtml').innerHTML =
+            '<div class="home-news-box-img" >' +
+            '<img src="'+img+'" alt="">' +
+            '</div>' +
+            '<div class="home-news-box-text">' +
+            '<h4>' + title + '</h4>' +
+            '<p>' + text + '</p>' +
+            '</div>';
+            // document.getElementById('news-modal').innerHTML += inputs;
+
+            // document.getElementById("news-modal").innerHTML(inputs);
+
             overlay.classList.toggle('d-block');
             body.style.overflow = "hidden"
             event.preventDefault();
