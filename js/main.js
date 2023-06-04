@@ -10,27 +10,42 @@ $('.main-slider-text').slick({
     nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>'
 
 });
-
-$('.main-slider-text').on('afterChange', function (event, slick, currentSlide) {
+$('.main-slider-text.slick-slider').on('afterChange', function (event, slick, currentSlide) {
     let slidesCount = slick.slideCount;
 
     if (currentSlide === 0) {
-        $('.slick-prev').css({
+        $('.main-slider-text .slick-prev').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
             'transform': 'matrix(1, 0, 0, -1, 0, 0)',
         });
     } else {
-        $('.slick-prev').css({
+        $('.main-slider-text .slick-prev').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     }
-
     if (currentSlide === slidesCount - 1) {
-        $('.slick-next').css({
+        $('.main-slider-text .slick-next').css({
             'background-color': 'rgba(9, 215, 92, 0.3)',
             'backdrop-filter': 'blur(16.5px)',
             'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    } else {
+        $('.main-slider-text .slick-next').css({
+            'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
+        });
+    }
+});
+$('.main-slider-text').on('afterChange', function (event, slick, currentSlide) {
+    let slidesCount = slick.slideCount;
+
+    if (currentSlide === slidesCount - slick.options.slidesToShow) {
+        $('.slick-next').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     } else {
         $('.slick-next').css({
@@ -38,7 +53,6 @@ $('.main-slider-text').on('afterChange', function (event, slick, currentSlide) {
         });
     }
 });
-
 
 const playButton = document.getElementById('playButton');
 const video = document.getElementById('myVideo');
@@ -1816,7 +1830,6 @@ $(document).ready(function () {
     }
 });
 // Table Sloider Start //
-
 
 
 // SQFT | M2 //
