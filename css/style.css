@@ -4444,7 +4444,7 @@ label span {
     line-height: 24px;
 }
 
-.invite-status{
+.invite-status, .new-status{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4458,7 +4458,7 @@ label span {
     -moz-column-gap: 30px;
     column-gap: 30px;
 }
-.invite-status i{
+.invite-status i, .new-status i{
     font-size: 10px;
     color: #09D75C;
     -webkit-box-shadow: 0 0 0 0 rgba(9, 215, 92, 1);
@@ -4496,7 +4496,15 @@ label span {
     }
 }
 
-.invite-status h6{
+.new-status h6{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130.9%;
+    letter-spacing: 0.035em;
+    color: #ffffff;
+}
+
+.invite-status h6 {
     font-weight: 500;
     font-size: 20px;
     line-height: 130.9%;
@@ -7092,7 +7100,7 @@ canvas{
     .access-delete i {
         font-size: 20px;
     }
-    .invite-status {
+    .invite-status, .new-status {
         -webkit-column-gap: 10px;
         -moz-column-gap: 10px;
         column-gap: 10px;

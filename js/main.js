@@ -1000,17 +1000,6 @@ if (openNewsModalBtn) {
             let text = this.getAttribute('data-news-text');
             let img = this.getAttribute('data-news-image');
 
-            // inputs =
-            // '<div class="home-news-box-img" >' +
-            // '<img src="'+img+'" alt="">' +
-            // '</div>' +
-            // '<div class="home-news-box-text">' +
-            // '<h4>' + title + '</h4>' +
-            // '<p>' + text + '</p>' +
-            // '</div>' +
-            // '<div class="modal-close-btn">' +
-            // '<i class="fa-solid fa-xmark"></i>' +
-            // '</div>'
             document.getElementById('newsModalInnerHtml').innerHTML =
             '<div class="home-news-box-img" >' +
             '<img src="'+img+'" alt="">' +
@@ -1019,9 +1008,6 @@ if (openNewsModalBtn) {
             '<h4>' + title + '</h4>' +
             '<p>' + text + '</p>' +
             '</div>';
-            // document.getElementById('news-modal').innerHTML += inputs;
-
-            // document.getElementById("news-modal").innerHTML(inputs);
 
             overlay.classList.toggle('d-block');
             body.style.overflow = "hidden"
@@ -1038,9 +1024,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let deletedAccessSection = null;
 
     function handleAddAccessClick() {
-        let accessSection = document.querySelector('.access-section');
-        if (window.innerWidth <= 991 && document.querySelector('.access-section-small')) {
-            accessSection = document.querySelector('.access-section-small');
+        let accessSection = document.querySelector('.access-section-temp');
+        if (window.innerWidth <= 991 && document.querySelector('.access-section-small-temp')) {
+            accessSection = document.querySelector('.access-section-small-temp');
         }
 
         if (accessSection) {
