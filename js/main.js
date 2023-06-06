@@ -98,7 +98,7 @@ $('.partner-section').slick({
             breakpoint: 480,
             settings: {
                 arrows: false,
-                centerMode: true,
+                centerMode: false,
                 slidesToShow: 3,
             }
         }

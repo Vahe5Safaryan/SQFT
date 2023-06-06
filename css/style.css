@@ -9088,6 +9088,12 @@ canvas{
     .project-region-search input::placeholder{
         font-size: 12px;
     }
+
+
+    .partner-box img {
+        width: 70px;
+    }
+
 }
 
 @media screen and (max-width: 414px) {
