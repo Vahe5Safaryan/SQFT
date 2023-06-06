@@ -74,9 +74,9 @@ if (video) {
 }
 
 
+
 $('.partner-section').slick({
     slidesToShow: 5,
-    slidesToScroll: 1,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 1000,
@@ -84,6 +84,7 @@ $('.partner-section').slick({
     prevArrow: false,
     nextArrow: false,
     variableWidth: true,
+    swipeToSlide: true,
     responsive: [
         {
             breakpoint: 768,
