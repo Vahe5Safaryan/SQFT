@@ -191,7 +191,8 @@ li {
     max-height: max-content;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    height: 100%;
 }
 
 .nav-link {
@@ -2144,6 +2145,43 @@ li {
 .padding-box{
     padding: 75px 0;
 }
+
+
+/* Confirm Start */
+
+.confirm-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 60px;
+    width: 100%;
+    margin-top: 50px;
+    height: 70vh;
+}
+.confirm-box h2{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 102%;
+    text-transform: uppercase;
+    color: #1E1E1E;
+    text-align: center;
+}
+.confirm-box a{
+    margin-top: 50px;
+}
+
+/* Confirm End */
+
+
+
+
+
+
+
+
 
 /* BROKER REGISTRATION */
 .bg-black{
@@ -8425,6 +8463,14 @@ canvas{
 
     .will-padding{
         margin-top: 50px;
+    }
+
+    .confirm-box h2{
+        font-size: 20px;
+        line-height: 115%;
+    }
+    .confirm-box a{
+        margin-top: 20px;
     }
 
 }

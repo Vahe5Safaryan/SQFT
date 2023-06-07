@@ -91,8 +91,7 @@ $('.partner-section').slick({
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
+                slidesToShow: 3,
             }
         },
         {
