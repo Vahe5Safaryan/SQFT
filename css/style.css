@@ -5237,7 +5237,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 /* Tabel Slider Start */
 .hrart-bg i{
-    color: #1E1E1E;
+    color: rgb(215, 9, 9);
 }
 .g2-slide .table-heart{
     text-align: center;

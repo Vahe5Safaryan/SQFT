@@ -1123,7 +1123,7 @@ if (ctx) {
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova'],
+            labels: ['Azizi fawad', 'Binghatti\nova', 'Binghatti \ nova', 'Binghatti \ nova'],
             datasets: [{
                 data: [750000, 600000, 200000, 100000],
                 borderWidth: 1,
