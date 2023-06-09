@@ -5600,7 +5600,7 @@ canvas{
 }
 .card-img img{
     max-width: 125px;
-    height: auto;
+    height: 125px;
     border-radius: 50%;
 }
 .card-img input{
@@ -9346,6 +9346,20 @@ canvas{
         width: 70px;
     }
 
+
+    .card-img img{
+        max-width: 90px;
+        height: 90px;
+    }
+    .card-box-form ul{
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+    }
+    .multiselect-dropdown{
+        width: 120px !important;
+    }
+
 }
 
 @media screen and (max-width: 414px) {
@@ -9617,9 +9631,6 @@ canvas{
         width: 120px;
     }
 
-    .multiselect-dropdown{
-        width: 150px;
-    }
 
 
     .reviews-pagination ul li {
