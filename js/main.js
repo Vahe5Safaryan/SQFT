@@ -1,4 +1,33 @@
 "use strict";
+const filters = new Proxy({}, {
+    get(target, field) {
+        return target[field]
+    },
+    set(target, field, value) {
+        target[field] = value
+        $(`[data-column='${field}']`).each((i, td) => {
+            console.log(td)
+            if (!td.innerHTML.toLowerCase().includes(value.toLowerCase())) {
+                td.closest('tr').classList.add('hidden');
+            } else {
+                td.closest('tr').classList.remove('hidden');
+            }
+        });
+
+        if (field === 'price-min-price' || field === 'price-max-price') {
+            const minPrice = parseInt($('#price-min-price').val());
+            const maxPrice = parseInt($('#price-max-price').val());
+
+            // Check if the range is set to 0 and 8,000,000
+            if (minPrice === 0 || maxPrice === 8000000) {
+                td.closest('tr').classList.remove('hidden');
+            }
+        }
+
+        console.log(target)
+        return target
+    }
+});
 
 $('.main-slider-text').slick({
     dots: true,
@@ -546,7 +575,7 @@ for (let i = 0; i < optionMenus.length; i++) {
         option.addEventListener("click", function () {
             let selectedOption = option.querySelector(".option-text").innerText;
             sBtn_text.innerText = selectedOption;
-
+            filters[sBtn_text.dataset.name] = selectedOption
             optionMenu.classList.remove("active");
         });
     }
@@ -1866,3 +1895,113 @@ heartIcons.forEach(function(icon) {
         }
     });
 });
+
+
+
+//  FILTER ---- //
+//  Developer //
+function updateDeveloper(selectedDeveloper) {
+    const developerHeader = document.querySelectorAll(".developerHeader");
+    developerHeader.forEach(function(developerHeader) {
+        developerHeader.textContent = selectedDeveloper;
+    });
+}
+// Project
+function updateProject(selectedProject) {
+    const projectHeaders = document.querySelectorAll(".projectHeader");
+    projectHeaders.forEach(function(projectHeader) {
+        projectHeader.textContent = selectedProject;
+    });
+}
+
+
+
+
+// function useDebounce () {
+//     let timeoutId = null
+//
+//     return function (callback, time) {
+//         if (timeoutId) {
+//             clearTimeout(timeoutId)
+//         }
+//
+//         timeoutId = setTimeout(callback, time)
+//     }
+// }
+//
+// const ourDebounce = useDebounce()
+// const filters = {}
+// $('.field').on('input', (event) => {
+//     const value = event.target.value
+//     const name = event.target.name
+//     filters[name] = value
+//     const changeFunction = () => {
+//         console.log(filters)
+//         $(`[data-column='${name}']`).each((i, td) => {
+//             if (!td.innerHTML.toLowerCase().includes(value.toLowerCase())) {
+//                 $(td).parents('tr').addClass('hidden')
+//             }else{
+//                 $(td).parents('tr').removeClass('hidden')
+//             }
+//         })
+//     }
+//
+//     ourDebounce(() => {
+//         changeFunction()
+//     }, 1000)
+// })
+//
+//
+
+
+
+
+
+
+
+
+
+function useDebounce() {
+    let timeoutId = null;
+
+    return function (callback, time) {
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(callback, time);
+    };
+}
+
+const ourDebounce = useDebounce();
+
+
+document.querySelectorAll('.field').forEach((field) => {
+    field.addEventListener('input', (event) => {
+        const value = event.target.value;
+        const name = event.target.name;
+
+        ourDebounce(() => {
+            filters[name] = value;
+        }, 1000);
+    });
+});
+
+
+
+
+
+let heartIcons2 = document.querySelectorAll(".fa-solid.fa-heart");
+heartIcons2.forEach(function(icon) {
+    icon.addEventListener("click", function() {
+        if (icon.classList.contains("fa-solid")) {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+            icon.style.color = "#1e1e1e";
+        } else if (icon.classList.contains("fa-regular")) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+            icon.style.color = "#D70909";
+        }
+    });
+});
+

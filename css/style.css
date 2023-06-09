@@ -4976,7 +4976,6 @@ label span {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    text-transform: uppercase;
     color: #1E1E1E;
 }
 /* --- */
@@ -5074,6 +5073,25 @@ label span {
     transition: opacity 0.3s ease;
     opacity: 1;
 }
+
+/* --- */
+.input-table input{
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+
+/* --- */
+
+
+
+
+
+
+
 
 /* range */
 .card {
@@ -5679,10 +5697,14 @@ canvas{
     width: 100%;
 }
 
+
+.card-box-form {
+    width: 100%;
+}
 /* Selector For Language */
 .select-language{
     max-width: 100%;
-    width: 100%;
+    /*width: 100%;*/
 }
 .multiselect-dropdown {
     width: 175px !important;
@@ -9356,10 +9378,9 @@ canvas{
         -moz-column-gap: 10px;
         column-gap: 10px;
     }
-    .multiselect-dropdown{
-        width: 120px !important;
+    .card-box{
+        overflow: hidden;
     }
-
 }
 
 @media screen and (max-width: 414px) {
