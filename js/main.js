@@ -1037,7 +1037,10 @@ const openNewsModalBtn = document.querySelectorAll('.open-news-modal');
 if (openNewsModalBtn) {
     for (let i = 0; i < openNewsModalBtn.length; i++) {
         openNewsModalBtn[i].addEventListener('click', function (event) {
+
             newsModalSection.classList.toggle('active-modal');
+            body.style.overflow = "hidden"
+            overlay.classList.toggle('d-block');
 
             let title = this.getAttribute('data-news-title');
             let text = this.getAttribute('data-news-text');
@@ -1214,8 +1217,7 @@ if (ctx) {
         },
     });
 }
-//  Chart 2 Start //
-
+ // Chart 2 Start //
 const ctr = document.getElementById('myChart2');
 if (ctr) {
     Chart.defaults.FontFamily = 'Montserrat';
@@ -1277,8 +1279,98 @@ if (ctr) {
         },
     });
 }
-//  Chart 2 End //
+ // Chart 2 End //
 
+//  -------------------------------------------------
+// const ctr = document.getElementById('myChart2');
+// if (ctr) {
+//     Chart.defaults.FontFamily = 'Montserrat';
+//     const chart = new Chart(ctr, {
+//         type: 'bar',
+//         data: {
+//             labels: ['Azizi fawad', 'Binghatti ova', 'Binghatti nova'],
+//             datasets: [{
+//                 data: [],
+//                 borderWidth: 1,
+//                 fill: true,
+//                 label: '',
+//                 backgroundColor: [
+//                     "#1e1e1e",
+//                     "#1e1e1e",
+//                     "#1e1e1e",
+//                 ],
+//             }]
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: true,
+//             plugins: {
+//                 legend: {
+//                     display: false,
+//                 },
+//                 tooltip: {
+//                     enabled: false,
+//                 },
+//             },
+//             animation: {
+//                 duration: 2000,
+//             },
+//             scales: {
+//                 x: {
+//                     max: 100,
+//                     ticks: {
+//                         color: '#1E1E1E',
+//                         font: {
+//                             size: 16,
+//                             family: 'Montserrat',
+//                         }
+//                     },
+//                 },
+//                 y: {
+//                     ticks: {
+//                         callback: function (value, index, values) {
+//                             return value.toFixed(2);
+//                         },
+//                         stepSize: 1000,
+//                         color: '#8F8F8F',
+//                         font: {
+//                             size: 14,
+//                             family: 'Montserrat',
+//                         },
+//                         maxTicksLimit: 10,
+//                     },
+//                 },
+//             },
+//         },
+//     });
+//
+//     // Получение полей ввода
+//     const chart1Input = document.querySelector('input[name="chart1"]');
+//     const chart2Input = document.querySelector('input[name="chart2"]');
+//     const chart3Input = document.querySelector('input[name="chart3"]');
+//
+//     // Обработчик события для добавления значений в массив данных при изменении полей ввода
+//     function addDataToChartOnChange() {
+//         const input1 = parseFloat(chart1Input.value);
+//         const input2 = parseFloat(chart2Input.value);
+//         const input3 = parseFloat(chart3Input.value);
+//
+//         // Очистка массива данных
+//         chart.data.datasets[0].data = [];
+//
+//         // Добавление значений в массив данных
+//         chart.data.datasets[0].data.push(input1, input2, input3);
+//
+//         // Обновление графика
+//         chart.update();
+//     }
+//
+//     // Привязка обработчика события к полям ввода
+//     chart1Input.addEventListener('input', addDataToChartOnChange);
+//     chart2Input.addEventListener('input', addDataToChartOnChange);
+//     chart3Input.addEventListener('input', addDataToChartOnChange);
+// }
+//  -------------------------------------------------
 
 
 const chartData = [
@@ -1430,6 +1522,7 @@ $('.news-section.slick-slider').on('afterChange', function (event, slick, curren
     } else {
         $('.news-section .slick-prev').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
         });
     }
     if (currentSlide === slidesCount - 1) {
@@ -1441,9 +1534,26 @@ $('.news-section.slick-slider').on('afterChange', function (event, slick, curren
     } else {
         $('.news-section .slick-next').css({
             'background-color': '#09D75C',
+            'transform': 'matrix(1, 0, 0, -1, 0, 0)',
         });
     }
 });
+$('.news-section').on('afterChange', function (event, slick, currentSlide) {
+    let slidesCount = slick.slideCount;
+
+    if (currentSlide === slidesCount - slick.options.slidesToShow) {
+        $('.slick-next').css({
+            'background-color': 'rgba(9, 215, 92, 0.3)',
+            'backdrop-filter': 'blur(16.5px)',
+            'transform': 'matrix(1, 0, 0, 1, 0, 0)',
+        });
+    } else {
+        $('.slick-next').css({
+            'background-color': '#09D75C',
+        });
+    }
+});
+
 
 
 //  Height News text box Start //
@@ -1985,7 +2095,6 @@ document.querySelectorAll('.field').forEach((field) => {
         }, 1000);
     });
 });
-
 
 
 
