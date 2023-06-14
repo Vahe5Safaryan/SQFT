@@ -3751,6 +3751,26 @@ li {
 .availability-box-form .developer-profile-reg-btn a{
     font-size: 24px;
 }
+
+.developer-update-btn{
+
+}
+.developer-update-btn a{
+    width: 410px;
+    max-width: 410px;
+    height: 65px;
+    background: #fff;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676767;
+    padding: 0 0 0 33px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
 /* Update Availability End */
 
 
@@ -8712,6 +8732,15 @@ canvas{
     }
     .confirm-box a{
         margin-top: 20px;
+    }
+
+
+    .developer-update-btn a{
+        width: 270px;
+        max-width: 100%;
+
+        padding: 0 0 0 20px;
+
     }
 
 }
