@@ -3710,66 +3710,104 @@ li {
     flex-direction: column;
     row-gap: 10px;
 }
-.availability-box-form input{
-    background: #FFFFFF;
-    border-radius: 32px;
-    max-width: 100%;
-    width: 410px;
-    height: 64px;
-    padding-left: 30px;
-}
-.availability-box-form input::-webkit-input-placeholder{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #676767;
-}
-.availability-box-form input::-moz-placeholder{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #676767;
-}
-.availability-box-form input:-ms-input-placeholder{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #676767;
-}
-.availability-box-form input::-ms-input-placeholder{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #676767;
-}
-.availability-box-form input::placeholder{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #676767;
-}
-.availability-box-form .developer-profile-reg-btn a{
-    font-size: 24px;
-}
 
-.developer-update-btn{
 
-}
-.developer-update-btn a{
+.developer-update-form {
     width: 410px;
     max-width: 410px;
     height: 65px;
     background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
 
+.developer-update-form label {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #676767;
-    padding: 0 0 0 33px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    /*padding: 50px 0;*/
+    padding-left: 33px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /*display: flex;*/
+    /*align-items: center;*/
+    margin-top: 45px;
+    /*background: greenyellow;*/
 }
+
+.developer-update-form input {
+    /*background: red;*/
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+/*.availability-box-form input{*/
+/*    background: #FFFFFF;*/
+/*    border-radius: 32px;*/
+/*    max-width: 100%;*/
+/*    width: 410px;*/
+/*    height: 64px;*/
+/*    padding-left: 30px;*/
+/*}*/
+/*.availability-box-form input::-webkit-input-placeholder{*/
+/*    font-weight: 400;*/
+/*    font-size: 14px;*/
+/*    line-height: 17px;*/
+/*    color: #676767;*/
+/*}*/
+/*.availability-box-form input::-moz-placeholder{*/
+/*    font-weight: 400;*/
+/*    font-size: 14px;*/
+/*    line-height: 17px;*/
+/*    color: #676767;*/
+/*}*/
+/*.availability-box-form input:-ms-input-placeholder{*/
+/*    font-weight: 400;*/
+/*    font-size: 14px;*/
+/*    line-height: 17px;*/
+/*    color: #676767;*/
+/*}*/
+/*.availability-box-form input::-ms-input-placeholder{*/
+/*    font-weight: 400;*/
+/*    font-size: 14px;*/
+/*    line-height: 17px;*/
+/*    color: #676767;*/
+/*}*/
+/*.availability-box-form input::placeholder{*/
+/*    font-weight: 400;*/
+/*    font-size: 14px;*/
+/*    line-height: 17px;*/
+/*    color: #676767;*/
+/*}*/
+.availability-box-form .developer-profile-reg-btn a{
+    font-size: 24px;
+}
+
+
+/*.developer-update-btn {*/
+/*    width: 410px;*/
+/*    max-width: 410px;*/
+/*    height: 65px;*/
+/*    background: #fff;*/
+/*    border-radius: 32px;*/
+
+/*    font-weight: 400;*/
+/*    font-size: 14px;*/
+/*    line-height: 17px;*/
+/*    color: #676767;*/
+/*    padding: 0 0 0 33px;*/
+/*    display: flex;*/
+/*    justify-content: left;*/
+/*    align-items: center;*/
+/*}*/
 
 /* Update Availability End */
 
@@ -8734,13 +8772,9 @@ canvas{
         margin-top: 20px;
     }
 
-
-    .developer-update-btn a{
+    .developer-update-form {
         width: 270px;
         max-width: 100%;
-
-        padding: 0 0 0 20px;
-
     }
 
 }
