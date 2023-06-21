@@ -358,10 +358,10 @@ $(document).ready(() => {
 
 $('.tab-selector').click((e) => {
     e.preventDefault()
+    $(e.target.dataset.target).slick('resize')
     $('.content').removeClass('active')
     $('.tab-selector').removeClass('active')
     $(e.target.dataset.target).parent().addClass('active')
-    $(e.target.dataset.target).slick('resize')
     e.target.classList.add('active')
 })
 
@@ -831,15 +831,15 @@ if (underPageMenuBtn) {
             setTimeout(function () {
                 if (window.innerWidth <= 414) {
                     underPageMenuBox.style.top = "-440px";
-                    underPageMenuBtn.style.position = "absolute";
+                    underPageMenuBtn.style.position = "fixed";
                     underPageMenuBtn.style.right = "15px";
                 } else if (window.innerWidth <= 768) {
                     underPageMenuBox.style.left = "-295px";
-                    underPageMenuBtn.style.position = "absolute";
+                    underPageMenuBtn.style.position = "fixed";
                     underPageMenuBtn.style.right = "15px";
                 } else {
                     underPageMenuBox.style.left = "-295px";
-                    underPageMenuBtn.style.position = "absolute";
+                    underPageMenuBtn.style.position = "fixed";
                     underPageMenuBtn.style.left = "15px";
                 }
                 headerLogo.style.opacity = "1";
@@ -909,11 +909,14 @@ const body = document.querySelector('body')
 if (replaceModalBtn) {
     for (let i = 0; i < replaceModalBtn.length; i++) {
         replaceModalBtn[i].addEventListener('click', function (event) {
+            event.preventDefault();
             devProfileModal.classList.toggle('active-modal');
-            document.getElementById("projectId").value = this.getAttribute('data-project-id');
+            const projectElement = document.getElementById("projectId");
             overlay.classList.toggle('d-block');
             body.style.overflow = "hidden"
-            event.preventDefault();
+            if (projectElement) {
+                projectElement.value = this.getAttribute('data-project-id');
+            }
         });
     }
 
