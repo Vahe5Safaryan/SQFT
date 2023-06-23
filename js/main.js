@@ -359,7 +359,11 @@ $('.tab-selector').click((e) => {
     $('.tab-selector').removeClass('active')
     $(e.target.dataset.target).parent().addClass('active')
     e.target.classList.add('active')
-    $(e.target.dataset.target).slick('resize')
+
+    setTimeout(() => {
+        $(e.target.dataset.target).slick('resize')
+        $(e.target.dataset.target).slick('setPosition');
+    }, 0)
 })
 
 
