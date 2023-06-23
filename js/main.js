@@ -373,7 +373,6 @@ $(document).ready(() => {
         const target = $(e.target).data('target');
         $(target).slick('resize');
     });
-    console.log(5456454)
 });
 
 
