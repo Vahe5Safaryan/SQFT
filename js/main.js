@@ -354,12 +354,12 @@ $(document).ready(() => {
 })
 
 $('.tab-selector').click((e) => {
-    $(e.target.dataset.target).slick('resize')
     e.preventDefault()
     $('.content').removeClass('active')
     $('.tab-selector').removeClass('active')
     $(e.target.dataset.target).parent().addClass('active')
     e.target.classList.add('active')
+    $(e.target.dataset.target).slick('resize')
 })
 
 
