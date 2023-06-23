@@ -368,7 +368,7 @@ $('.tab-selector').click((e) => {
 })
 
 $(document).ready(() => {
-    $('.tab-selector').click((e) => {
+    $('.tab-selector.pay-tab-year').click((e) => {
         e.preventDefault();
         const target = $(e.target).data('target');
         $(target).slick('resize');
