@@ -365,8 +365,16 @@ $('.tab-selector').click((e) => {
     $('.tab-selector').removeClass('active')
     $(e.target.dataset.target).parent().addClass('active')
     e.target.classList.add('active')
-    $(e.target.dataset.target).slick('resize')
 })
+
+$(document).ready(() => {
+    $('.tab-selector').click((e) => {
+        e.preventDefault();
+        const target = $(e.target).data('target');
+        $(target).slick('resize');
+    });
+    console.log(5456454)
+});
 
 
 
