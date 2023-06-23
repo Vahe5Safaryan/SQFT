@@ -137,7 +137,6 @@ $('.partner-section').slick({
 
 
 
-
 // // Payment Section //
 $('.plan-monthly').slick({
     dots: false,
@@ -150,36 +149,30 @@ $('.plan-monthly').slick({
             breakpoint: 9999,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 1025,
             settings: {
                 slidesToShow: 2,
-                dots: false,
             }
         },
         {
             breakpoint: 998,
             settings: {
                 slidesToShow: 2,
-                dots: false,
             }
         },
         {
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 630,
             settings: {
                 slidesToShow: 1,
-                dots: false,
             }
         },
         {
@@ -191,6 +184,13 @@ $('.plan-monthly').slick({
         },
         {
             breakpoint: 414,
+            settings: {
+                slidesToShow: 1,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 321,
             settings: {
                 slidesToShow: 1,
                 dots: true
@@ -255,47 +255,36 @@ $('.plan-yearly').slick({
             breakpoint: 1400,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 1025,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 998,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 630,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false,
             }
         },
         {
             breakpoint: 578,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
                 dots: true,
             }
         },
@@ -303,7 +292,13 @@ $('.plan-yearly').slick({
             breakpoint: 414,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                dots: true,
+            }
+        },
+        {
+            breakpoint: 321,
+            settings: {
+                slidesToShow: 1,
                 dots: true,
             }
         }
