@@ -354,21 +354,13 @@ $(document).ready(() => {
 })
 
 $('.tab-selector').click((e) => {
-    e.preventDefault()
     $(e.target.dataset.target).slick('resize')
+    e.preventDefault()
     $('.content').removeClass('active')
     $('.tab-selector').removeClass('active')
     $(e.target.dataset.target).parent().addClass('active')
     e.target.classList.add('active')
 })
-
-$(document).ready(() => {
-    $('.tab-selector.pay-tab-year').click((e) => {
-        e.preventDefault();
-        const target = $(e.target).data('target');
-        $(target).slick('resize');
-    });
-});
 
 
 
